@@ -7,3 +7,6 @@ spring:
     active: dev
   resources:
     static-locations: classpath:/templates/
+
+logging:
+  config: src/main/resources/config/ logback-spring.xml
