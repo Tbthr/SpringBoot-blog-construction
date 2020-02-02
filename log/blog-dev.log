@@ -4593,3 +4593,330 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving template [templ
 2020-02-02 17:28:43.481  INFO 7924 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
 2020-02-02 17:28:43.710  WARN 7924 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [187] milliseconds.
 2020-02-02 17:28:43.735  INFO 7924 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-02-02 19:09:37.871  INFO 14560 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 14560 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-02 19:09:37.883 DEBUG 14560 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-02 19:09:37.884  INFO 14560 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-02 19:09:38.020  INFO 14560 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-02 19:09:38.021  INFO 14560 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-02 19:09:40.027  INFO 14560 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-02 19:09:40.175  INFO 14560 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 128ms. Found 1 repository interfaces.
+2020-02-02 19:09:41.226  INFO 14560 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$89af2f2e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-02 19:09:42.304  INFO 14560 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-02 19:09:42.361  INFO 14560 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-02 19:09:42.362  INFO 14560 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-02 19:09:42.723  INFO 14560 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-02 19:09:42.740  INFO 14560 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-02 19:09:42.740  INFO 14560 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4718 ms
+2020-02-02 19:09:43.258  INFO 14560 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-02 19:09:44.050  INFO 14560 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-02 19:09:44.161  INFO 14560 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-02 19:09:44.357  INFO 14560 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2020-02-02 19:09:44.361  INFO 14560 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-02-02 19:09:44.656  INFO 14560 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-02 19:09:45.043  INFO 14560 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-02 19:09:47.591  INFO 14560 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-02 19:09:47.761  INFO 14560 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-02 19:09:49.623  INFO 14560 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:09:49.802  WARN 14560 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-02 19:09:49.919  INFO 14560 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-02 19:09:50.855  INFO 14560 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-02 19:09:50.862  INFO 14560 --- [restartedMain] com.lyq.blog.BlogApplication             : Started BlogApplication in 14.446 seconds (JVM running for 17.129)
+2020-02-02 19:10:00.219  INFO 14560 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 19:10:00.220  INFO 14560 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-02 19:10:00.250  INFO 14560 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 30 ms
+2020-02-02 19:10:25.656  WARN 14560 --- [http-nio-8080-exec-6] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [297] milliseconds.
+2020-02-02 19:10:25.722  INFO 14560 --- [http-nio-8080-exec-6] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-02-02 19:10:49.726  INFO 14560 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:10:49.727  INFO 14560 --- [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-02 19:10:49.737  INFO 14560 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-02 19:10:49.757  INFO 14560 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-02-02 19:18:30.930  INFO 15272 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 15272 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-02 19:18:30.936 DEBUG 15272 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-02 19:18:30.937  INFO 15272 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-02 19:18:31.030  INFO 15272 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-02 19:18:31.030  INFO 15272 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-02 19:18:32.647  INFO 15272 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-02 19:18:32.813  INFO 15272 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 146ms. Found 1 repository interfaces.
+2020-02-02 19:18:33.931  INFO 15272 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8e4fc93d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-02 19:18:34.983  INFO 15272 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-02 19:18:35.090  INFO 15272 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-02 19:18:35.092  INFO 15272 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-02 19:18:35.978  INFO 15272 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-02 19:18:36.038  INFO 15272 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-02 19:18:36.040  INFO 15272 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5008 ms
+2020-02-02 19:18:36.578  INFO 15272 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-02 19:18:37.284  INFO 15272 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-02 19:18:37.398  INFO 15272 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-02 19:18:37.563  INFO 15272 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2020-02-02 19:18:37.567  INFO 15272 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-02-02 19:18:37.791  INFO 15272 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-02 19:18:38.106  INFO 15272 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-02 19:18:40.662  INFO 15272 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-02 19:18:40.830  INFO 15272 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-02 19:18:42.331  INFO 15272 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:18:42.446  WARN 15272 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-02 19:18:42.594  INFO 15272 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-02 19:18:43.579  INFO 15272 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-02 19:18:43.584  INFO 15272 --- [restartedMain] com.lyq.blog.BlogApplication             : Started BlogApplication in 13.625 seconds (JVM running for 15.814)
+2020-02-02 19:18:43.815  INFO 15272 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 19:18:43.817  INFO 15272 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-02 19:18:43.849  INFO 15272 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 32 ms
+2020-02-02 19:20:45.796  INFO 15272 --- [Thread-4] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:20:45.798  INFO 15272 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-02 19:20:45.806  INFO 15272 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-02 19:20:45.830  INFO 15272 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-02-02 19:20:46.415  INFO 15272 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 15272 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-02 19:20:46.416 DEBUG 15272 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-02 19:20:46.416  INFO 15272 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-02 19:20:46.965  INFO 15272 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-02 19:20:46.986  INFO 15272 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 1 repository interfaces.
+2020-02-02 19:20:47.112  INFO 15272 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8e4fc93d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-02 19:20:47.406  INFO 15272 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-02 19:20:47.408  INFO 15272 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-02 19:20:47.409  INFO 15272 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-02 19:20:47.494  INFO 15272 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-02 19:20:47.495  INFO 15272 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-02 19:20:47.496  INFO 15272 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1076 ms
+2020-02-02 19:20:47.730  INFO 15272 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-02-02 19:20:47.757  INFO 15272 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-02-02 19:20:47.783  INFO 15272 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-02 19:20:47.882  INFO 15272 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-02 19:20:48.991  INFO 15272 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-02 19:20:49.200  INFO 15272 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-02 19:20:50.351  INFO 15272 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:20:50.416  WARN 15272 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-02 19:20:50.569  INFO 15272 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-02 19:20:51.122  INFO 15272 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-02 19:20:51.124  INFO 15272 --- [restartedMain] com.lyq.blog.BlogApplication             : Started BlogApplication in 4.785 seconds (JVM running for 143.354)
+2020-02-02 19:20:51.130  INFO 15272 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-02-02 19:20:51.552  INFO 15272 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 19:20:51.553  INFO 15272 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-02 19:20:51.574  INFO 15272 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
+2020-02-02 19:20:59.707  WARN 15272 --- [http-nio-8080-exec-6] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [369] milliseconds.
+2020-02-02 19:21:50.375  INFO 15272 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:21:50.376  INFO 15272 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-02 19:21:50.377  INFO 15272 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-02-02 19:21:50.391  INFO 15272 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-02-02 19:21:50.774  INFO 15272 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 15272 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-02 19:21:50.774 DEBUG 15272 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-02 19:21:50.774  INFO 15272 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-02 19:21:51.108  INFO 15272 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-02 19:21:51.130  INFO 15272 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 1 repository interfaces.
+2020-02-02 19:21:51.218  INFO 15272 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8e4fc93d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-02 19:21:51.386  INFO 15272 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-02 19:21:51.388  INFO 15272 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-02 19:21:51.388  INFO 15272 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-02 19:21:51.442  INFO 15272 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-02 19:21:51.443  INFO 15272 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-02 19:21:51.444  INFO 15272 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 667 ms
+2020-02-02 19:21:51.657  INFO 15272 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2020-02-02 19:21:51.685  INFO 15272 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2020-02-02 19:21:51.702  INFO 15272 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-02 19:21:51.828  INFO 15272 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-02 19:21:52.571  INFO 15272 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-02 19:21:52.635  INFO 15272 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-02 19:21:53.211  INFO 15272 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:21:53.239  WARN 15272 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-02 19:21:53.288  INFO 15272 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-02 19:21:53.768  INFO 15272 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-02 19:21:53.769  INFO 15272 --- [restartedMain] com.lyq.blog.BlogApplication             : Started BlogApplication in 3.032 seconds (JVM running for 205.999)
+2020-02-02 19:21:53.772  INFO 15272 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-02-02 19:22:14.037  INFO 15272 --- [Thread-15] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:22:14.039  INFO 15272 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-02 19:22:14.040  INFO 15272 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2020-02-02 19:22:14.055  INFO 15272 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2020-02-02 19:22:14.433  INFO 15272 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 15272 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-02 19:22:14.433 DEBUG 15272 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-02 19:22:14.433  INFO 15272 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-02 19:22:14.831  INFO 15272 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-02 19:22:14.847  INFO 15272 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 1 repository interfaces.
+2020-02-02 19:22:14.948  INFO 15272 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8e4fc93d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-02 19:22:15.128  INFO 15272 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-02 19:22:15.130  INFO 15272 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-02 19:22:15.131  INFO 15272 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-02 19:22:15.210  INFO 15272 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-02 19:22:15.211  INFO 15272 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-02 19:22:15.211  INFO 15272 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 776 ms
+2020-02-02 19:22:15.338  INFO 15272 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2020-02-02 19:22:15.352  INFO 15272 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2020-02-02 19:22:15.363  INFO 15272 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-02 19:22:15.428  INFO 15272 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-02 19:22:16.229  INFO 15272 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-02 19:22:16.304  INFO 15272 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-02 19:22:16.905  INFO 15272 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:22:16.934  WARN 15272 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-02 19:22:16.996  INFO 15272 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-02 19:22:17.506  INFO 15272 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-02 19:22:17.506  INFO 15272 --- [restartedMain] com.lyq.blog.BlogApplication             : Started BlogApplication in 3.12 seconds (JVM running for 229.736)
+2020-02-02 19:22:17.509  INFO 15272 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-02-02 19:22:24.015  INFO 15272 --- [Thread-21] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:22:24.016  INFO 15272 --- [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-02 19:22:24.018  INFO 15272 --- [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2020-02-02 19:22:24.032  INFO 15272 --- [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2020-02-02 19:22:24.382  INFO 15272 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 15272 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-02 19:22:24.383 DEBUG 15272 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-02 19:22:24.383  INFO 15272 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-02 19:22:24.750  INFO 15272 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-02 19:22:24.769  INFO 15272 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 1 repository interfaces.
+2020-02-02 19:22:24.850  INFO 15272 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8e4fc93d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-02 19:22:25.002  INFO 15272 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-02 19:22:25.003  INFO 15272 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-02 19:22:25.004  INFO 15272 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-02 19:22:25.058  INFO 15272 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-02 19:22:25.059  INFO 15272 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-02 19:22:25.059  INFO 15272 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 674 ms
+2020-02-02 19:22:25.169  INFO 15272 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2020-02-02 19:22:25.185  INFO 15272 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2020-02-02 19:22:25.201  INFO 15272 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-02 19:22:25.271  INFO 15272 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-02 19:22:26.004  INFO 15272 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-02 19:22:26.077  INFO 15272 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-02 19:41:03.789  INFO 10584 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 10584 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-02 19:41:03.794 DEBUG 10584 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-02 19:41:03.795  INFO 10584 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-02 19:41:03.848  INFO 10584 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-02 19:41:03.849  INFO 10584 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-02 19:41:05.021  INFO 10584 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-02 19:41:05.140  INFO 10584 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104ms. Found 1 repository interfaces.
+2020-02-02 19:41:05.769  INFO 10584 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1f5118de] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-02 19:41:06.597  INFO 10584 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-02 19:41:06.638  INFO 10584 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-02 19:41:06.639  INFO 10584 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-02 19:41:06.892  INFO 10584 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-02 19:41:06.904  INFO 10584 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-02 19:41:06.905  INFO 10584 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3056 ms
+2020-02-02 19:41:07.243  INFO 10584 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-02 19:41:07.827  INFO 10584 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-02 19:41:07.960  INFO 10584 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-02 19:41:08.080  INFO 10584 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2020-02-02 19:41:08.082  INFO 10584 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-02-02 19:41:08.321  INFO 10584 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-02 19:41:08.631  INFO 10584 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-02 19:41:10.674  INFO 10584 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-02 19:41:10.803  INFO 10584 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-02 19:41:10.818  WARN 10584 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webConfig': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.lyq.blog.interceptor.LoginInterceptor' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup="", name="", description="", authenticationType=CONTAINER, type=java.lang.Object.class, mappedName="")}
+2020-02-02 19:41:10.818  INFO 10584 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-02 19:41:10.824  INFO 10584 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-02 19:41:10.846  INFO 10584 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-02-02 19:41:10.850  INFO 10584 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-02-02 19:41:10.866  INFO 10584 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-02 19:41:11.162 ERROR 10584 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.lyq.blog.interceptor.LoginInterceptor' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.lyq.blog.interceptor.LoginInterceptor' in your configuration.
+
+2020-02-02 19:45:25.510  INFO 11776 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 11776 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-02 19:45:25.517 DEBUG 11776 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-02 19:45:25.518  INFO 11776 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-02 19:45:25.619  INFO 11776 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-02 19:45:25.620  INFO 11776 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-02 19:45:27.203  INFO 11776 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-02 19:45:27.337  INFO 11776 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117ms. Found 1 repository interfaces.
+2020-02-02 19:45:28.233  INFO 11776 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a26ed146] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-02 19:45:29.128  INFO 11776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-02 19:45:29.176  INFO 11776 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-02 19:45:29.177  INFO 11776 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-02 19:45:29.541  INFO 11776 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-02 19:45:29.559  INFO 11776 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-02 19:45:29.560  INFO 11776 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3940 ms
+2020-02-02 19:45:29.983  INFO 11776 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-02 19:45:30.583  INFO 11776 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-02 19:45:30.683  INFO 11776 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-02 19:45:30.810  INFO 11776 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2020-02-02 19:45:30.813  INFO 11776 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-02-02 19:45:31.055  INFO 11776 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-02 19:45:31.326  INFO 11776 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-02 19:45:33.639  INFO 11776 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-02 19:45:33.797  INFO 11776 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-02 19:45:33.818  WARN 11776 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webConfig': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.lyq.blog.interceptor.LoginInterceptor' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup="", name="", description="", authenticationType=CONTAINER, type=java.lang.Object.class, mappedName="")}
+2020-02-02 19:45:33.819  INFO 11776 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-02 19:45:33.829  INFO 11776 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-02 19:45:33.852  INFO 11776 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-02-02 19:45:33.857  INFO 11776 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-02-02 19:45:33.897  INFO 11776 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-02 19:45:34.336 ERROR 11776 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.lyq.blog.interceptor.LoginInterceptor' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.lyq.blog.interceptor.LoginInterceptor' in your configuration.
+
+2020-02-02 19:46:57.466  INFO 12080 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 12080 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-02 19:46:57.473 DEBUG 12080 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-02 19:46:57.474  INFO 12080 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-02 19:46:57.578  INFO 12080 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-02 19:46:57.579  INFO 12080 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-02 19:46:59.535  INFO 12080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-02 19:46:59.727  INFO 12080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 170ms. Found 1 repository interfaces.
+2020-02-02 19:47:00.984  INFO 12080 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8204fe51] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-02 19:47:02.272  INFO 12080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-02 19:47:02.359  INFO 12080 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-02 19:47:02.360  INFO 12080 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-02 19:47:02.855  INFO 12080 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-02 19:47:02.874  INFO 12080 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-02 19:47:02.874  INFO 12080 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5294 ms
+2020-02-02 19:47:03.322  INFO 12080 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-02 19:47:04.107  INFO 12080 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-02 19:47:04.216  INFO 12080 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-02 19:47:04.422  INFO 12080 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2020-02-02 19:47:04.429  INFO 12080 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-02-02 19:47:04.819  INFO 12080 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-02 19:47:05.164  INFO 12080 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-02 19:47:08.143  INFO 12080 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-02 19:47:08.342  INFO 12080 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-02 19:47:10.224  INFO 12080 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:47:10.339  WARN 12080 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-02 19:47:10.445  INFO 12080 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-02 19:47:11.383  INFO 12080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-02 19:47:11.390  INFO 12080 --- [restartedMain] com.lyq.blog.BlogApplication             : Started BlogApplication in 14.791 seconds (JVM running for 17.663)
+2020-02-02 19:48:16.970  INFO 12080 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 19:48:16.971  INFO 12080 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-02 19:48:16.999  INFO 12080 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 27 ms
+2020-02-02 19:48:17.396  WARN 12080 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [362] milliseconds.
+2020-02-02 19:48:48.325 ERROR 12080 --- [http-nio-8080-exec-4] c.l.b.h.ControllerExceptionHandler       : Request URL : http://localhost:8080/admin/login , Exception : Request method 'GET' not supported
+2020-02-02 19:48:48.327  WARN 12080 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-02-02 19:49:59.578  INFO 12080 --- [http-nio-8080-exec-4] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-02-02 19:51:19.069  INFO 12080 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:51:19.071  INFO 12080 --- [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-02 19:51:19.080  INFO 12080 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-02 19:51:19.102  INFO 12080 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
