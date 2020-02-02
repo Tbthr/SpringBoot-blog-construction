@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <!--移动端缩放比例1.0-->
@@ -264,7 +264,7 @@
 </div>
 
 <!----------------------------------------------底部footer-------------------------------------->
-<footer class="ui inverted segment attached m-padded-tb-massive">
+<footer th:replace="admin/_fragments :: footer" class="ui inverted segment attached m-padded-tb-massive">
     <div class="ui center aligned container">
         <div class="ui inverted divided stackable grid">
             <div class="three wide column">
@@ -304,10 +304,9 @@
 
 </footer>
 
-
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.js"></script>
-<script src="../../static/lib/editormd/editormd.js"></script>
+<script src="../../static/lib/editormd/editormd.js" th:src="@{/lib/editormd/editormd.js}"></script>
 <script>
     $('.dropdown').dropdown({
         on: 'hover'
@@ -323,15 +322,15 @@
                 }]
             }
         }
-    })
+    });
 
-    var testEditor;
+    let testEditor;
     $(function() {
         testEditor = editormd({
             id      : "test-editormd",
             width   : "100%",
             height  : 640,
-            path    : "../static/lib/editormd/lib/",
+            path    : "../../static/lib/editormd/lib/",
             // syncScrolling: "single"
             // theme : "dark",
             // previewTheme : "dark",

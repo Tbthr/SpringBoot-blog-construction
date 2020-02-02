@@ -44,6 +44,11 @@ body{
     padding-bottom: 5em !important;
 }
 
+.m-padded-tb-largest{
+    padding-top: 12em !important;
+    padding-bottom: 12em !important;
+}
+
 .m-padded-lr-responsive{
     padding-left: 4em !important;
     padding-right: 4em !important;;

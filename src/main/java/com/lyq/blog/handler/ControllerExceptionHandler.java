@@ -18,7 +18,7 @@ public class ControllerExceptionHandler {
     @ExceptionHandler({Exception.class})
     public ModelAndView handleException(HttpServletRequest request, Exception e) throws Exception {
 
-        log.error("Request URL : {} , Exception : {}", request.getRequestURL(), e);
+        log.error("Request URL : {} , Exception : {}", request.getRequestURL(), e.getMessage());
 
         if (AnnotationUtils.findAnnotation(e.getClass(), ResponseStatus.class) != null) {
             throw e;

@@ -4,7 +4,6 @@
  */
 package com.lyq.blog.web;
 
-import com.lyq.blog.NotFoundExcepiton;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -14,10 +13,10 @@ public class IndexController {
     @GetMapping("/")
     public String index() {
 //        int a = 2 / 0;
-        String blog = null;
-        if (blog == null) {
-            throw new NotFoundExcepiton("博客找不到");
-        }
+//        String blog = null;
+//        if (blog == null) {
+//            throw new NotFoundExcepiton("博客找不到");
+//        }
         return "index";
     }
 }
