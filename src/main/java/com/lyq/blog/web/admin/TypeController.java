@@ -22,7 +22,7 @@ public class TypeController {
     private TypeServiceImpl typeService;
 
     @GetMapping //get all
-    public String types(@PageableDefault(size = 3,sort = {"id"},direction = Sort.Direction.DESC)
+    public String types(@PageableDefault(size = 10,sort = {"id"},direction = Sort.Direction.DESC)
                                     Pageable pageable, Model model){
         model.addAttribute("page",typeService.listType(pageable));
         return "admin/types";
@@ -37,6 +37,7 @@ public class TypeController {
     @GetMapping("/input/{id}") // to分类标签页面 attached "id"
     public String editInput(@PathVariable Long id, Model model){
         model.addAttribute("type",typeService.getType(id));
+        model.addAttribute("edit","修改");
         return "admin/types-input";
     }
 
