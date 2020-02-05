@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @Transactional
@@ -19,6 +21,25 @@ public class TagServiceImpl {
 
     public Tag saveTag(Tag Tag){
         return tagRepository.save(Tag);
+    }
+
+    public List<Tag> getAllTags(){
+        return tagRepository.findAll();
+    }
+
+    public List<Tag> getTags(String ids){
+        return tagRepository.findAllById(convertToList(ids));
+    }
+
+    public List<Long> convertToList(String ids){ // 1,2,3 to list[1,2,3]
+        List<Long> list=new ArrayList<>();
+        if (ids!=null&&!ids.equals("")){
+            String[] strings=ids.split(",");
+            for (String string : strings) {
+                list.add(Long.valueOf(string));
+            }
+        }
+        return list;
     }
 
     public Tag getTag(Long id){

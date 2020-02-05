@@ -20,20 +20,25 @@ public class Blog {
     private Long id;
 
     private String title; //标题
+//    @Lob
+//    @Basic(fetch = FetchType.LAZY)
     private String content; //内容
     private String firstPicture; //首图
     private String flag; //标记
     private Integer views; //浏览次数
     private boolean appreciation; //赞赏开启
-    private boolean shareStatement; //版权开启
+    private boolean shareStatement; //转载声明
     private boolean commentabled; //评论开启
-    private boolean published; //发布
+    private boolean published; //发布 or 保存
     private boolean recommend; //推荐
     private Date createTime; //创建时间
     private Date updateTime; //更新时间
 
     @ManyToOne
     private Type type;
+
+    @Transient //不映射到数据表
+    private String tagIds;
 
     @ManyToMany(cascade = {CascadeType.PERSIST}) //级联新增
     private List<Tag> tags=new ArrayList<>();
