@@ -28,7 +28,7 @@ public class Blog {
     private boolean shareStatement; //版权开启
     private boolean commentabled; //评论开启
     private boolean published; //发布
-    private boolean recommend; //评论开启
+    private boolean recommend; //推荐
     private Date createTime; //创建时间
     private Date updateTime; //更新时间
 

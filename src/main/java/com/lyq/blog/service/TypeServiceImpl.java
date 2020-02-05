@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 @Transactional
@@ -19,6 +20,10 @@ public class TypeServiceImpl {
 
     public Type saveType(Type type){
         return typeRepository.save(type);
+    }
+
+    public List<Type> getAllTypes(){
+        return typeRepository.findAll();
     }
 
     public Type getType(Long id){
@@ -34,9 +39,7 @@ public class TypeServiceImpl {
     }
 
     public Type updateType(Long id,Type type){
-        try {
-            typeRepository.findById(id);
-        } catch (IllegalArgumentException e){
+        if (!typeRepository.existsById(id)){
             throw new NotFoundExcepiton("不存在该分类");
         }
         return typeRepository.save(type);

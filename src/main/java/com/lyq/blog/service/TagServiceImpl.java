@@ -34,9 +34,7 @@ public class TagServiceImpl {
     }
 
     public Tag updateTag(Long id,Tag Tag){
-        try {
-            tagRepository.findById(id);
-        } catch (IllegalArgumentException e){
+        if (!tagRepository.existsById(id)){
             throw new NotFoundExcepiton("不存在该标签");
         }
         return tagRepository.save(Tag);
