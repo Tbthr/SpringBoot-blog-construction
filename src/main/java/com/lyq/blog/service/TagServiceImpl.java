@@ -27,11 +27,7 @@ public class TagServiceImpl {
         return tagRepository.findAll();
     }
 
-    public List<Tag> getTags(String ids){
-        return tagRepository.findAllById(convertToList(ids));
-    }
-
-    public List<Long> convertToList(String ids){ // 1,2,3 to list[1,2,3]
+    public List<Long> String_List(String ids){ // "1,2,3" to list[1,2,3]
         List<Long> list=new ArrayList<>();
         if (ids!=null&&!ids.equals("")){
             String[] strings=ids.split(",");
@@ -40,6 +36,9 @@ public class TagServiceImpl {
             }
         }
         return list;
+    }
+    public List<Tag> getTags(String ids){
+        return tagRepository.findAllById(String_List(ids));
     }
 
     public Tag getTag(Long id){

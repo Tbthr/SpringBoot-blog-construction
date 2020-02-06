@@ -24,9 +24,17 @@ public class BlogServiceImpl {
     BlogRepository blogRepository;
 
     public Blog saveBlog(Blog blog){
-        blog.setCreateTime(new Date());
-        blog.setUpdateTime(new Date());
-        blog.setViews(0);
+        if (blog.getId() == null) {
+            Date date = new Date();
+            blog.setCreateTime(date);
+            blog.setUpdateTime(date);
+            blog.setViews(0);
+        } else {
+            if (!blogRepository.existsById(blog.getId())) {
+                throw new NotFoundExcepiton("不存在该博客");
+            }
+            blog.setUpdateTime(new Date());
+        }
         return blogRepository.save(blog);
     }
 
@@ -53,13 +61,6 @@ public class BlogServiceImpl {
             query.where(predicates.toArray(new Predicate[0]));
             return null;
         },pageable);
-    }
-
-    public Blog updateBlog(Long id,Blog blog){
-        if (!blogRepository.existsById(id)){
-            throw new NotFoundExcepiton("不存在该博客");
-        }
-        return blogRepository.save(blog);
     }
 
     public void deleteBlog(Long id){

@@ -67,18 +67,18 @@
                                 <!--*/-->
                             </div>
                         </div>
-                        <button id="clear-btn" class="ui basic button">Clear</button>
+                        <button id="clear-btn" class="ui basic button"><b>Clear</b></button>
                     </div>
                 </div>
                 <div class="filed" style="margin-right: 2em !important">
-                    <div class="ui checkbox">
-                        <input type="checkbox" id="recommend" name="recommend">
-                        <label for="recommend">推荐</label>
+                    <div class="ui toggle checkbox">
+                        <input type="checkbox" id="recommend" name="recommend" tabindex="0" class="hidden">
+                        <label for="recommend"><b>推荐</b></label>
                     </div>
                 </div>
                 <div class="filed">
                     <button type="button" id="search-btn" class="ui small teal basic button">
-                        <i class="search icon"></i>搜索
+                        <i class="search icon"></i><b>搜索</b>
                     </button>
                 </div>
             </div>
@@ -106,7 +106,7 @@
                     <td th:text="${blog.type.name}">认知升级</td>
                     <td th:text="${blog.recommend} ? '是' : '否'">是</td>
                     <td th:text="${blog.published} ? '发布' : '草稿'">发布</td>
-                    <td th:text="${blog.updateTime}">2019-12-25 20:23</td>
+                    <td th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd HH:mm:ss')}">2020-02-06 20:23:23</td>
                     <td>
                         <a th:href="@{/admin/blogs/input/{id}(id=${blog.id})}"
                            class="ui mini teal basic button">
@@ -160,12 +160,16 @@
         on: 'hover'
     });
 
+    $('.ui.checkbox')
+        .checkbox()
+    ;
+
     function loaddata() {
-        $("#table-container").load(/*[[@{/admin/blogs/search}]]*/"/admin/blogs/search",{
-            title : $("[name='title']").val(),
-            typeId : $("[name='typeId']").val(),
-            recommend : $("[name='recommend']").prop('checked'),
-            page : $("[name='page']").val()
+        $("#table-container").load(/*[[@{/admin/blogs/search}]]*/"/admin/blogs/search", {
+            title: $("[name='title']").val(),
+            typeId: $("[name='typeId']").val(),
+            recommend: $("[name='recommend']").prop('checked'),
+            page: $("[name='page']").val()
         });
     }
 
@@ -184,7 +188,7 @@
     });
 
     //消息提示关闭
-    $('.message.close').click(function () {
+    $('.message').click(function () {
         $(this)
             .closest('.message')
             .transition('fade');
