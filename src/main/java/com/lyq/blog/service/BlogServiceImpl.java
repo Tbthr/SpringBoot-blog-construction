@@ -7,7 +7,9 @@ import com.lyq.blog.repository.BlogRepository;
 import com.lyq.blog.util.MyBeanUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -56,6 +58,16 @@ public class BlogServiceImpl {
             query.where(predicates.toArray(new Predicate[0]));
             return null;
         },pageable);
+    }
+
+    public Page<Blog> listBlog(Pageable pageable){
+        return blogRepository.findAll(pageable);
+    }
+
+    public List<Blog> listRecommendBlogTop(Integer size){
+        Sort sort=Sort.by(Sort.Direction.DESC,"updateTime");
+        Pageable pageable= PageRequest.of(0,size,sort);
+        return blogRepository.findTop(pageable);
     }
 
     public void deleteBlog(Long id){

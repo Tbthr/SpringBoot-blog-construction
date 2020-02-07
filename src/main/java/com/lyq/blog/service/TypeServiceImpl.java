@@ -4,7 +4,9 @@ import com.lyq.blog.NotFoundExcepiton;
 import com.lyq.blog.model.Type;
 import com.lyq.blog.repository.TypeRepository;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -36,6 +38,12 @@ public class TypeServiceImpl {
 
     public Page<Type> listType(Pageable pageable){
         return typeRepository.findAll(pageable);
+    }
+
+    public List<Type> listTypeTop(Integer size){
+        Sort sort=Sort.by(Sort.Direction.DESC,"blogs.size");
+        Pageable pageable=PageRequest.of(0,size,sort);
+        return typeRepository.findTop(pageable);
     }
 
     public Type updateType(Long id,Type type){
