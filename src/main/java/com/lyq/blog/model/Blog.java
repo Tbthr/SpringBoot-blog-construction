@@ -20,18 +20,21 @@ public class Blog {
 
     private String flag; //原创 or 转载
     private String title; //标题
-    //    @Lob
-    //    @Basic(fetch = FetchType.LAZY)
     private String content; //内容
     private String firstPicture; //首图
 
     private Integer views; //浏览次数
 
-    private boolean published; //发布 or 保存
+//    @Lob
+//    @Basic(fetch = FetchType.LAZY)
+    private String description;
+
     private boolean recommend; //推荐
     private boolean shareStatement; //转载声明
     private boolean appreciation; //赞赏开启
     private boolean commentabled; //评论开启
+
+    private boolean published; //发布 or 保存
 
     @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss") //for date.format(time)
     private Date createTime; //创建时间
@@ -47,7 +50,6 @@ public class Blog {
 
     @Transient //不映射到数据表
     private String tagIds;
-
     public void tags_tagsIds() {
         this.tagIds = (tagsTotagsIds(this.tags));
     }
@@ -65,9 +67,54 @@ public class Blog {
         return builder.toString();
     }
 
+    @Transient //不映射到数据表
+    private String tagNames;
+    public void tags_tagsNames() {
+        this.tagNames = (tagsTotagsNames(this.tags));
+    }
+    public String tagsTotagsNames(List<Tag> tags) {
+        StringBuilder builder = new StringBuilder();
+        int sum = tags.size();
+        int cnt = 0;
+        for (Tag tag : tags) {
+            builder.append(tag.getName());
+            cnt++;
+            if (cnt != sum) {
+                builder.append(",");
+            }
+        }
+        return builder.toString();
+    }
+
     @ManyToOne
     private User user;
 
     @OneToMany(mappedBy = "blog")
     private List<Comment> comments = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return "Blog{" +
+                "id=" + id +
+                ", flag='" + flag + '\'' +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", firstPicture='" + firstPicture + '\'' +
+                ", views=" + views +
+                ", description='" + description + '\'' +
+                ", recommend=" + recommend +
+                ", shareStatement=" + shareStatement +
+                ", appreciation=" + appreciation +
+                ", commentabled=" + commentabled +
+                ", published=" + published +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", type=" + type +
+                ", tags=" + tags +
+                ", tagIds='" + tagIds + '\'' +
+                ", tagNames='" + tagNames + '\'' +
+                ", user=" + user +
+                ", comments=" + comments +
+                '}';
+    }
 }

@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -19,33 +20,41 @@ public class TagServiceImpl {
     @Resource
     TagRepository tagRepository;
 
-    public Tag saveTag(Tag Tag){
+    public Tag saveTag(Tag Tag) {
         return tagRepository.save(Tag);
     }
 
-    public List<Tag> getAllTags(){
+    public List<Tag> getAllTags() {
         return tagRepository.findAll();
     }
 
-    public List<Long> String_List(String ids){ // "1,2,3" to list[1,2,3]
-        List<Long> list=new ArrayList<>();
-        if (ids!=null&&!ids.equals("")){
-            String[] strings=ids.split(",");
-            for (String string : strings) {
-                list.add(Long.valueOf(string));
-            }
+    public List<String> String_List(String Names) { // "aa,bb,cc" to list[aa,bb,cc]
+        List<String> list = new ArrayList<>();
+        if (Names != null && !Names.equals("")) {
+            String[] strings = Names.split(",");
+            list.addAll(Arrays.asList(strings));
         }
         return list;
     }
-    public List<Tag> getTags(String ids){
-        return tagRepository.findAllById(String_List(ids));
+
+    public List<Tag> getTags(String Names) {
+        List<String> list = String_List(Names);
+        List<Tag> tags = new ArrayList<>();
+        for (String s : list) {
+            Tag tag = tagRepository.findByName(s);
+            if (tag == null) {
+                tag = tagRepository.save(Tag.builder().name(s).build());
+            }
+            tags.add(tag);
+        }
+        return tags;
     }
 
-    public Tag getTag(Long id){
+    public Tag getTag(Long id) {
         return tagRepository.findById(id).get();
     }
 
-    public Tag findByName(String name){
+    public Tag findByName(String name) {
         return tagRepository.findByName(name);
     }
 

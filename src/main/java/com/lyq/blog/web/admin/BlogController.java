@@ -2,10 +2,12 @@ package com.lyq.blog.web.admin;
 
 import com.lyq.blog.model.Blog;
 import com.lyq.blog.model.BlogSearch;
+import com.lyq.blog.model.Type;
 import com.lyq.blog.model.User;
 import com.lyq.blog.service.BlogServiceImpl;
 import com.lyq.blog.service.TagServiceImpl;
 import com.lyq.blog.service.TypeServiceImpl;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
@@ -20,6 +22,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
+@Slf4j
 @Controller
 @RequestMapping("/admin/blogs")
 public class BlogController {
@@ -60,19 +63,27 @@ public class BlogController {
         model.addAttribute("types", typeService.getAllTypes());
         model.addAttribute("edit","修改");
         Blog blog=blogService.getBlog(id);
-        blog.tags_tagsIds();
+        blog.tags_tagsNames();
         model.addAttribute("blog", blog);
         return "admin/blogs-input";
     }
 
     @PostMapping //add + update
     public String add(Blog blog, RedirectAttributes attributes, HttpSession session) {
-        if (blog.getId() == null) {
-            blog.setUser((User) session.getAttribute("user"));
+        blog.setUser((User) session.getAttribute("user"));
+        Type type = typeService.findByName(blog.getType().getName());
+        if (type == null) {
+            blog.setType(typeService.getType(typeService.saveType(blog.getType()).getId()));
+        } else {
+            blog.setType(type);
         }
-        blog.setType(typeService.getType(blog.getType().getId()));
-        blog.setTags(tagService.getTags(blog.getTagIds()));
-        Blog b = blogService.saveBlog(blog);
+        blog.setTags(tagService.getTags(blog.getTagNames()));
+        Blog b;
+        if (blog.getId() == null) {
+            b = blogService.saveBlog(blog);
+        }else{
+            b=blogService.updateBlog(blog.getId(),blog);
+        }
         if (b != null) {
             if (blog.isPublished()) {
                 attributes.addFlashAttribute("message", "发布成功");

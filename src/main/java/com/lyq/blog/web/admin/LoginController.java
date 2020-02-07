@@ -31,7 +31,7 @@ public class LoginController {
                         RedirectAttributes attributes) {
         User user = userService.checkUser(username, password);
         if (user != null) {
-//            user.setPassword(null);
+            user.setPassword(null);
             session.setAttribute("user", user);
         } else {
             attributes.addFlashAttribute("message","用户名或密码错误，请重新输入！");

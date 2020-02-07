@@ -4,6 +4,8 @@ import com.lyq.blog.NotFoundExcepiton;
 import com.lyq.blog.model.Blog;
 import com.lyq.blog.model.BlogSearch;
 import com.lyq.blog.repository.BlogRepository;
+import com.lyq.blog.util.MyBeanUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
@@ -24,17 +26,10 @@ public class BlogServiceImpl {
     BlogRepository blogRepository;
 
     public Blog saveBlog(Blog blog){
-        if (blog.getId() == null) {
-            Date date = new Date();
-            blog.setCreateTime(date);
-            blog.setUpdateTime(date);
-            blog.setViews(0);
-        } else {
-            if (!blogRepository.existsById(blog.getId())) {
-                throw new NotFoundExcepiton("不存在该博客");
-            }
-            blog.setUpdateTime(new Date());
-        }
+        Date date = new Date();
+        blog.setCreateTime(date);
+        blog.setUpdateTime(date);
+        blog.setViews(0);
         return blogRepository.save(blog);
     }
 
@@ -67,4 +62,13 @@ public class BlogServiceImpl {
         blogRepository.deleteById(id);
     }
 
+    public Blog updateBlog(Long id,Blog blog){
+        if (!blogRepository.existsById(id)) {
+            throw new NotFoundExcepiton("不存在该博客");
+        }
+        Blog b=blogRepository.getOne(id);
+        BeanUtils.copyProperties(blog,b, MyBeanUtils.getNullPropertyNames(blog));
+        b.setUpdateTime(new Date());
+        return blogRepository.save(b);
+    }
 }
