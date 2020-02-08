@@ -53,24 +53,28 @@ public class BlogServiceImpl {
                 predicates.add(cb.equal(root.<String>get("type").get("id"),blog.getTypeId()));
             }
             if (blog.isRecommend()){
-                predicates.add(cb.equal(root.<Boolean>get("recommend"),blog.isRecommend()));
+                predicates.add(cb.equal(root.<Boolean>get("recommend"), blog.isRecommend()));
             }
             query.where(predicates.toArray(new Predicate[0]));
             return null;
-        },pageable);
+        }, pageable);
     }
 
-    public Page<Blog> listBlog(Pageable pageable){
+    public Page<Blog> listBlog(Pageable pageable) {
         return blogRepository.findAll(pageable);
     }
 
-    public List<Blog> listRecommendBlogTop(Integer size){
-        Sort sort=Sort.by(Sort.Direction.DESC,"updateTime");
-        Pageable pageable= PageRequest.of(0,size,sort);
+    public Page<Blog> listBlog(String query, Pageable pageable) {
+        return blogRepository.findByQuery(query, pageable);
+    }
+
+    public List<Blog> listRecommendBlogTop(Integer size) {
+        Sort sort = Sort.by(Sort.Direction.DESC, "updateTime");
+        Pageable pageable = PageRequest.of(0, size, sort);
         return blogRepository.findTop(pageable);
     }
 
-    public void deleteBlog(Long id){
+    public void deleteBlog(Long id) {
         blogRepository.deleteById(id);
     }
 

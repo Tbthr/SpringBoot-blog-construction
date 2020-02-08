@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <!-----------------content------------------------>
-                <div class="ui attached horizontal segment">
+                <div class="ui top teal attached horizontal segment">
                     <div class="ui padded vertical segment m-padded-tb-large" th:each="blog : ${page.content}">
                         <div class="ui middle aligned mobile reversed stackable grid">
                             <div class="ui eleven wide column">
@@ -191,19 +191,18 @@
                     </div>
                     <!--*/-->
                 </div>
-                <!-------------------footer--------------------->
+
+                <!-------------------上一页、下一页--------------------->
                 <div th:if="${page.totalPages}>1" class="ui bottom attached segment">
                     <div class="ui middle aligned two column grid">
                         <div class="column">
-                            <button th:href="@{/(page=${page.number}-1)}" th:if="!${page.isFirst()}" class="ui mini teal basic button">上一页</button>
+                            <a th:href="@{/(page=${page.number}-1)}" th:if="!${page.isFirst()}" class="ui mini teal basic button">上一页</a>
                         </div>
                         <div class="right aligned column">
-                            <button th:href="@{/(page=${page.number}+1)}" th:if="!${page.isLast()}" class="ui mini teal basic button">下一页</button>
+                            <a th:href="@{/(page=${page.number}+1)}" th:if="!${page.isLast()}" class="ui mini teal basic button">下一页</a>
                         </div>
                     </div>
-<!--                    <div  class="ui small pagination menu">-->
                 </div>
-
             </div>
 
             <!--右边top-->
