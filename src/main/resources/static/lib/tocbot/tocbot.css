@@ -28,7 +28,7 @@
 
 a.toc-link {
     color: currentColor;
-    height: 100%
+    height: 100%;
 }
 
 .is-collapsible {
@@ -49,18 +49,13 @@ a.toc-link {
 .is-active-link {
     font-weight: 700
 }
-
-.toc-link::before {
-    background-color: #EEE;
-    content: ' ';
+.is-active-link::before {
+    background-color: #54BC4B;
+    content: '';
     display: inline-block;
-    height: inherit;
+    height: 2em; /*default---inherit*/
     left: 0;
-    margin-top: -1px;
+    margin-top: -0.5px;
     position: absolute;
     width: 2px
-}
-
-.is-active-link::before {
-    background-color: #54BC4B
 }

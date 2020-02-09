@@ -2,7 +2,6 @@ package com.lyq.blog.service;
 
 import com.lyq.blog.NotFoundExcepiton;
 import com.lyq.blog.model.Tag;
-import com.lyq.blog.model.Type;
 import com.lyq.blog.repository.TagRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
