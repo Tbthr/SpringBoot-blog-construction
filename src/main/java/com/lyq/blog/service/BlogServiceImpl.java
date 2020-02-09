@@ -4,6 +4,7 @@ import com.lyq.blog.NotFoundExcepiton;
 import com.lyq.blog.model.Blog;
 import com.lyq.blog.model.BlogSearch;
 import com.lyq.blog.repository.BlogRepository;
+import com.lyq.blog.util.MarkdownUtils;
 import com.lyq.blog.util.MyBeanUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.data.domain.Page;
@@ -35,19 +36,31 @@ public class BlogServiceImpl {
         return blogRepository.save(blog);
     }
 
-    public Blog getBlog(Long id){
+    public Blog getBlog(Long id) {
         return blogRepository.findById(id).get();
     }
 
-    public Blog findByName(String title){
+    public Blog getAndConvert(Long id) {
+        if (!blogRepository.existsById(id)) {
+            throw new NotFoundExcepiton("该博客不存在");
+        }
+        Blog blog = blogRepository.getOne(id);
+        Blog b = new Blog();
+        BeanUtils.copyProperties(blog, b);
+        String content = b.getContent();
+        b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
+        return b;
+    }
+
+    public Blog findByName(String title) {
         return blogRepository.findByTitle(title);
     }
 
-    public Page<Blog> listBlog(Pageable pageable, BlogSearch blog){
+    public Page<Blog> listBlog(Pageable pageable, BlogSearch blog) {
         return blogRepository.findAll((Specification<Blog>) (root, query, cb) -> {
-            List<Predicate> predicates=new ArrayList<>();
-            if (blog.getTitle() != null && !("".equals(blog.getTitle())) ){
-                predicates.add(cb.like(root.get("title"),"%"+blog.getTitle()+"%"));
+            List<Predicate> predicates = new ArrayList<>();
+            if (blog.getTitle() != null && !("".equals(blog.getTitle()))) {
+                predicates.add(cb.like(root.get("title"), "%" + blog.getTitle() + "%"));
             }
             if (blog.getTypeId() != null){
                 predicates.add(cb.equal(root.<String>get("type").get("id"),blog.getTypeId()));
