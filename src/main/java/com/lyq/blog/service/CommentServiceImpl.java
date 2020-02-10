@@ -17,7 +17,7 @@ public class CommentServiceImpl {
     private CommentRepository commentRepository;
 
     public List<Comment> listCommentByBlogId(Long blogId) {
-        Sort sort = Sort.by(Sort.Direction.DESC, "createTime");
+        Sort sort = Sort.by(Sort.Direction.ASC, "createTime");
         return eachComment(commentRepository.findByBlogIdAndParentCommentNull(blogId, sort));
     }
 

@@ -928,3 +928,1055 @@ org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as express
 2020-02-10 13:50:14.149  INFO 936 --- [http-nio-8080-exec-2] com.lyq.blog.aspect.LogAspect            : Return ------ blog
 2020-02-10 13:51:14.811  INFO 936 --- [http-nio-8080-exec-2] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[116, {}])
 2020-02-10 13:51:14.839  INFO 936 --- [http-nio-8080-exec-2] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 14:22:21.955  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 6552 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-10 14:22:21.960 DEBUG 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-10 14:22:21.961  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-10 14:22:22.011  INFO 6552 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-10 14:22:22.011  INFO 6552 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-10 14:22:23.051  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-10 14:22:23.177  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115ms. Found 5 repository interfaces.
+2020-02-10 14:22:23.684  INFO 6552 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ddb4a43c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-10 14:22:24.357  INFO 6552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-10 14:22:24.403  INFO 6552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-10 14:22:24.403  INFO 6552 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-10 14:22:24.695  INFO 6552 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-10 14:22:24.706  INFO 6552 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-10 14:22:24.706  INFO 6552 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2694 ms
+2020-02-10 14:22:24.952  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-10 14:22:25.453  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-10 14:22:25.546  INFO 6552 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-10 14:22:25.693  INFO 6552 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2020-02-10 14:22:25.695  INFO 6552 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-02-10 14:22:25.943  INFO 6552 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-10 14:22:26.225  INFO 6552 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-10 14:22:28.545  INFO 6552 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:22:28.662  INFO 6552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-10 14:22:29.337  INFO 6552 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-02-10 14:22:30.418  INFO 6552 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-10 14:22:30.557  INFO 6552 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-10 14:22:31.128  INFO 6552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-10 14:22:31.131  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Started BlogApplication in 9.918 seconds (JVM running for 13.004)
+2020-02-10 14:23:10.169  INFO 6552 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-10 14:23:10.170  INFO 6552 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-10 14:23:10.194  INFO 6552 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
+2020-02-10 14:24:41.887  WARN 6552 --- [http-nio-8080-exec-6] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [184] milliseconds.
+2020-02-10 14:25:09.991  INFO 6552 --- [http-nio-8080-exec-7] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[116, {}])
+2020-02-10 14:25:10.123  INFO 6552 --- [http-nio-8080-exec-7] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 14:25:28.452  INFO 6552 --- [http-nio-8080-exec-10] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/comments, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.CommentController.post, args=[Comment(id=null, nickname=刘以强, email=1598622578@qq.com, avatar=null, content=管理员的评论, createTime=null, adminComment=false, blog=Blog{id=116, flag='null', title='null', content='null', firstPicture='null', views=null, description='null', recommend=false, shareStatement=false, appreciation=false, commentabled=false, published=false, createTime=null, updateTime=null, type=null, tags=[], tagIds='null', tagNames='null', user=null, comments=[]}, replayComments=[], parentComment=Comment(id=-1, nickname=null, email=null, avatar=null, content=null, createTime=null, adminComment=false, blog=null, replayComments=[], parentComment=null)), org.apache.catalina.session.StandardSessionFacade@36f0907b])
+2020-02-10 14:25:28.530  INFO 6552 --- [http-nio-8080-exec-10] com.lyq.blog.aspect.LogAspect            : Return ------ redirect:/comments/116
+2020-02-10 14:25:28.557  INFO 6552 --- [http-nio-8080-exec-7] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/comments/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.CommentController.comments, args=[116, {}])
+2020-02-10 14:25:28.584  INFO 6552 --- [http-nio-8080-exec-7] com.lyq.blog.aspect.LogAspect            : Return ------ blog :: commentList
+2020-02-10 14:26:19.213  INFO 6552 --- [http-nio-8080-exec-2] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[116, {}])
+2020-02-10 14:26:19.244  INFO 6552 --- [http-nio-8080-exec-2] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 14:28:20.641  INFO 6552 --- [Thread-4] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-10 14:28:20.641  INFO 6552 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:28:20.641  INFO 6552 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-10 14:28:20.657  INFO 6552 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-02-10 14:28:21.028  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 6552 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-10 14:28:21.028 DEBUG 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-10 14:28:21.028  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-10 14:28:21.357  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-10 14:28:21.388  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31ms. Found 5 repository interfaces.
+2020-02-10 14:28:21.450  INFO 6552 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ddb4a43c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-10 14:28:21.654  INFO 6552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-10 14:28:21.654  INFO 6552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-10 14:28:21.654  INFO 6552 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-10 14:28:21.747  INFO 6552 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-10 14:28:21.747  INFO 6552 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-10 14:28:21.747  INFO 6552 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 719 ms
+2020-02-10 14:28:21.952  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-02-10 14:28:21.974  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-02-10 14:28:21.998  INFO 6552 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-10 14:28:22.111  INFO 6552 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-10 14:28:23.120  INFO 6552 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:28:23.167  INFO 6552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-10 14:28:23.323  INFO 6552 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-02-10 14:28:23.852  INFO 6552 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-10 14:28:23.924  INFO 6552 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-10 14:28:24.272  INFO 6552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-10 14:28:24.274  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Started BlogApplication in 3.291 seconds (JVM running for 366.147)
+2020-02-10 14:28:24.278  INFO 6552 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-02-10 14:28:24.313  INFO 6552 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-10 14:28:24.313  INFO 6552 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-10 14:28:24.324  INFO 6552 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-02-10 14:28:24.328  INFO 6552 --- [http-nio-8080-exec-1] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[116, {}])
+2020-02-10 14:28:24.401  INFO 6552 --- [http-nio-8080-exec-1] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 14:28:28.008  INFO 6552 --- [http-nio-8080-exec-10] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[116, {}])
+2020-02-10 14:28:28.038  INFO 6552 --- [http-nio-8080-exec-10] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 14:30:18.753  INFO 6552 --- [http-nio-8080-exec-4] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[116, {}])
+2020-02-10 14:30:18.782  INFO 6552 --- [http-nio-8080-exec-4] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 14:30:53.268  INFO 6552 --- [http-nio-8080-exec-10] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/comments, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.CommentController.post, args=[Comment(id=null, nickname=1, email=1@1.com, avatar=null, content=111111111111, createTime=null, adminComment=false, blog=Blog{id=116, flag='null', title='null', content='null', firstPicture='null', views=null, description='null', recommend=false, shareStatement=false, appreciation=false, commentabled=false, published=false, createTime=null, updateTime=null, type=null, tags=[], tagIds='null', tagNames='null', user=null, comments=[]}, replayComments=[], parentComment=Comment(id=136, nickname=null, email=null, avatar=null, content=null, createTime=null, adminComment=false, blog=null, replayComments=[], parentComment=null)), org.apache.catalina.session.StandardSessionFacade@1d77143a])
+2020-02-10 14:30:53.303  INFO 6552 --- [http-nio-8080-exec-10] com.lyq.blog.aspect.LogAspect            : Return ------ redirect:/comments/116
+2020-02-10 14:30:53.325  INFO 6552 --- [http-nio-8080-exec-7] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/comments/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.CommentController.comments, args=[116, {}])
+2020-02-10 14:30:53.347  INFO 6552 --- [http-nio-8080-exec-7] com.lyq.blog.aspect.LogAspect            : Return ------ blog :: commentList
+2020-02-10 14:31:42.335  INFO 6552 --- [http-nio-8080-exec-2] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[116, {}])
+2020-02-10 14:31:42.361  INFO 6552 --- [http-nio-8080-exec-2] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 14:32:06.659  INFO 6552 --- [http-nio-8080-exec-2] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/comments, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.CommentController.post, args=[Comment(id=null, nickname=刘以强, email=1598622578@qq.com, avatar=null, content=我是管理员，哈哈哈哈哈哈哈哈哈哈, createTime=null, adminComment=false, blog=Blog{id=116, flag='null', title='null', content='null', firstPicture='null', views=null, description='null', recommend=false, shareStatement=false, appreciation=false, commentabled=false, published=false, createTime=null, updateTime=null, type=null, tags=[], tagIds='null', tagNames='null', user=null, comments=[]}, replayComments=[], parentComment=Comment(id=130, nickname=null, email=null, avatar=null, content=null, createTime=null, adminComment=false, blog=null, replayComments=[], parentComment=null)), org.apache.catalina.session.StandardSessionFacade@1d77143a])
+2020-02-10 14:32:06.688  INFO 6552 --- [http-nio-8080-exec-2] com.lyq.blog.aspect.LogAspect            : Return ------ redirect:/comments/116
+2020-02-10 14:32:06.698  INFO 6552 --- [http-nio-8080-exec-8] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/comments/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.CommentController.comments, args=[116, {}])
+2020-02-10 14:32:06.721  INFO 6552 --- [http-nio-8080-exec-8] com.lyq.blog.aspect.LogAspect            : Return ------ blog :: commentList
+2020-02-10 14:35:22.496  INFO 6552 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-10 14:35:22.498  INFO 6552 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:35:22.499  INFO 6552 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-02-10 14:35:22.511  INFO 6552 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-02-10 14:35:22.846  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 6552 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-10 14:35:22.846 DEBUG 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-10 14:35:22.846  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-10 14:35:23.185  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-10 14:35:23.303  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117ms. Found 4 repository interfaces.
+2020-02-10 14:35:23.385  INFO 6552 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ddb4a43c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-10 14:35:23.568  INFO 6552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-10 14:35:23.569  INFO 6552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-10 14:35:23.570  INFO 6552 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-10 14:35:23.650  INFO 6552 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-10 14:35:23.651  INFO 6552 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-10 14:35:23.651  INFO 6552 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 803 ms
+2020-02-10 14:35:23.797  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2020-02-10 14:35:23.820  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2020-02-10 14:35:23.837  INFO 6552 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-10 14:35:23.889  INFO 6552 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-10 14:35:24.661  INFO 6552 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:35:24.716  INFO 6552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-10 14:35:24.731  WARN 6552 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogServiceImpl' defined in file [D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes\com\lyq\blog\service\BlogServiceImpl.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.lyq.blog.service.BlogServiceImpl] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4048f773]
+2020-02-10 14:35:24.731  INFO 6552 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:35:24.731  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2020-02-10 14:35:24.741  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2020-02-10 14:35:24.742  INFO 6552 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-02-10 14:35:24.750  INFO 6552 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-10 14:35:24.763 ERROR 6552 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogServiceImpl' defined in file [D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes\com\lyq\blog\service\BlogServiceImpl.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.lyq.blog.service.BlogServiceImpl] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4048f773]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:570) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at com.lyq.blog.BlogApplication.main(BlogApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.lyq.blog.service.BlogServiceImpl] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4048f773]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:760) ~[spring-core-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:692) ~[spring-core-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.buildPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:422) ~[spring-orm-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:406) ~[spring-orm-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(PersistenceAnnotationBeanPostProcessor.java:333) ~[spring-orm-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1077) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:567) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	... 20 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Lcom/lyq/blog/repository/BlogRepository;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3061) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2248) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:755) ~[spring-core-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.lyq.blog.repository.BlogRepository
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144) ~[spring-boot-devtools-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	... 30 common frames omitted
+
+2020-02-10 14:35:43.483  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 6552 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-10 14:35:43.483 DEBUG 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-10 14:35:43.483  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-10 14:35:43.917  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-10 14:35:43.957  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40ms. Found 5 repository interfaces.
+2020-02-10 14:35:44.051  INFO 6552 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ddb4a43c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-10 14:35:44.259  INFO 6552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-10 14:35:44.261  INFO 6552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-10 14:35:44.262  INFO 6552 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-10 14:35:44.336  INFO 6552 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-10 14:35:44.337  INFO 6552 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-02-10 14:35:44.337  INFO 6552 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 851 ms
+2020-02-10 14:35:44.465  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2020-02-10 14:35:44.487  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2020-02-10 14:35:44.506  INFO 6552 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-10 14:35:44.584  INFO 6552 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-10 14:35:45.380  INFO 6552 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:35:45.438  INFO 6552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-10 14:35:45.566  WARN 6552 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract int com.lyq.blog.repository.BlogRepository.updateViews(java.lang.Long)! No property updateViews found for type Blog!
+2020-02-10 14:35:45.566  INFO 6552 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:35:45.567  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2020-02-10 14:35:45.575  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2020-02-10 14:35:45.576  INFO 6552 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-02-10 14:35:45.583  INFO 6552 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-10 14:35:45.586 ERROR 6552 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract int com.lyq.blog.repository.BlogRepository.updateViews(java.lang.Long)! No property updateViews found for type Blog!
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:324) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at com.lyq.blog.BlogApplication.main(BlogApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract int com.lyq.blog.repository.BlogRepository.updateViews(java.lang.Long)! No property updateViews found for type Blog!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:452) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:526) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:496) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:636) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:180) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	... 22 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract int com.lyq.blog.repository.BlogRepository.updateViews(java.lang.Long)! No property updateViews found for type Blog!
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:84) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:106) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:211) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:79) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lookupQuery(RepositoryFactorySupport.java:566) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(RepositoryFactorySupport.java:559) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[na:na]
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1054) ~[na:na]
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) ~[na:na]
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.mapMethodsToQuery(RepositoryFactorySupport.java:561) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$new$0(RepositoryFactorySupport.java:551) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at java.base/java.util.Optional.map(Optional.java:265) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:551) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:324) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:297) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:211) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.util.Lazy.get(Lazy.java:94) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:300) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:121) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	... 35 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property updateViews found for type Blog!
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:382) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:358) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:311) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330) ~[na:na]
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:293) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:276) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:250) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177) ~[na:na]
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) ~[na:na]
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578) ~[na:na]
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:251) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:380) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177) ~[na:na]
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) ~[na:na]
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578) ~[na:na]
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:381) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:93) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:78) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	... 61 common frames omitted
+
+2020-02-10 14:35:51.877  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 6552 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-10 14:35:51.877 DEBUG 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-10 14:35:51.878  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-10 14:35:52.266  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-10 14:35:52.314  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 5 repository interfaces.
+2020-02-10 14:35:52.404  INFO 6552 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ddb4a43c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-10 14:35:52.606  INFO 6552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-10 14:35:52.607  INFO 6552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-10 14:35:52.607  INFO 6552 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-10 14:35:52.663  INFO 6552 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-10 14:35:52.664  INFO 6552 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-02-10 14:35:52.664  INFO 6552 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 784 ms
+2020-02-10 14:35:52.768  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2020-02-10 14:35:52.783  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2020-02-10 14:35:52.794  INFO 6552 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-10 14:35:52.843  INFO 6552 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-10 14:35:53.552  INFO 6552 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:35:53.602  INFO 6552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-10 14:35:53.760  INFO 6552 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-02-10 14:35:53.766 ERROR 6552 --- [restartedMain] o.h.hql.internal.ast.ErrorTracker        : line 1:38: expecting IDENT, found 'null'
+2020-02-10 14:35:53.768 ERROR 6552 --- [restartedMain] o.h.hql.internal.ast.ErrorTracker        : line 1:38: expecting IDENT, found 'null'
+
+antlr.MismatchedTokenException: expecting IDENT, found 'null'
+	at antlr.Parser.match(Parser.java:211) ~[antlr-2.7.7.jar:na]
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.identifier(HqlBaseParser.java:1480) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.path(HqlBaseParser.java:577) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.stateField(HqlBaseParser.java:540) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.assignment(HqlBaseParser.java:516) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.setClause(HqlBaseParser.java:461) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.updateStatement(HqlBaseParser.java:241) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:181) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:289) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:188) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:143) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:119) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:80) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:153) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:611) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:720) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:104) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:350) ~[spring-orm-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at com.sun.proxy.$Proxy155.createQuery(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:87) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:63) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:76) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromQueryAnnotation(JpaQueryFactory.java:56) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:142) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:209) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:79) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lookupQuery(RepositoryFactorySupport.java:566) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(RepositoryFactorySupport.java:559) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[na:na]
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1054) ~[na:na]
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) ~[na:na]
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.mapMethodsToQuery(RepositoryFactorySupport.java:561) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$new$0(RepositoryFactorySupport.java:551) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at java.base/java.util.Optional.map(Optional.java:265) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:551) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:324) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:297) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:211) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.util.Lazy.get(Lazy.java:94) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:300) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:121) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:452) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:526) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:496) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:636) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:180) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at com.lyq.blog.BlogApplication.main(BlogApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+
+2020-02-10 14:35:53.770 ERROR 6552 --- [restartedMain] o.h.hql.internal.ast.ErrorTracker        : line 1:38: expecting EQ, found 'null'
+2020-02-10 14:35:53.772 ERROR 6552 --- [restartedMain] o.h.hql.internal.ast.ErrorTracker        : line 1:38: expecting EQ, found 'null'
+
+antlr.MismatchedTokenException: expecting EQ, found 'null'
+	at antlr.Parser.match(Parser.java:211) ~[antlr-2.7.7.jar:na]
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.assignment(HqlBaseParser.java:521) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.setClause(HqlBaseParser.java:461) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.updateStatement(HqlBaseParser.java:241) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:181) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:289) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:188) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:143) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:119) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:80) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:153) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:611) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:720) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:104) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:350) ~[spring-orm-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at com.sun.proxy.$Proxy155.createQuery(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:87) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:63) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:76) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromQueryAnnotation(JpaQueryFactory.java:56) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:142) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:209) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:79) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lookupQuery(RepositoryFactorySupport.java:566) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(RepositoryFactorySupport.java:559) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[na:na]
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1054) ~[na:na]
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) ~[na:na]
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.mapMethodsToQuery(RepositoryFactorySupport.java:561) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$new$0(RepositoryFactorySupport.java:551) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at java.base/java.util.Optional.map(Optional.java:265) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:551) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:324) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:297) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:211) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.util.Lazy.get(Lazy.java:94) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:300) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:121) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:452) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:526) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:496) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:636) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:180) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at com.lyq.blog.BlogApplication.main(BlogApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+
+2020-02-10 14:35:53.782  WARN 6552 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract int com.lyq.blog.repository.BlogRepository.updateViews(java.lang.Long)!
+2020-02-10 14:35:53.782  INFO 6552 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:35:53.783  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2020-02-10 14:35:53.787  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2020-02-10 14:35:53.788  INFO 6552 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-02-10 14:35:53.797  INFO 6552 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-10 14:35:53.800 ERROR 6552 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract int com.lyq.blog.repository.BlogRepository.updateViews(java.lang.Long)!
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:324) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at com.lyq.blog.BlogApplication.main(BlogApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract int com.lyq.blog.repository.BlogRepository.updateViews(java.lang.Long)!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:452) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:526) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:496) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:636) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:180) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	... 22 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract int com.lyq.blog.repository.BlogRepository.updateViews(java.lang.Long)!
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:93) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:63) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:76) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromQueryAnnotation(JpaQueryFactory.java:56) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:142) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:209) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:79) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lookupQuery(RepositoryFactorySupport.java:566) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(RepositoryFactorySupport.java:559) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[na:na]
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1054) ~[na:na]
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) ~[na:na]
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.mapMethodsToQuery(RepositoryFactorySupport.java:561) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$new$0(RepositoryFactorySupport.java:551) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at java.base/java.util.Optional.map(Optional.java:265) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:551) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:324) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:297) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:211) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.util.Lazy.get(Lazy.java:94) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:300) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:121) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	... 35 common frames omitted
+Caused by: java.lang.IllegalArgumentException: org.hibernate.hql.internal.ast.QuerySyntaxException: expecting IDENT, found 'null' near line 1, column 38 [update com.lyq.blog.model.Blog b set ]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:138) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:181) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:188) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:729) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:104) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:350) ~[spring-orm-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at com.sun.proxy.$Proxy155.createQuery(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:87) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	... 64 common frames omitted
+Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: expecting IDENT, found 'null' near line 1, column 38 [update com.lyq.blog.model.Blog b set ]
+	at org.hibernate.hql.internal.ast.QuerySyntaxException.convert(QuerySyntaxException.java:74) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.ast.ErrorTracker.throwQueryException(ErrorTracker.java:93) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:296) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:188) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:143) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:119) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:80) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:153) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:611) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:720) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	... 72 common frames omitted
+
+2020-02-10 14:35:59.155  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 6552 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-10 14:35:59.156 DEBUG 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-10 14:35:59.156  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-10 14:35:59.575  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-10 14:35:59.619  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44ms. Found 5 repository interfaces.
+2020-02-10 14:35:59.706  INFO 6552 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ddb4a43c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-10 14:35:59.911  INFO 6552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-10 14:35:59.912  INFO 6552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-10 14:35:59.912  INFO 6552 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-10 14:35:59.985  INFO 6552 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-10 14:35:59.985  INFO 6552 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-02-10 14:35:59.985  INFO 6552 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 825 ms
+2020-02-10 14:36:00.107  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2020-02-10 14:36:00.120  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2020-02-10 14:36:00.135  INFO 6552 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-10 14:36:00.201  INFO 6552 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-10 14:36:01.019  INFO 6552 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:36:01.083  INFO 6552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-10 14:36:01.301  INFO 6552 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-02-10 14:36:01.302 ERROR 6552 --- [restartedMain] o.h.hql.internal.ast.ErrorTracker        : line 1:45: expecting EQ, found 'null'
+2020-02-10 14:36:01.306 ERROR 6552 --- [restartedMain] o.h.hql.internal.ast.ErrorTracker        : line 1:45: expecting EQ, found 'null'
+
+antlr.MismatchedTokenException: expecting EQ, found 'null'
+	at antlr.Parser.match(Parser.java:211) ~[antlr-2.7.7.jar:na]
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.assignment(HqlBaseParser.java:521) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.setClause(HqlBaseParser.java:461) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.updateStatement(HqlBaseParser.java:241) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:181) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:289) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:188) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:143) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:119) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:80) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:153) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:611) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:720) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:104) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:350) ~[spring-orm-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at com.sun.proxy.$Proxy160.createQuery(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:87) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:63) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:76) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromQueryAnnotation(JpaQueryFactory.java:56) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:142) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:209) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:79) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lookupQuery(RepositoryFactorySupport.java:566) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(RepositoryFactorySupport.java:559) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[na:na]
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1054) ~[na:na]
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) ~[na:na]
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.mapMethodsToQuery(RepositoryFactorySupport.java:561) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$new$0(RepositoryFactorySupport.java:551) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at java.base/java.util.Optional.map(Optional.java:265) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:551) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:324) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:297) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:211) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.util.Lazy.get(Lazy.java:94) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:300) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:121) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:452) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:526) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:496) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:636) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:180) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at com.lyq.blog.BlogApplication.main(BlogApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+
+2020-02-10 14:36:01.308  WARN 6552 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract int com.lyq.blog.repository.BlogRepository.updateViews(java.lang.Long)!
+2020-02-10 14:36:01.308  INFO 6552 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:36:01.308  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2020-02-10 14:36:01.314  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2020-02-10 14:36:01.315  INFO 6552 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-02-10 14:36:01.323  INFO 6552 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-10 14:36:01.327 ERROR 6552 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract int com.lyq.blog.repository.BlogRepository.updateViews(java.lang.Long)!
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:324) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204) ~[spring-boot-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at com.lyq.blog.BlogApplication.main(BlogApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract int com.lyq.blog.repository.BlogRepository.updateViews(java.lang.Long)!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:452) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:526) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:496) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:636) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:180) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	... 22 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract int com.lyq.blog.repository.BlogRepository.updateViews(java.lang.Long)!
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:93) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:63) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:76) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromQueryAnnotation(JpaQueryFactory.java:56) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:142) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:209) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:79) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lookupQuery(RepositoryFactorySupport.java:566) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(RepositoryFactorySupport.java:559) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[na:na]
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1054) ~[na:na]
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) ~[na:na]
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.mapMethodsToQuery(RepositoryFactorySupport.java:561) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$new$0(RepositoryFactorySupport.java:551) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at java.base/java.util.Optional.map(Optional.java:265) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:551) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:324) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:297) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:211) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.util.Lazy.get(Lazy.java:94) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:300) ~[spring-data-commons-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:121) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	... 35 common frames omitted
+Caused by: java.lang.IllegalArgumentException: org.hibernate.hql.internal.ast.QuerySyntaxException: expecting EQ, found 'null' near line 1, column 45 [update com.lyq.blog.model.Blog b set b.views]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:138) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:181) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:188) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:729) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:104) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:350) ~[spring-orm-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at com.sun.proxy.$Proxy160.createQuery(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:87) ~[spring-data-jpa-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	... 64 common frames omitted
+Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: expecting EQ, found 'null' near line 1, column 45 [update com.lyq.blog.model.Blog b set b.views]
+	at org.hibernate.hql.internal.ast.QuerySyntaxException.convert(QuerySyntaxException.java:74) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.ast.ErrorTracker.throwQueryException(ErrorTracker.java:93) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:296) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:188) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:143) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:119) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:80) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:153) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:611) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:720) ~[hibernate-core-5.3.11.Final.jar:5.3.11.Final]
+	... 72 common frames omitted
+
+2020-02-10 14:36:15.667  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 6552 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-10 14:36:15.667 DEBUG 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-10 14:36:15.667  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-10 14:36:16.124  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-10 14:36:16.210  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85ms. Found 5 repository interfaces.
+2020-02-10 14:36:16.325  INFO 6552 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ddb4a43c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-10 14:36:16.511  INFO 6552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-10 14:36:16.512  INFO 6552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-10 14:36:16.512  INFO 6552 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-10 14:36:16.583  INFO 6552 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-10 14:36:16.584  INFO 6552 --- [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-02-10 14:36:16.584  INFO 6552 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 914 ms
+2020-02-10 14:36:16.701  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2020-02-10 14:36:16.715  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2020-02-10 14:36:16.745  INFO 6552 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-10 14:36:16.820  INFO 6552 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-10 14:36:17.581  INFO 6552 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:36:17.647  INFO 6552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-10 14:36:17.910  INFO 6552 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-02-10 14:36:18.539  INFO 6552 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-10 14:36:18.607  INFO 6552 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-10 14:36:19.089  INFO 6552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-10 14:36:19.090  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Started BlogApplication in 3.482 seconds (JVM running for 840.964)
+2020-02-10 14:36:19.096  INFO 6552 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-02-10 14:36:35.816  INFO 6552 --- [Thread-15] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-10 14:36:35.817  INFO 6552 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:36:35.818  INFO 6552 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2020-02-10 14:36:35.822  INFO 6552 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2020-02-10 14:36:36.200  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 6552 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-10 14:36:36.200 DEBUG 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-10 14:36:36.201  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-10 14:36:36.538  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-10 14:36:36.577  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39ms. Found 5 repository interfaces.
+2020-02-10 14:36:36.660  INFO 6552 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ddb4a43c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-10 14:36:36.832  INFO 6552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-10 14:36:36.833  INFO 6552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-10 14:36:36.834  INFO 6552 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-10 14:36:36.900  INFO 6552 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-10 14:36:36.901  INFO 6552 --- [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-02-10 14:36:36.901  INFO 6552 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 698 ms
+2020-02-10 14:36:37.047  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2020-02-10 14:36:37.068  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2020-02-10 14:36:37.084  INFO 6552 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-10 14:36:37.148  INFO 6552 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-10 14:36:37.985  INFO 6552 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:36:38.046  INFO 6552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-10 14:36:38.307  INFO 6552 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-02-10 14:36:39.138  INFO 6552 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-10 14:36:39.335  INFO 6552 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-10 14:36:39.748  INFO 6552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-10 14:36:39.750  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Started BlogApplication in 3.586 seconds (JVM running for 861.623)
+2020-02-10 14:36:39.753  INFO 6552 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-02-10 14:36:52.809  INFO 6552 --- [Thread-33] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-10 14:36:52.809  INFO 6552 --- [Thread-33] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:36:52.814  INFO 6552 --- [Thread-33] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2020-02-10 14:36:52.814  INFO 6552 --- [Thread-33] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2020-02-10 14:36:53.240  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 6552 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-10 14:36:53.241 DEBUG 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-10 14:36:53.241  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-10 14:36:53.569  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-10 14:36:53.611  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42ms. Found 5 repository interfaces.
+2020-02-10 14:36:53.696  INFO 6552 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ddb4a43c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-10 14:36:53.859  INFO 6552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-10 14:36:53.860  INFO 6552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-10 14:36:53.860  INFO 6552 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-10 14:36:53.921  INFO 6552 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-10 14:36:53.921  INFO 6552 --- [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-02-10 14:36:53.922  INFO 6552 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 679 ms
+2020-02-10 14:36:54.014  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2020-02-10 14:36:54.032  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2020-02-10 14:36:54.047  INFO 6552 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-10 14:36:54.112  INFO 6552 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-10 14:36:54.926  INFO 6552 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:36:54.985  INFO 6552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-10 14:36:55.161  INFO 6552 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-02-10 14:36:55.748  INFO 6552 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-10 14:36:55.817  INFO 6552 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-10 14:36:56.231  INFO 6552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-10 14:36:56.231  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Started BlogApplication in 3.024 seconds (JVM running for 878.105)
+2020-02-10 14:36:56.233  INFO 6552 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-02-10 14:37:22.980  INFO 6552 --- [Thread-39] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-10 14:37:22.986  INFO 6552 --- [Thread-39] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:37:22.987  INFO 6552 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2020-02-10 14:37:22.992  INFO 6552 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2020-02-10 14:37:23.366  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 6552 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-10 14:37:23.366 DEBUG 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-10 14:37:23.366  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-10 14:37:23.758  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-10 14:37:23.808  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50ms. Found 5 repository interfaces.
+2020-02-10 14:37:23.897  INFO 6552 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ddb4a43c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-10 14:37:24.086  INFO 6552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-10 14:37:24.087  INFO 6552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-10 14:37:24.087  INFO 6552 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-10 14:37:24.159  INFO 6552 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-10 14:37:24.160  INFO 6552 --- [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-02-10 14:37:24.160  INFO 6552 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 791 ms
+2020-02-10 14:37:24.258  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2020-02-10 14:37:24.272  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2020-02-10 14:37:24.285  INFO 6552 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-10 14:37:24.341  INFO 6552 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-10 14:37:25.073  INFO 6552 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:37:25.137  INFO 6552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-10 14:37:25.358  INFO 6552 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-02-10 14:37:25.989  INFO 6552 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-10 14:37:26.065  INFO 6552 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-10 14:37:26.468  INFO 6552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-10 14:37:26.469  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Started BlogApplication in 3.154 seconds (JVM running for 908.343)
+2020-02-10 14:37:26.472  INFO 6552 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-02-10 14:38:41.766  INFO 6552 --- [Thread-45] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-10 14:38:41.768  INFO 6552 --- [Thread-45] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:38:41.770  INFO 6552 --- [Thread-45] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2020-02-10 14:38:41.775  INFO 6552 --- [Thread-45] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2020-02-10 14:38:42.163  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 6552 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-10 14:38:42.164 DEBUG 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-10 14:38:42.164  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-10 14:38:42.529  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-10 14:38:42.565  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36ms. Found 5 repository interfaces.
+2020-02-10 14:38:42.639  INFO 6552 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ddb4a43c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-10 14:38:42.828  INFO 6552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-10 14:38:42.829  INFO 6552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-10 14:38:42.829  INFO 6552 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-10 14:38:42.885  INFO 6552 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-10 14:38:42.886  INFO 6552 --- [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-02-10 14:38:42.886  INFO 6552 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 718 ms
+2020-02-10 14:38:43.061  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2020-02-10 14:38:43.076  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2020-02-10 14:38:43.089  INFO 6552 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-10 14:38:43.145  INFO 6552 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-10 14:38:43.893  INFO 6552 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:38:43.966  INFO 6552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-10 14:38:44.162  INFO 6552 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-02-10 14:38:44.759  INFO 6552 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-10 14:38:44.844  INFO 6552 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-10 14:38:45.203  INFO 6552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-10 14:38:45.203  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Started BlogApplication in 3.077 seconds (JVM running for 987.077)
+2020-02-10 14:38:45.206  INFO 6552 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-02-10 14:39:49.494  INFO 6552 --- [Thread-51] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-10 14:39:49.495  INFO 6552 --- [Thread-51] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:39:49.496  INFO 6552 --- [Thread-51] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2020-02-10 14:39:49.500  INFO 6552 --- [Thread-51] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2020-02-10 14:39:49.845  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 6552 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-10 14:39:49.846 DEBUG 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-10 14:39:49.846  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-10 14:39:50.189  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-10 14:39:50.227  INFO 6552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38ms. Found 5 repository interfaces.
+2020-02-10 14:39:50.311  INFO 6552 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ddb4a43c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-10 14:39:50.457  INFO 6552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-10 14:39:50.458  INFO 6552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-10 14:39:50.458  INFO 6552 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-10 14:39:50.513  INFO 6552 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-10 14:39:50.514  INFO 6552 --- [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-02-10 14:39:50.514  INFO 6552 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 666 ms
+2020-02-10 14:39:50.614  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2020-02-10 14:39:50.628  INFO 6552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2020-02-10 14:39:50.643  INFO 6552 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-10 14:39:50.723  INFO 6552 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-10 14:39:51.453  INFO 6552 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 14:39:51.517  INFO 6552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-10 14:39:51.676  INFO 6552 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-02-10 14:39:52.408  INFO 6552 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-10 14:39:52.488  INFO 6552 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-10 14:39:52.854  INFO 6552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-10 14:39:52.855  INFO 6552 --- [restartedMain] com.lyq.blog.BlogApplication             : Started BlogApplication in 3.056 seconds (JVM running for 1054.728)
+2020-02-10 14:39:52.857  INFO 6552 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-02-10 14:39:58.248  INFO 6552 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-10 14:39:58.249  INFO 6552 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-10 14:39:58.262  INFO 6552 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-02-10 14:39:58.267  INFO 6552 --- [http-nio-8080-exec-1] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[116, {}])
+2020-02-10 14:39:58.385  INFO 6552 --- [http-nio-8080-exec-1] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 14:40:03.542  INFO 6552 --- [http-nio-8080-exec-3] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[116, {}])
+2020-02-10 14:40:03.588  INFO 6552 --- [http-nio-8080-exec-3] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 14:40:07.029  INFO 6552 --- [http-nio-8080-exec-5] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[116, {}])
+2020-02-10 14:40:07.067  INFO 6552 --- [http-nio-8080-exec-5] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 14:40:15.163  INFO 6552 --- [http-nio-8080-exec-5] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[116, {}])
+2020-02-10 14:40:15.222  INFO 6552 --- [http-nio-8080-exec-5] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 14:42:14.447  INFO 6552 --- [http-nio-8080-exec-3] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[116, {}])
+2020-02-10 14:42:14.481  INFO 6552 --- [http-nio-8080-exec-3] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 14:42:17.407  INFO 6552 --- [http-nio-8080-exec-8] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.index, args=[Page request [number: 0, size 6, sort: updateTime: DESC], {}])
+2020-02-10 14:42:17.429  WARN 6552 --- [http-nio-8080-exec-8] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-02-10 14:42:17.442  WARN 6552 --- [http-nio-8080-exec-8] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-02-10 14:42:17.456  INFO 6552 --- [http-nio-8080-exec-8] com.lyq.blog.aspect.LogAspect            : Return ------ index
+2020-02-10 14:42:19.452  INFO 6552 --- [http-nio-8080-exec-10] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/120, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[120, {}])
+2020-02-10 14:42:19.474  INFO 6552 --- [http-nio-8080-exec-10] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 14:42:22.983  INFO 6552 --- [http-nio-8080-exec-2] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/120, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[120, {}])
+2020-02-10 14:42:22.997  INFO 6552 --- [http-nio-8080-exec-2] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 14:42:29.264  INFO 6552 --- [http-nio-8080-exec-4] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/120, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[120, {}])
+2020-02-10 14:42:29.277  INFO 6552 --- [http-nio-8080-exec-4] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 14:42:33.052  INFO 6552 --- [http-nio-8080-exec-5] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/119, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[119, {}])
+2020-02-10 14:42:33.066  INFO 6552 --- [http-nio-8080-exec-5] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 14:42:36.041  INFO 6552 --- [http-nio-8080-exec-10] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/119, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[119, {}])
+2020-02-10 14:42:36.063  INFO 6552 --- [http-nio-8080-exec-10] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 14:42:41.718  INFO 6552 --- [http-nio-8080-exec-8] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.index, args=[Page request [number: 0, size 6, sort: updateTime: DESC], {}])
+2020-02-10 14:42:41.742  INFO 6552 --- [http-nio-8080-exec-8] com.lyq.blog.aspect.LogAspect            : Return ------ index
+2020-02-10 14:42:43.055  INFO 6552 --- [http-nio-8080-exec-7] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.index, args=[Page request [number: 0, size 6, sort: updateTime: DESC], {}])
+2020-02-10 14:42:43.080  INFO 6552 --- [http-nio-8080-exec-7] com.lyq.blog.aspect.LogAspect            : Return ------ index
+2020-02-10 14:42:44.211  INFO 6552 --- [http-nio-8080-exec-10] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.index, args=[Page request [number: 0, size 6, sort: updateTime: DESC], {}])
+2020-02-10 14:42:44.237  INFO 6552 --- [http-nio-8080-exec-10] com.lyq.blog.aspect.LogAspect            : Return ------ index
+2020-02-10 14:42:44.881  INFO 6552 --- [http-nio-8080-exec-5] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.index, args=[Page request [number: 0, size 6, sort: updateTime: DESC], {}])
+2020-02-10 14:42:44.905  INFO 6552 --- [http-nio-8080-exec-5] com.lyq.blog.aspect.LogAspect            : Return ------ index
+2020-02-10 14:42:45.529  INFO 6552 --- [http-nio-8080-exec-4] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.index, args=[Page request [number: 0, size 6, sort: updateTime: DESC], {}])
+2020-02-10 14:42:45.555  INFO 6552 --- [http-nio-8080-exec-4] com.lyq.blog.aspect.LogAspect            : Return ------ index
+2020-02-10 14:42:46.681  INFO 6552 --- [http-nio-8080-exec-5] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.index, args=[Page request [number: 0, size 6, sort: updateTime: DESC], {}])
+2020-02-10 14:42:46.717  INFO 6552 --- [http-nio-8080-exec-5] com.lyq.blog.aspect.LogAspect            : Return ------ index
+2020-02-10 14:42:48.055  INFO 6552 --- [http-nio-8080-exec-4] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/120, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[120, {}])
+2020-02-10 14:42:48.071  INFO 6552 --- [http-nio-8080-exec-4] com.lyq.blog.aspect.LogAspect            : Return ------ blog

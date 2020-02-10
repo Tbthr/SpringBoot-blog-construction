@@ -49,6 +49,7 @@ public class BlogServiceImpl {
         BeanUtils.copyProperties(blog, b);
         String content = b.getContent();
         b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
+        blogRepository.updateViews(id); //浏览次数 + 1
         return b;
     }
 
