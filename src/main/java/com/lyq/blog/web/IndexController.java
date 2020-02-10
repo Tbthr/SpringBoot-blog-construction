@@ -15,7 +15,6 @@ import javax.annotation.Resource;
 
 @Controller
 public class IndexController {
-
     @Resource
     private BlogServiceImpl blogService;
     @Resource
@@ -35,8 +34,8 @@ public class IndexController {
         return "index";
     }
 
-    @PostMapping("/search")
-    public String search(@PageableDefault(size = 6, sort = {"updateTime"}, direction = Sort.Direction.DESC)
+    @GetMapping("/search")
+    public String search(@PageableDefault(size = 10, sort = {"updateTime"}, direction = Sort.Direction.DESC)
                                      Pageable pageable, @RequestParam String query, Model model) {
         model.addAttribute("page",blogService.listBlog("%"+query+"%",pageable));
         model.addAttribute("query",query);
