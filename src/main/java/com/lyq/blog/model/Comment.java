@@ -22,7 +22,7 @@ public class Comment {
     private String nickname;
     private String email;
     private String avatar;
-    private String comment;
+    private String content;
 //    @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
 

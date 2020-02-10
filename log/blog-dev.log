@@ -1,22 +1,23 @@
-2020-02-09 09:43:12.971  INFO 12936 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 12936 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
-2020-02-09 09:43:12.982 DEBUG 12936 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
-2020-02-09 09:43:12.982  INFO 12936 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
-2020-02-09 09:43:13.040  INFO 12936 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-02-09 09:43:13.040  INFO 12936 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-02-09 09:43:14.191  INFO 12936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-02-09 09:43:14.363  INFO 12936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 142ms. Found 4 repository interfaces.
-2020-02-09 09:43:14.881  INFO 12936 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$228c7a8c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-02-09 09:43:15.716  INFO 12936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-02-09 09:43:15.792  INFO 12936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-02-09 09:43:15.793  INFO 12936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2020-02-09 09:43:16.166  INFO 12936 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2020-02-09 09:43:16.175  INFO 12936 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-02-09 09:43:16.175  INFO 12936 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3134 ms
-2020-02-09 09:43:16.434  INFO 12936 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-02-09 09:43:16.932  INFO 12936 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-02-09 09:43:17.038  INFO 12936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2020-02-10 11:48:49.562  INFO 15788 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 15788 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-10 11:48:49.576 DEBUG 15788 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-10 11:48:49.576  INFO 15788 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-10 11:48:49.636  INFO 15788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-10 11:48:49.636  INFO 15788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-10 11:48:50.829  INFO 15788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-10 11:48:50.994  INFO 15788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 151ms. Found 5 repository interfaces.
+2020-02-10 11:48:51.537  INFO 15788 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dd403df2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-10 11:48:52.379  INFO 15788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-10 11:48:52.418  INFO 15788 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-10 11:48:52.419  INFO 15788 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-10 11:48:52.724  INFO 15788 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-10 11:48:52.735  INFO 15788 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-10 11:48:52.735  INFO 15788 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3099 ms
+2020-02-10 11:48:53.044  INFO 15788 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-10 11:48:53.503  INFO 15788 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-10 11:48:53.581  INFO 15788 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
+<<<<<<< Updated upstream
 2020-02-09 09:43:17.185  INFO 12936 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
 2020-02-09 09:43:17.187  INFO 12936 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
 2020-02-09 09:43:17.390  INFO 12936 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
@@ -752,3 +753,178 @@ org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as express
 2020-02-09 14:42:33.627  INFO 7448 --- [http-nio-8080-exec-4] com.lyq.blog.aspect.LogAspect            : Return ------ blog
 2020-02-09 14:45:04.350  INFO 7448 --- [http-nio-8080-exec-8] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/114, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[114, {}])
 2020-02-09 14:45:04.358  INFO 7448 --- [http-nio-8080-exec-8] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+=======
+2020-02-10 11:48:53.737  INFO 15788 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2020-02-10 11:48:53.741  INFO 15788 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-02-10 11:48:53.971  INFO 15788 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-10 11:48:54.223  INFO 15788 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-10 11:48:56.065  INFO 15788 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 11:48:56.192  INFO 15788 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-10 11:48:56.776  INFO 15788 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-02-10 11:48:57.648  INFO 15788 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-10 11:48:57.763  INFO 15788 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-10 11:48:58.189  INFO 15788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-10 11:48:58.192  INFO 15788 --- [restartedMain] com.lyq.blog.BlogApplication             : Started BlogApplication in 9.226 seconds (JVM running for 10.941)
+2020-02-10 11:49:03.050  INFO 15788 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-10 11:49:03.051  INFO 15788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-10 11:49:03.079  INFO 15788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 28 ms
+2020-02-10 11:49:03.162  INFO 15788 --- [http-nio-8080-exec-1] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[116, {}])
+2020-02-10 11:49:03.617  INFO 15788 --- [http-nio-8080-exec-1] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 11:49:07.579  INFO 15788 --- [http-nio-8080-exec-6] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/comments/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.CommentController.comments, args=[116, {}])
+2020-02-10 11:49:07.622  INFO 15788 --- [http-nio-8080-exec-6] com.lyq.blog.aspect.LogAspect            : Return ------ blog :: commentList
+2020-02-10 11:49:24.052  INFO 15788 --- [http-nio-8080-exec-5] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[116, {}])
+2020-02-10 11:49:24.078  INFO 15788 --- [http-nio-8080-exec-5] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 11:49:25.156  INFO 15788 --- [http-nio-8080-exec-6] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/comments/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.CommentController.comments, args=[116, {}])
+2020-02-10 11:49:25.182  INFO 15788 --- [http-nio-8080-exec-6] com.lyq.blog.aspect.LogAspect            : Return ------ blog :: commentList
+2020-02-10 11:49:34.847  INFO 15788 --- [http-nio-8080-exec-7] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[116, {}])
+2020-02-10 11:49:34.871  INFO 15788 --- [http-nio-8080-exec-7] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 11:49:35.502  INFO 15788 --- [http-nio-8080-exec-6] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/comments/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.CommentController.comments, args=[116, {}])
+2020-02-10 11:49:35.521  INFO 15788 --- [http-nio-8080-exec-6] com.lyq.blog.aspect.LogAspect            : Return ------ blog :: commentList
+2020-02-10 11:50:17.351  INFO 15788 --- [http-nio-8080-exec-9] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/comments, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.CommentController.post, args=[Comment(id=null, nickname=lyq, email=lyq@qq.com, avatar=null, content=lyq@tbthr, createTime=null, blog=Blog{id=116, flag='null', title='null', content='null', firstPicture='null', views=null, description='null', recommend=false, shareStatement=false, appreciation=false, commentabled=false, published=false, createTime=null, updateTime=null, type=null, tags=[], tagIds='null', tagNames='null', user=null, comments=[]}, replayComments=[], parentComment=Comment(id=131, nickname=null, email=null, avatar=null, content=null, createTime=null, blog=null, replayComments=[], parentComment=null))])
+2020-02-10 11:50:17.410  INFO 15788 --- [http-nio-8080-exec-9] com.lyq.blog.aspect.LogAspect            : Return ------ redirect:/comments/116
+2020-02-10 11:50:17.433  INFO 15788 --- [http-nio-8080-exec-10] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/comments/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.CommentController.comments, args=[116, {}])
+2020-02-10 11:50:17.448  INFO 15788 --- [http-nio-8080-exec-10] com.lyq.blog.aspect.LogAspect            : Return ------ blog :: commentList
+2020-02-10 11:51:05.786  INFO 15788 --- [http-nio-8080-exec-5] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/comments, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.CommentController.post, args=[Comment(id=null, nickname=lyq, email=lyq@qq.com, avatar=null, content=新的评论, createTime=null, blog=Blog{id=116, flag='null', title='null', content='null', firstPicture='null', views=null, description='null', recommend=false, shareStatement=false, appreciation=false, commentabled=false, published=false, createTime=null, updateTime=null, type=null, tags=[], tagIds='null', tagNames='null', user=null, comments=[]}, replayComments=[], parentComment=Comment(id=-1, nickname=null, email=null, avatar=null, content=null, createTime=null, blog=null, replayComments=[], parentComment=null))])
+2020-02-10 11:51:05.804  INFO 15788 --- [http-nio-8080-exec-5] com.lyq.blog.aspect.LogAspect            : Return ------ redirect:/comments/116
+2020-02-10 11:51:05.815  INFO 15788 --- [http-nio-8080-exec-7] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/comments/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.CommentController.comments, args=[116, {}])
+2020-02-10 11:51:05.835  INFO 15788 --- [http-nio-8080-exec-7] com.lyq.blog.aspect.LogAspect            : Return ------ blog :: commentList
+2020-02-10 11:51:14.161  INFO 15788 --- [http-nio-8080-exec-4] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/comments, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.CommentController.post, args=[Comment(id=null, nickname=ly, email=lyq@qq.com, avatar=null, content=新的评论, createTime=null, blog=Blog{id=116, flag='null', title='null', content='null', firstPicture='null', views=null, description='null', recommend=false, shareStatement=false, appreciation=false, commentabled=false, published=false, createTime=null, updateTime=null, type=null, tags=[], tagIds='null', tagNames='null', user=null, comments=[]}, replayComments=[], parentComment=Comment(id=-1, nickname=null, email=null, avatar=null, content=null, createTime=null, blog=null, replayComments=[], parentComment=null))])
+2020-02-10 11:51:14.183  INFO 15788 --- [http-nio-8080-exec-4] com.lyq.blog.aspect.LogAspect            : Return ------ redirect:/comments/116
+2020-02-10 11:51:14.193  INFO 15788 --- [http-nio-8080-exec-1] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/comments/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.CommentController.comments, args=[116, {}])
+2020-02-10 11:51:14.210  INFO 15788 --- [http-nio-8080-exec-1] com.lyq.blog.aspect.LogAspect            : Return ------ blog :: commentList
+>>>>>>> Stashed changes
+2020-02-10 13:26:03.630  INFO 13436 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 13436 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-10 13:26:03.633 DEBUG 13436 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-10 13:26:03.633  INFO 13436 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-10 13:26:03.676  INFO 13436 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-10 13:26:03.677  INFO 13436 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-10 13:26:04.625  INFO 13436 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-10 13:26:04.745  INFO 13436 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107ms. Found 5 repository interfaces.
+2020-02-10 13:26:05.220  INFO 13436 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4c739b31] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-10 13:26:05.875  INFO 13436 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-10 13:26:05.910  INFO 13436 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-10 13:26:05.911  INFO 13436 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-10 13:26:06.092  INFO 13436 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-10 13:26:06.100  INFO 13436 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-10 13:26:06.101  INFO 13436 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2424 ms
+2020-02-10 13:26:06.309  INFO 13436 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-10 13:26:06.710  INFO 13436 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-10 13:26:06.781  INFO 13436 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-10 13:26:06.894  INFO 13436 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2020-02-10 13:26:06.896  INFO 13436 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-02-10 13:26:07.112  INFO 13436 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-10 13:26:07.375  INFO 13436 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-10 13:26:08.968  INFO 13436 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 13:26:09.049  INFO 13436 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-10 13:26:09.499  INFO 13436 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-02-10 13:26:10.212  INFO 13436 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-10 13:26:10.329  INFO 13436 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-10 13:26:10.798  INFO 13436 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-10 13:26:10.801  INFO 13436 --- [restartedMain] com.lyq.blog.BlogApplication             : Started BlogApplication in 7.696 seconds (JVM running for 9.297)
+2020-02-10 13:27:01.940  INFO 13436 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-10 13:27:01.940  INFO 13436 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-10 13:27:01.956  INFO 13436 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-02-10 13:27:01.997  INFO 13436 --- [http-nio-8080-exec-1] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[116, {}])
+2020-02-10 13:27:02.211  INFO 13436 --- [http-nio-8080-exec-1] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 13:27:03.256  INFO 13436 --- [http-nio-8080-exec-3] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/comments/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.CommentController.comments, args=[116, {}])
+2020-02-10 13:27:03.327  INFO 13436 --- [http-nio-8080-exec-3] com.lyq.blog.aspect.LogAspect            : Return ------ blog :: commentList
+2020-02-10 13:29:37.029  INFO 13436 --- [http-nio-8080-exec-2] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[116, {}])
+2020-02-10 13:29:37.039  INFO 13436 --- [http-nio-8080-exec-2] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 13:29:37.603  INFO 13436 --- [http-nio-8080-exec-3] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/comments/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.CommentController.comments, args=[116, {}])
+2020-02-10 13:29:37.632  INFO 13436 --- [http-nio-8080-exec-3] com.lyq.blog.aspect.LogAspect            : Return ------ blog :: commentList
+2020-02-10 13:31:09.496  INFO 13436 --- [http-nio-8080-exec-6] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[116, {}])
+2020-02-10 13:31:09.508  INFO 13436 --- [http-nio-8080-exec-6] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 13:31:10.153  INFO 13436 --- [http-nio-8080-exec-9] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/comments/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.CommentController.comments, args=[116, {}])
+2020-02-10 13:31:10.180  INFO 13436 --- [http-nio-8080-exec-9] com.lyq.blog.aspect.LogAspect            : Return ------ blog :: commentList
+2020-02-10 13:33:03.672  INFO 13436 --- [http-nio-8080-exec-6] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[116, {}])
+2020-02-10 13:33:03.682  INFO 13436 --- [http-nio-8080-exec-6] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 13:33:04.263  INFO 13436 --- [http-nio-8080-exec-9] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/comments/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.CommentController.comments, args=[116, {}])
+2020-02-10 13:33:04.291  INFO 13436 --- [http-nio-8080-exec-9] com.lyq.blog.aspect.LogAspect            : Return ------ blog :: commentList
+2020-02-10 13:34:55.356  INFO 11084 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 11084 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-10 13:34:55.356 DEBUG 11084 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-10 13:34:55.356  INFO 11084 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-10 13:34:55.416  INFO 11084 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-10 13:34:55.417  INFO 11084 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-10 13:34:56.867  INFO 11084 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-10 13:34:56.976  INFO 11084 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109ms. Found 5 repository interfaces.
+2020-02-10 13:34:57.456  INFO 11084 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9371c115] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-10 13:34:58.149  INFO 11084 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-10 13:34:58.181  INFO 11084 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-10 13:34:58.181  INFO 11084 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-10 13:34:58.446  INFO 11084 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-10 13:34:58.446  INFO 11084 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-10 13:34:58.446  INFO 11084 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3029 ms
+2020-02-10 13:34:58.696  INFO 11084 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-10 13:34:59.144  INFO 11084 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-10 13:34:59.222  INFO 11084 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-10 13:34:59.332  INFO 11084 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2020-02-10 13:34:59.332  INFO 11084 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-02-10 13:34:59.520  INFO 11084 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-10 13:34:59.769  INFO 11084 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-10 13:35:01.551  INFO 11084 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 13:35:01.614  INFO 11084 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-10 13:35:02.051  INFO 11084 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-02-10 13:35:02.773  INFO 11084 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-10 13:35:02.930  INFO 11084 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-10 13:35:03.406  INFO 11084 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-10 13:35:03.406  INFO 11084 --- [restartedMain] com.lyq.blog.BlogApplication             : Started BlogApplication in 8.699 seconds (JVM running for 11.247)
+2020-02-10 13:35:26.147  INFO 11084 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-10 13:35:26.147  INFO 11084 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-10 13:35:26.163  INFO 11084 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2020-02-10 13:35:26.208  INFO 11084 --- [http-nio-8080-exec-1] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[116, {}])
+2020-02-10 13:35:26.375  INFO 11084 --- [http-nio-8080-exec-1] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 13:35:27.753  INFO 11084 --- [http-nio-8080-exec-6] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/comments/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.CommentController.comments, args=[116, {}])
+2020-02-10 13:35:27.839  INFO 11084 --- [http-nio-8080-exec-6] com.lyq.blog.aspect.LogAspect            : Return ------ blog :: commentList
+2020-02-10 13:48:35.961  INFO 936 --- [restartedMain] com.lyq.blog.BlogApplication             : Starting BlogApplication on LAPTOP-D6AL548I with PID 936 (D:\GitHub_Liuken\SpringBoot-blog-construction\target\classes started by 刘以强 in D:\GitHub_Liuken\SpringBoot-blog-construction)
+2020-02-10 13:48:36.007 DEBUG 936 --- [restartedMain] com.lyq.blog.BlogApplication             : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-02-10 13:48:36.007  INFO 936 --- [restartedMain] com.lyq.blog.BlogApplication             : The following profiles are active: dev
+2020-02-10 13:48:36.101  INFO 936 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-10 13:48:36.101  INFO 936 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-10 13:48:37.778  INFO 936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-10 13:48:37.953  INFO 936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 174ms. Found 5 repository interfaces.
+2020-02-10 13:48:38.562  INFO 936 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5c78e986] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-10 13:48:39.503  INFO 936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-10 13:48:39.550  INFO 936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-10 13:48:39.566  INFO 936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2020-02-10 13:48:40.401  INFO 936 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-10 13:48:40.416  INFO 936 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-10 13:48:40.416  INFO 936 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4315 ms
+2020-02-10 13:48:40.761  INFO 936 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-10 13:48:41.212  INFO 936 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-10 13:48:41.275  INFO 936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-10 13:48:41.400  INFO 936 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2020-02-10 13:48:41.400  INFO 936 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-02-10 13:48:41.623  INFO 936 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-10 13:48:41.930  INFO 936 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-10 13:48:43.643  INFO 936 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-10 13:48:43.770  INFO 936 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-10 13:48:44.350  INFO 936 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-02-10 13:48:45.173  INFO 936 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-10 13:48:45.307  INFO 936 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-10 13:48:45.823  INFO 936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-10 13:48:45.839  INFO 936 --- [restartedMain] com.lyq.blog.BlogApplication             : Started BlogApplication in 11.291 seconds (JVM running for 13.143)
+2020-02-10 13:48:50.617  INFO 936 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-10 13:48:50.617  INFO 936 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-10 13:48:50.646  INFO 936 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 28 ms
+2020-02-10 13:48:50.715  INFO 936 --- [http-nio-8080-exec-1] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.index, args=[Page request [number: 0, size 6, sort: updateTime: DESC], {}])
+2020-02-10 13:48:50.949  WARN 936 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-02-10 13:48:50.983  WARN 936 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-02-10 13:48:51.031  INFO 936 --- [http-nio-8080-exec-1] com.lyq.blog.aspect.LogAspect            : Return ------ index
+2020-02-10 13:48:55.001  INFO 936 --- [http-nio-8080-exec-5] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/120, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[120, {}])
+2020-02-10 13:48:55.101  INFO 936 --- [http-nio-8080-exec-5] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 13:49:38.499  INFO 936 --- [http-nio-8080-exec-6] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/120, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[120, {}])
+2020-02-10 13:49:38.522  INFO 936 --- [http-nio-8080-exec-6] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 13:50:01.945  INFO 936 --- [http-nio-8080-exec-7] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/119, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[119, {}])
+2020-02-10 13:50:01.961  INFO 936 --- [http-nio-8080-exec-7] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 13:50:10.537  INFO 936 --- [http-nio-8080-exec-7] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/118, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[118, {}])
+2020-02-10 13:50:10.558  INFO 936 --- [http-nio-8080-exec-7] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 13:50:14.118  INFO 936 --- [http-nio-8080-exec-2] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[116, {}])
+2020-02-10 13:50:14.149  INFO 936 --- [http-nio-8080-exec-2] com.lyq.blog.aspect.LogAspect            : Return ------ blog
+2020-02-10 13:51:14.811  INFO 936 --- [http-nio-8080-exec-2] com.lyq.blog.aspect.LogAspect            : Request ----- RequestLog(url=http://localhost:8080/blog/116, ip=0:0:0:0:0:0:0:1, classMethod=com.lyq.blog.web.IndexController.blog, args=[116, {}])
+2020-02-10 13:51:14.839  INFO 936 --- [http-nio-8080-exec-2] com.lyq.blog.aspect.LogAspect            : Return ------ blog

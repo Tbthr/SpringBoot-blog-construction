@@ -1,6 +1,7 @@
 package com.lyq.blog.web;
 
 import com.lyq.blog.service.BlogServiceImpl;
+import com.lyq.blog.service.CommentServiceImpl;
 import com.lyq.blog.service.TagServiceImpl;
 import com.lyq.blog.service.TypeServiceImpl;
 import org.springframework.data.domain.Pageable;
@@ -13,7 +14,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 
 @Controller
-@RequestMapping("/")
 public class IndexController {
 
     @Resource
@@ -22,8 +22,10 @@ public class IndexController {
     private TypeServiceImpl typeService;
     @Resource
     private TagServiceImpl tagService;
+    @Resource
+    private CommentServiceImpl commentService;
 
-    @GetMapping
+    @GetMapping("/")
     public String index(@PageableDefault(size = 6, sort = {"updateTime"}, direction = Sort.Direction.DESC)
                                     Pageable pageable, Model model) {
         model.addAttribute("page",blogService.listBlog(pageable));
@@ -44,7 +46,7 @@ public class IndexController {
     @GetMapping("/blog/{id}")
     public String blog(@PathVariable Long id, Model model) {
         model.addAttribute("blog",blogService.getAndConvert(id));
-//        model.addAttribute("types",blogService.getBlog(id).getTags());
-        return "blog";
+        model.addAttribute("comments",commentService.listCommentByBlogId(id));
+        return  "blog";
     }
 }
