@@ -46,6 +46,6 @@ public class IndexController {
     public String blog(@PathVariable Long id, Model model) {
         model.addAttribute("blog",blogService.getAndConvert(id));
         model.addAttribute("comments",commentService.listCommentByBlogId(id));
-        return  "blog";
+        return "blog";
     }
 }

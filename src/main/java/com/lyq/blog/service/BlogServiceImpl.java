@@ -6,6 +6,7 @@ import com.lyq.blog.model.BlogSearch;
 import com.lyq.blog.repository.BlogRepository;
 import com.lyq.blog.util.MarkdownUtils;
 import com.lyq.blog.util.MyBeanUtils;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -16,13 +17,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
-import javax.persistence.criteria.Predicate;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import javax.persistence.criteria.*;
+import java.util.*;
 
 @Service
 @Transactional
+@Slf4j
 public class BlogServiceImpl {
 
     @Resource
@@ -74,6 +74,16 @@ public class BlogServiceImpl {
         }, pageable);
     }
 
+    public Page<Blog> listBlog(Long tagId,Pageable pageable) {
+       return blogRepository.findAll(new Specification<Blog>() {
+           @Override
+           public Predicate toPredicate(Root<Blog> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
+               Join join=root.join("tags");
+               return cb.equal(join.get("id"),tagId);
+           }
+       },pageable);
+    }
+
     public Page<Blog> listBlog(Pageable pageable) {
         return blogRepository.findAll(pageable);
     }
@@ -86,6 +96,19 @@ public class BlogServiceImpl {
         Sort sort = Sort.by(Sort.Direction.DESC, "updateTime");
         Pageable pageable = PageRequest.of(0, size, sort);
         return blogRepository.findTop(pageable);
+    }
+
+    public Map<String,List<Blog>> archiveBlog(){
+        List<String> years=blogRepository.findGroupYear();
+        Map<String,List<Blog>> map=new HashMap<>();
+        for (String year: years){
+            map.put(year,blogRepository.findByYear(year));
+        }
+        return map;
+    }
+
+    public Long countBlog(){
+        return blogRepository.count();
     }
 
     public void deleteBlog(Long id) {
