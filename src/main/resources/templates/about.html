@@ -10,7 +10,7 @@
 <body>
 
 <!------------------------------导航---------------------------------------->
-<nav th:replace="templates/_fragments :: menu(5)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+<nav th:replace="_fragments :: menu(5)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
             <h2 class="ui teal header item">Blog</h2>
@@ -35,88 +35,71 @@
 <div class="m-container m-padded-tb-big animated fadeIn">
     <div class="ui container">
         <div class="ui stackable grid">
-            <!--     左侧图片       -->
+            <!-----左侧图片----->
             <div class="eleven wide column">
-                <img src="https://www.runoob.com/wp-content/uploads/2018/12/12312sss3.png" alt=""
-                     class="ui rounded image">
-                <div class="ui three stackable cards">
-                    <div class="card">
-                        <div class="image">
-                            <img src="https://www.runoob.com/wp-content/uploads/2019/01/1547535309-3338-5bed4b1f7c6dc.gif">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="image">
-                            <img src="https://www.runoob.com/wp-content/uploads/2014/07/28070355_oogw.gif">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="image">
-                            <img src="https://www.runoob.com/wp-content/uploads/2019/01/1547535309-9072-5bed4b2fdbbe3.gif">
-                        </div>
-                    </div>
-                </div>
+                <img src="https://picsum.photos/id/259/1600/1250" alt="" class="ui rounded image">
             </div>
-            <!--     右侧信息       -->
+            <!------右侧信息--------->
             <div class="five wide column">
                 <div class="ui top attached segment">
                     <div class="ui header">关于我</div>
                 </div>
+                <!------自我介绍------>
                 <div class="ui attached segment">
-                    <p class="m-text">大家好，如你们所见，我是个刚入行的码农。虽然我被生产于95年，但是目前为止所有零件都是原装的。
-                        左脑堪比骁龙855，右脑可战麒麟980。可唱可跳可rap，不定时也可以做一个不露脸的颜值主播。
-                        虽然我们不熟，但是天气这么热，相信我们马上就熟了。如果有空可以来逛逛我的博客~~~</p>
+                    <p class="m-text" th:text="#{index.self-introduction}"></p>
                 </div>
+                <!------爱好------>
                 <div class="ui attached segment">
                     <div class="ui teal basic label">编程</div>
-                    <div class="ui teal basic label">篮球</div>
-                    <div class="ui teal basic label">探秘</div>
-                    <div class="ui teal basic label">科学</div>
+                    <div class="ui teal basic label">听音乐</div>
+                    <div class="ui teal basic label">打游戏</div>
                 </div>
+                <!------技术学习------>
                 <div class="ui attached segment">
+                    <div class="ui orange basic left pointing label m-margin-tb-tiny">Git</div>
                     <div class="ui orange basic left pointing label m-margin-tb-tiny">Java</div>
-                    <div class="ui orange basic left pointing label m-margin-tb-tiny">javascript</div>
-                    <div class="ui orange basic left pointing label m-margin-tb-tiny">Mysql&amp;Oracle</div>
-                    <div class="ui orange basic left pointing label m-margin-tb-tiny">Linux</div>
+                    <div class="ui orange basic left pointing label m-margin-tb-tiny">SpringBoot</div>
+                    <div class="ui orange basic left pointing label m-margin-tb-tiny">Thymeleaf</div>
                 </div>
-                <div class="ui bottom attached segment">
-                    <a href="https://github.com/Tbthr" class="ui circular icon button" style="margin-right: 0.5em"><i class="github icon"></i></a>
 
-                    <button id="wechatButton" href="#" class="ui wecaht circular icon button" style="margin-right: 0.5em">
+                <div class="ui bottom attached segment">
+                    <!----------GitHub---------->
+                    <a href="https://github.com/Tbthr" class="ui circular icon button" style="margin-right: 0.5em">
+                        <i class="github icon"></i>
+                    </a>
+                    <!----------WeChat---------->
+                    <button id="wechatButton" class="ui wecaht circular icon button" style="margin-right: 0.5em">
                         <i class="weixin icon"></i>
                     </button>
                     <div class="ui wechatQR flowing popup transition hidden">
                         <div class="ui column divided center aligned grid">
                             <div class="column">
                                 <div class="image">
-                                    <img src="../static/images/Wechat.png" alt="" class="ui rounded bordered image" style="width: 125px">
+                                    <img src="../static/images/Wechat.png" th:src="@{/images/Wechat.png}" class="ui rounded bordered image" style="width: 125px">
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <button id="qqButton" href="#" class="ui qq circular icon button" style="margin-right: 0.5em">
+                    <!----------QQ---------->
+                    <button id="qqButton" class="ui qq circular icon button" style="margin-right: 0.5em">
                         <i class="qq icon"></i>
                     </button>
                     <div class="ui qqQR flowing popup transition hidden">
                         <div class="ui column divided center aligned grid">
                             <div class="column">
                                 <div class="image">
-                                    <img src="../static/images/QQ.jpg" alt="" class="ui rounded bordered image" style="width: 125px">
+                                    <img src="../static/images/QQ.jpg" th:src="@{/images/QQ.jpg}" class="ui rounded bordered image" style="width: 125px">
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </div>
-
 </div>
 <!----------------------------------------------底部footer-------------------------------------->
-<footer th:replace="templates/_fragments :: footer" class="ui inverted segment attached m-padded-tb-massive">
+<footer th:replace="_fragments :: footer" class="ui inverted segment attached m-padded-tb-massive">
     <div class="ui center aligned container">
         <div class="ui inverted divided stackable grid">
             <div class="three wide column">
@@ -156,18 +139,17 @@
 
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
+<!--/*/</th:block>/*/-->
 <script>
     $('.menu.toggle').click(function () {
         $('.m-item').toggleClass('m-mobile-show')
     });
-
     $('#wechatButton').popup({
         popup: $('.wechatQR.popup'),
         on: 'click',
         position: 'bottom center'
-    })
+    });
     $('#qqButton').popup({
         popup: $('.qqQR.popup'),
         on: 'click',

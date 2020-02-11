@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import javax.annotation.Resource;
 
 @Controller
-public class ArchiveController {
+public class ArchiveShowController {
     @Resource
     private BlogServiceImpl blogService;
 

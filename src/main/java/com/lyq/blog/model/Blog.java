@@ -29,12 +29,12 @@ public class Blog {
 
 //    @Lob
 //    @Basic(fetch = FetchType.LAZY)
-    private String description;
+    private String description; //文章简介
 
     private boolean recommend; //推荐
     private boolean shareStatement; //转载声明
-    private boolean appreciation; //赞赏开启
-    private boolean commentabled; //评论开启
+    private boolean appreciation; //赞赏
+    private boolean commentabled; //评论
 
     private boolean published; //发布 or 保存
 

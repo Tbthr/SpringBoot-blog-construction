@@ -476,32 +476,34 @@ h5,h6{font-size:1em;}
                     <div class="m-inline-block content" th:each="tag : ${blog.tags}" th:text="${tag.name}">数据结构</div>
                 </div>
                 <!---打赏---->
-                <div class="ui center aligned basic segment">
-                    <button id="payButton" class="ui basic orange circular button">赞赏</button>
-                </div>
-                <div class="ui payQR flowing popup transition hidden">
-                    <div class="ui two column divided center aligned grid">
-                        <div class="column">
-                            <div class="image">
-                                <img src="../static/images/fine-3.jfif" th:src="@{/images/fine-3.jfif}" alt=""
-                                     class="ui rounded bordered image"
-                                     style="width: 125px">
-                                <div class="ui basic label m-margin-top">支付宝</div>
+                <div th:if="${blog.appreciation}">
+                    <div class="ui center aligned basic segment">
+                        <button id="payButton" class="ui basic orange circular button">赞赏</button>
+                    </div>
+                    <div class="ui payQR flowing popup transition hidden">
+                        <div class="ui two column divided center aligned grid">
+                            <div class="column">
+                                <div class="image">
+                                    <img src="../static/images/fine-3.jfif" th:src="@{/images/fine-3.jfif}" alt=""
+                                         class="ui rounded bordered image"
+                                         style="width: 125px">
+                                    <div class="ui basic label m-margin-top">支付宝</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="column">
-                            <div class="image">
-                                <img src="../static/images/fine-3.jfif" th:src="@{/images/fine-3.jfif}" alt=""
-                                     class="ui rounded bordered image"
-                                     style="width: 125px">
-                                <div class="ui basic label m-margin-top">微信</div>
+                            <div class="column">
+                                <div class="image">
+                                    <img src="../static/images/fine-3.jfif" th:src="@{/images/fine-3.jfif}" alt=""
+                                         class="ui rounded bordered image"
+                                         style="width: 125px">
+                                    <div class="ui basic label m-margin-top">微信</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-------博客信息------>
-            <div class="ui positive attached message">
+            <div class="ui positive attached message" th:if="${blog.shareStatement}">
                 <div class="ui middle aligned grid">
                     <div class="eleven wide column">
                         <ul class="list">
@@ -522,7 +524,7 @@ h5,h6{font-size:1em;}
                 </div>
             </div>
             <!-------评论------>
-            <div class="ui bottom attached segment">
+            <div class="ui bottom attached segment" th:if="${blog.commentabled}">
                 <div id="comment-container" class="ui teal segment">
                     <!-------评论展示------>
                     <div th:fragment="commentList">
@@ -665,140 +667,140 @@ h5,h6{font-size:1em;}
 
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <!--/*/<th:block th:replace="_fragments :: script">/*/-->
+    <!--/*/</th:block>/*/-->
     <script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script> <!--代码高亮-->
-    <script src="../static/lib/tocbot/tocbot.min.js" th:src="@{/lib/tocbot/tocbot.min.js}"></script> <!--目录生成-->
+    <script src="../static/lib/tocbot/tocbot.js" th:src="@{/lib/tocbot/tocbot.js}"></script> <!--目录生成-->
     <script src="../static/lib/qrcode/qrcode.min.js" th:src="@{/lib/qrcode/qrcode.min.js}"></script> <!--二维码生成-->
-    <script src="../static/lib/jquery.scrollTo/jquery.scrollTo.js"
-            th:src="@{/lib/jquery.scrollTo/jquery.scrollTo.js}"></script> <!--平滑滚动-->
-    <script src="../static/lib/Waypoints/jquery.waypoints.js" th:src="@{/lib/Waypoints/jquery.waypoints.js}"></script>
+    <script src="../static/lib/jquery.scrollTo/jquery.scrollTo.min.js"
+            th:src="@{/lib/jquery.scrollTo/jquery.scrollTo.min.js}"></script> <!--平滑滚动-->
+    <script src="../static/lib/Waypoints/jquery.waypoints.min.js" th:src="@{/lib/Waypoints/jquery.waypoints.min.js}"></script>
     <!--滚动侦测-->
     <script th:inline="javascript">
-        $('.menu.toggle').click(function () {
-            $('.m-item').toggleClass('m-mobile-show')
-        });
-
-        $('#payButton').popup({
-            popup: $('.payQR.popup'),
-            on: 'click',
-            position: 'bottom center'
-        });
-
-        $('.wecaht').popup({
-            popup: $('.wechat-qr'),
-            position: 'left center'
-        });
-
-        var serurl = "127.0.0.1:8080";
-        var url =/*[[@{/blog/{id}(id=${blog.id})}]]*/"";
-        var qrcode = new QRCode("qrcode", {
-            text: serurl + url,
-            width: 120,
-            height: 120,
-            colorDark: "#000000",
-            colorLight: "#ffffff",
-            correctLevel: QRCode.CorrectLevel.H
-        });
-        $('#toTop-button').click(function () {
-            $(window).scrollTo(0, 666);
-        });
-
-        var waypoint = new Waypoint({
-            element: document.getElementById('waypoint'),
-            handler: function(direction) {
-                if (direction === 'down') {
-                    $('#toolbar').show(500);
-                } else {
-                    $('#toolbar').hide(500);
-                }
-                console.log('Scrolled to waypoint!' + direction)
-            }
-        });
-
-        tocbot.init({
-            // Where to render the table of contents.
-            tocSelector: '.js-toc',
-            // Where to grab the headings to build the table of contents.
-            contentSelector: '.js-toc-content',
-            // Which headings to grab inside of the contentSelector element.
-            headingSelector: 'h1, h2, h3',
-            // For headings inside relative or absolute positioned containers within content.
-            hasInnerContainers: true,
-        });
-
-        $('.toc.button').popup({
-            popup: $('.toc-container.popup'),
-            on: 'click',
-            position: 'top center'
-        });
-
-        $('.ui.form').form({
-            fields: {
-                content: {
-                    identifier: 'content',
-                    rules: [{
-                        type: 'empty',
-                        prompt: '请输入评论内容'
-                    }]
-                },
-                nickname: {
-                    identifier: 'nickname',
-                    rules: [{
-                        type: 'empty',
-                        prompt: '请输入你的名字'
-                    }]
-                },
-                email: {
-                    identifier: 'email',
-                    rules: [{
-                        type: 'email',
-                        prompt: '请输入正确的邮箱地址'
-                    }]
-                }
-            }
-        });
-
-        $('#comment-submit').click(function () {
-            const boo = $('.ui.form').form('validate form');
-            if (boo) {
-                console.log('校验成功');
-                postComments();
-            } else {
-                console.log('校验失败');
-            }
-        });
-
-        //
-        // $(function () {
-        //     $('#comment-container').load(/*[[@{/comments/{id}(id=${blog.id})}]]*/"");
-        // });
-
-        function postComments() {
-            $("#comment-container").load(/*[[@{/comments}]]*/"", {
-                "parentComment.id": $("[name='parentComment.id']").val(),
-                "blog.id": $("[name='blog.id']").val(),
-                "nickname": $("[name='nickname']").val(),
-                "email": $("[name='email']").val(),
-                "content": $("[name='content']").val()
-            }, function (responseTxt, statusTxt, xhr) {
-                // $(window).scrollTo($('#comment-container'), 500);
-                clearContent();
+            $('.menu.toggle').click(function () {
+                $('.m-item').toggleClass('m-mobile-show')
             });
-        }
 
-        function clearContent() {
-            $("[name='parentComment.id']").val(-1);
-            $("[name='content']").attr("placeholder", "请输入评论信息...");
-        }
+            $('#payButton').popup({
+                popup: $('.payQR.popup'),
+                on: 'click',
+                position: 'bottom center'
+            });
 
-        function reply(obj) {
-            var commentId = $(obj).data('commentid');
-            var commentNickname = $(obj).data('commentnickname');
-            $("[name='content']").attr("placeholder", "@" + commentNickname).focus();
-            $("[name='parentComment.id']").val(commentId);
-            $(window).scrollTo($('#comment-form'), 500);
-        }
-    </script>
+            $('.wecaht').popup({
+                popup: $('.wechat-qr'),
+                position: 'left center'
+            });
+
+            const serurl = /*[[#{blog.serurl}]]*/"127.0.0.1:8080";
+            const url =/*[[@{/blog/{id}(id=${blog.id})}]]*/"";
+            const qrcode = new QRCode("qrcode", {
+                text: serurl + url,
+                width: 120,
+                height: 120,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+            $('#toTop-button').click(function () {
+                $(window).scrollTo(0, 666);
+            });
+
+            var waypoint = new Waypoint({
+                element: document.getElementById('waypoint'),
+                handler: function(direction) {
+                    if (direction === 'down') {
+                        $('#toolbar').show(500);
+                    } else {
+                        $('#toolbar').hide(500);
+                    }
+                    console.log('Scrolled to waypoint!' + direction)
+                }
+            });
+
+            tocbot.init({
+                // Where to render the table of contents.
+                tocSelector: '.js-toc',
+                // Where to grab the headings to build the table of contents.
+                contentSelector: '.js-toc-content',
+                // Which headings to grab inside of the contentSelector element.
+                headingSelector: 'h1, h2, h3',
+                // For headings inside relative or absolute positioned containers within content.
+                hasInnerContainers: true,
+            });
+
+            $('.toc.button').popup({
+                popup: $('.toc-container.popup'),
+                on: 'click',
+                position: 'left center'
+            });
+
+            $('.ui.form').form({
+                fields: {
+                    content: {
+                        identifier: 'content',
+                        rules: [{
+                            type: 'empty',
+                            prompt: '请输入评论内容'
+                        }]
+                    },
+                    nickname: {
+                        identifier: 'nickname',
+                        rules: [{
+                            type: 'empty',
+                            prompt: '请输入你的名字'
+                        }]
+                    },
+                    email: {
+                        identifier: 'email',
+                        rules: [{
+                            type: 'email',
+                            prompt: '请输入正确的邮箱地址'
+                        }]
+                    }
+                }
+            });
+
+            $('#comment-submit').click(function () {
+                const boo = $('.ui.form').form('validate form');
+                if (boo) {
+                    console.log('校验成功');
+                    postComments();
+                } else {
+                    console.log('校验失败');
+                }
+            });
+
+            //
+            // $(function () {
+            //     $('#comment-container').load(/*[[@{/comments/{id}(id=${blog.id})}]]*/"");
+            // });
+
+            function postComments() {
+                $("#comment-container").load(/*[[@{/comments}]]*/"", {
+                    "parentComment.id": $("[name='parentComment.id']").val(),
+                    "blog.id": $("[name='blog.id']").val(),
+                    "nickname": $("[name='nickname']").val(),
+                    "email": $("[name='email']").val(),
+                    "content": $("[name='content']").val()
+                }, function (responseTxt, statusTxt, xhr) {
+                    // $(window).scrollTo($('#comment-container'), 500);
+                    clearContent();
+                });
+            }
+
+            function clearContent() {
+                $("[name='parentComment.id']").val(-1);
+                $("[name='content']").attr("placeholder", "请输入评论信息...");
+            }
+
+            function reply(obj) {
+                var commentId = $(obj).data('commentid');
+                var commentNickname = $(obj).data('commentnickname');
+                $("[name='content']").attr("placeholder", "@" + commentNickname).focus();
+                $("[name='parentComment.id']").val(commentId);
+                $(window).scrollTo($('#comment-form'), 500);
+            }
+        </script>
 </body>
 </html>
