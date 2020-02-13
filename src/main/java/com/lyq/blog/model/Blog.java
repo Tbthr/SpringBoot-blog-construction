@@ -24,6 +24,7 @@ public class Blog {
     private String title; //标题
     private String content; //内容
     private String firstPicture; //首图
+    private String bigPicture; //博客正文大图
 
     private Integer views; //浏览次数
 

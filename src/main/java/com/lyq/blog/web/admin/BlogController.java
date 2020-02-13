@@ -8,25 +8,27 @@ import com.lyq.blog.service.BlogServiceImpl;
 import com.lyq.blog.service.TagServiceImpl;
 import com.lyq.blog.service.TypeServiceImpl;
 import lombok.extern.slf4j.Slf4j;
+import net.minidev.json.JSONObject;
+import org.apache.commons.io.FileUtils;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.File;
 
 @Slf4j
 @Controller
 @RequestMapping("/admin/blogs")
 public class BlogController {
-
     @Resource
     private BlogServiceImpl blogService;
     @Resource
@@ -101,9 +103,39 @@ public class BlogController {
     }
 
     @GetMapping("/delete/{id}")
-    public String delete(@PathVariable Long id,RedirectAttributes attributes){
+    public String delete(@PathVariable Long id, RedirectAttributes attributes) {
         blogService.deleteBlog(id);
         attributes.addFlashAttribute("message", "删除成功");
         return "redirect:/admin/blogs";
+    }
+
+    //    editormd上传图片
+    @ResponseBody
+    @PostMapping("/uploadFile")
+    public JSONObject hello(HttpServletRequest request, HttpServletResponse response,
+                            @RequestParam(value = "editormd-image-file", required = false) MultipartFile attach) {
+
+        JSONObject jsonObject = new JSONObject();
+        try {
+            request.setCharacterEncoding("utf-8");
+            response.setHeader("Content-Type", "text/html");
+            String rootPath = request.getSession().getServletContext().getRealPath("/static/img/blog/");
+            log.info("editormd上传图片：{}",rootPath);
+            // 文件路径不存在则需要创建文件路径
+            File filePath = new File(rootPath);
+            if (!filePath.exists()) {
+                filePath.mkdirs();
+            }
+            // 最终文件名
+            File realFile = new File(rootPath + File.separator + attach.getOriginalFilename());
+            FileUtils.copyInputStreamToFile(attach.getInputStream(), realFile);
+            // 下面response返回的json格式是editor.md所限制的，规范输出就OK
+            jsonObject.put("success", 1);
+            jsonObject.put("message", "上传成功");
+            jsonObject.put("url", "/static/img/blog/" + attach.getOriginalFilename());
+        } catch (Exception e) {
+            jsonObject.put("success", 0);
+        }
+        return jsonObject;
     }
 }

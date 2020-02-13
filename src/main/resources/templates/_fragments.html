@@ -13,18 +13,21 @@
 </head>
 <body>
 
-<nav th:fragment="menu(n)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+<nav th:fragment="menu(n)" class="ui attached segment m-padded-tb-mini m-shadow-small animated fadeInDown">
     <div class="ui container">
-        <div class="ui inverted secondary stackable menu">
-            <h2 class="ui teal header item">Blog</h2>
-            <a th:href="@{/}" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class="small home icon"></i>首页</a>
-            <a th:href="@{/types/-1}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class="small idea icon"></i>分类</a>
-            <a th:href="@{/tags/-1}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class="small tags icon"></i>标签</a>
-            <a th:href="@{/archives}" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class="small clone icon"></i>归档</a>
-            <a th:href="@{/about}" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class="small info icon"></i>关于我</a>
+        <div class="ui secondary stackable menu">
+            <a th:href="@{/}" class="item">
+                <img class="ui circular image" th:src="@{/images/index_avatar/index_avatar (1).jpeg}" style="width: 60px!important" alt="">
+                <h3 class="ui teal header item">流韵’s Blog</h3>
+            </a>
+            <a th:href="@{/}" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class=" home icon"></i>首页</a>
+            <a th:href="@{/types/-1}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class=" idea icon"></i>分类</a>
+            <a th:href="@{/tags/-1}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class=" tags icon"></i>标签</a>
+            <a th:href="@{/archives}" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class=" clone icon"></i>归档</a>
+            <a th:href="@{/about}" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class=" info icon"></i>关于我</a>
             <div class="right m-item item m-mobile-hide">
                 <form name="search" method="get" th:action="@{/search}" target="_blank">
-                    <div class="ui icon inverted transparent input">
+                    <div class="ui icon transparent input">
                         <input type="text" name="query" placeholder="Search..." th:value="${query}">
                         <i onclick="document.forms['search'].submit()" class="search link icon"></i>
                     </div>

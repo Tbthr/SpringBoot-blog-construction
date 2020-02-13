@@ -1,5 +1,5 @@
 body{
-    background-image: url("../images/bg.png");
+    background-image: url("../images/background_images/leaves.png");
 }
 /*--------------------padding-----------------------------*/
 .m-padded-mini{
@@ -155,7 +155,15 @@ body{
     margin: auto !important;
 }
 .m-container{
+    max-width: 70em !important;
+    margin: auto !important;
+}
+.m-container-big{
     max-width: 72em !important;
+    margin: auto !important;
+}
+.m-container-large{
+    max-width: 100em !important;
     margin: auto !important;
 }
 /*--------------------------color-----------------------------*/
@@ -164,6 +172,12 @@ body{
 }
 .m-teal{
     color: #00B5AD !important;
+}
+.m-blue{
+    color: #4183C4 !important;
+}
+.m-grey{
+    color: rgba(0,0,0,.4);
 }
 /*--------------------------position-----------------------------*/
 .m-right-top{

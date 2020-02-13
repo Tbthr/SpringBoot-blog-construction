@@ -39,7 +39,7 @@ pre[class*="language-"] {
 
 pre[class*="language-"] > code {
     position: relative;
-    border-left: 10px solid #358ccb;
+    border-left: 1px solid #358ccb;
     box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
     background-color: #fdfdfd;
     background-image: linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
@@ -323,41 +323,42 @@ pre[class*="language-"].line-numbers > code {
     text-align: right;
 }
 
-.token.tab:not(:empty),
-.token.cr,
-.token.lf,
-.token.space {
-    position: relative;
-}
 
-.token.tab:not(:empty):before,
-.token.cr:before,
-.token.lf:before,
-.token.space:before {
-    color: #808080;
-    opacity: 0.6;
-    position: absolute;
-}
+/*.token.tab:not(:empty),*/
+/*.token.cr,*/
+/*.token.lf,*/
+/*.token.space {*/
+/*    position: relative;*/
+/*}*/
+/**/
+/*.token.tab:not(:empty):before,*/
+/*.token.cr:before,*/
+/*.token.lf:before,*/
+/*.token.space:before {*/
+/*    color: #808080;*/
+/*    opacity: 0.6;*/
+/*    position: absolute;*/
+/*}*/
+/**/
+/*.token.tab:not(:empty):before {*/
+/*    content: '\21E5';*/
+/*}*/
 
-.token.tab:not(:empty):before {
-    content: '\21E5';
-}
+/*.token.cr:before {*/
+/*    content: '\240D';*/
+/*}*/
 
-.token.cr:before {
-    content: '\240D';
-}
+/*.token.crlf:before {*/
+/*    content: '\240D\240A';*/
+/*}*/
 
-.token.crlf:before {
-    content: '\240D\240A';
-}
+/*.token.lf:before {*/
+/*    content: '\240A';*/
+/*}*/
 
-.token.lf:before {
-    content: '\240A';
-}
-
-.token.space:before {
-    content: '\00B7';
-}
+/*.token.space:before {*/
+/*    content: '\00B7';*/
+/*}*/
 
 .token a {
     color: inherit;

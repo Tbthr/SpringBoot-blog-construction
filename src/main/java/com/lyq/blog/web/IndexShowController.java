@@ -34,8 +34,8 @@ public class IndexShowController {
         return "index";
     }
 
-    @GetMapping("/search")
-    public String search(@PageableDefault(size = 10, sort = {"updateTime"}, direction = Sort.Direction.DESC)
+    @GetMapping("/search") // 翻页功能待解决，故设为 100
+    public String search(@PageableDefault(size = 100, sort = {"updateTime"}, direction = Sort.Direction.DESC)
                                      Pageable pageable, @RequestParam String query, Model model) {
         model.addAttribute("page",blogService.listBlog("%"+query+"%",pageable));
         model.addAttribute("query",query);
