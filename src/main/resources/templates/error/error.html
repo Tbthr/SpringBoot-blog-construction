@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">     <!--移动端缩放比例1.0-->
+<head th:replace="admin/_fragments :: head(~{:: title})">
     <title>错误</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"/>
-    <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
 </head>
 <body>
 
@@ -16,12 +12,13 @@
         <div class="ui error message m-padded-tb">
             <div class="ui container m-padded-tb">
                 <h2>错误</h2>
-                <p></p>
+                <p>系统错误或网络问题</p>
             </div>
         </div>
     </div>
 
     <!--    <footer th:replace="_fragments :: footer"></footer>-->
+
 
     <!-----页面源代码查看报错信息------>
     <div>

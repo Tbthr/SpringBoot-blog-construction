@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="admin/_fragments :: head(~{:: title})">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">     <!--移动端缩放比例1.0-->
     <title>后台管理</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-    <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
 </head>
 <body>
 <!------------------------------导航---------------------------------------->
@@ -17,12 +13,12 @@
             <h3>Hi,</h3>
             <p>刘以强，欢迎登录！</p>
         </div>
-        <img src="https://picsum.photos/id/2/1000/600" alt="" class="ui rounded bordered fluid image">
+        <img src="https://picsum.photos/id/180/1000/600" alt="" class="ui rounded bordered fluid image">
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.js"></script>
+<!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
+<!--/*/</th:block>/*/-->
 <script>
     $('.dropdown').dropdown({
         on: 'hover'

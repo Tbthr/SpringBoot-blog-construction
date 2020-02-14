@@ -54,6 +54,9 @@ body{
     padding-right: 4em !important;;
 }
 /*--------------------------margin------------------------------*/
+.m-margin-tiny {
+    margin: 0.4em 0.9em 0.3em 0.5em !important;
+}
 .m-margin-top-small{
     margin-top: 0.5em !important;
 }
@@ -70,12 +73,26 @@ body{
     margin-top: 0.4em !important;
     margin-bottom: 0.4em !important;
 }
+.m-margin-tb{
+    margin-top: 0.6em !important;
+    margin-bottom: 0.6em !important;
+}
 
 .m-margin-button-small{
     margin-bottom: 0.5em !important;
 }
 .m-margin-button-mini{
     margin-bottom: 0.4em !important;
+}
+
+.m-margin-right-small{
+    margin-right: 0.3em!important;
+}
+.m-margin-right{
+    margin-right: 0.5em!important;
+}
+.m-margin-right-big{
+    margin-right: 1em!important;
 }
 /*--------------------------text-------------------------*/
 .m-text{
@@ -159,12 +176,24 @@ body{
     margin: auto !important;
 }
 .m-container-big{
-    max-width: 72em !important;
+    max-width: 80em !important;
     margin: auto !important;
 }
 .m-container-large{
     max-width: 100em !important;
     margin: auto !important;
+}
+.m-container-largest{
+    max-width: 160em !important;
+    margin: auto !important;
+}
+.m-container-ninety{
+    width: 90% !important;
+    display: block!important;
+}
+.m-container-full{
+    width: 100% !important;
+    display: block!important;
 }
 /*--------------------------color-----------------------------*/
 .m-black{

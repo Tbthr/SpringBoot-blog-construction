@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="admin/_fragments :: head(~{:: title})">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">     <!--移动端缩放比例1.0-->
     <title>博客管理</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-    <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
 </head>
 <body>
 <!------------------------------导航---------------------------------------->
 <nav th:replace="admin/_fragments :: menu(1)"></nav>
 <!------------------------------------中间部分---------------- ---------------->
-<div class="m-container-small m-padded-tb-large">
+<div class="m-container-big m-padded-tb-large">
     <div class="ui container">
         <!----------------查询----------------------->
         <div class="ui basic segment form">
-            <input type="hidden" name="page" value=""> <!--for-->
+            <input type="hidden" name="page" value=""> <!--for search-->
             <div class="inline fields">
                 <div class="field" style="margin-right: 1em !important">
                     <input type="text" name="title" placeholder="标题">
@@ -30,10 +26,6 @@
                                 <div th:each="type : ${types}" class="item" data-value="1" th:data-value="${type.id}"
                                      th:text="${type.name}">错误
                                 </div>
-                                <!--/*-->
-                                <div class="item" data-value="2">错误</div>
-                                <div class="item" data-value="3">错误</div>
-                                <!--*/-->
                             </div>
                         </div>
                         <button id="clear-btn" class="ui basic button"><b>Clear</b></button>
@@ -50,17 +42,24 @@
                         <i class="search icon"></i><b>搜索</b>
                     </button>
                 </div>
+                <div class="filed">
+                    <a th:href="@{/admin/blogs/input}" class="ui small teal basic button" style="margin-left: 2em!important">
+                        <i class="plus icon"></i><b>发布博客</b>
+                    </a>
+                </div>
             </div>
         </div>
         <!-------------------表格--------------------->
-        <div id="table-container">
+        <div id="table-container" class="">
             <table th:fragment="blogList" class="ui teal compact padded table">
                 <thead>
                 <tr>
                     <th></th>
                     <th>标题</th>
-                    <th>类型</th>
+                    <th>分类</th>
+                    <th>标签</th>
                     <th>推荐</th>
+                    <th>是否原创</th>
                     <th>博客状态</th>
                     <th>更新时间</th>
                     <th>操作</th>
@@ -73,36 +72,35 @@
                     </td>
                     <td th:text="${blog.title}">刻意练习清单</td>
                     <td th:text="${blog.type.name}">认知升级</td>
+                    <td th:each="tag : ${blog.tags}">
+                        <div th:text="${tag.name}"></div>
+                    </td>
                     <td th:text="${blog.recommend} ? '是' : '否'">是</td>
+                    <td th:text="${blog.flag}">原创</td>
                     <td th:text="${blog.published} ? '发布' : '草稿'">发布</td>
                     <td th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd HH:mm:ss')}">2020-02-06 20:23:23</td>
                     <td>
                         <a th:href="@{/admin/blogs/input/{id}(id=${blog.id})}"
                            class="ui mini teal basic button">
-                            编辑
+                            <b style="font-family: 'Andale Mono'">Edit</b>
                         </a>
                         <a th:href="@{/admin/blogs/delete/{id}(id=${blog.id})}"
                            class="ui mini negative basic button">
-                            删除
+                            <b style="font-family: 'Andale Mono'">Delete</b>
                         </a>
                     </td>
                 </tr>
                 </tbody>
                 <tfoot>
-                <tr>
-                    <th colspan="7" class="">
-                        <div th:if="${page.totalPages}>1" class="ui tiny pagination menu">
+                <tr th:if="${page.totalPages}>1">
+                    <th colspan="10" class="">
+                        <div class="ui tiny pagination menu">
                             <a href="javascript:void(0);" onclick="page(this);" th:attr="date-page=${page.number}-1"
                                th:if="!${page.isFirst()}"
                                class="ui mini item"> 上一页 </a>
                             <a href="javascript:void(0);" onclick="page(this);" th:attr="date-page=${page.number}+1"
                                th:if="!${page.isLast()}"
                                class="ui mini item"> 下一页 </a>
-                        </div>
-                        <div class="ui right floated tiny icon menu">
-                            <a th:href="@{/admin/blogs/input}" class="ui mini item">
-                                <i class="plus icon"></i>
-                            </a>
                         </div>
                     </th>
                 </tr>
@@ -118,8 +116,8 @@
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
+<!--/*/</th:block>/*/-->
 <script>
     $('.menu.toggle').click(function () {
         $('.m-item').toggleClass('m-mobile-hide');

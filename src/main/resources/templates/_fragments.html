@@ -2,14 +2,15 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="head(title)">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">     <!--移动端缩放比例1.0-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--移动端缩放比例1.0-->
     <title th:replace="${title}">博客正文</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-    <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
-    <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
-    <link rel="stylesheet" href="../static/css/animate.css" th:href="@{/css/animate.css}">
-    <link rel="stylesheet" href="../static/lib/prism/prism-white.css" th:href="@{/lib/prism/prism-white.css}">
-    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"> <!--Semantic-->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!--fas icons-->
+    <link rel="stylesheet" th:href="@{/css/me.css}"> <!--myCSS-->
+    <link rel="stylesheet" th:href="@{/css/typo.css}"> <!--内容排版-->
+    <link rel="stylesheet" th:href="@{/css/animate.css}"> <!--动画-->
+    <link rel="stylesheet" th:href="@{/lib/prism/prism-white.css}"> <!--代码高亮-->
+    <link rel="stylesheet" th:href="@{/lib/tocbot/tocbot.css}"> <!--目录生成-->
 </head>
 <body>
 
@@ -17,14 +18,14 @@
     <div class="ui container">
         <div class="ui secondary stackable menu">
             <a th:href="@{/}" class="item">
-                <img class="ui circular image" th:src="@{/images/index_avatar/index_avatar (1).jpeg}" style="width: 60px!important" alt="">
+                <img class="ui circular image" th:src="@{/images/index_avatar/index_avatar1.jpeg}" style="width: 60px!important" alt="">
                 <h3 class="ui teal header item">流韵’s Blog</h3>
             </a>
-            <a th:href="@{/}" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class=" home icon"></i>首页</a>
-            <a th:href="@{/types/-1}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class=" idea icon"></i>分类</a>
-            <a th:href="@{/tags/-1}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class=" tags icon"></i>标签</a>
-            <a th:href="@{/archives}" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class=" clone icon"></i>归档</a>
-            <a th:href="@{/about}" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class=" info icon"></i>关于我</a>
+            <a th:href="@{/}" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class="fa fa-lemon-o fa-lg m-margin-right"></i>首页</a>
+            <a th:href="@{/types/-1}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class="fa fa-flag-o fa-lg m-margin-right"></i>分类</a>
+            <a th:href="@{/tags/-1}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class="fa fa-heart-o fa-lg m-margin-right"></i>标签</a>
+            <a th:href="@{/archives}" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class="fa fa-folder-open-o fa-lg m-margin-right"></i>归档</a>
+            <a th:href="@{/about}" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class="fa fa-send-o fa-lg m-margin-right"></i>关于我</a>
             <div class="right m-item item m-mobile-hide">
                 <form name="search" method="get" th:action="@{/search}" target="_blank">
                     <div class="ui icon transparent input">
@@ -84,9 +85,9 @@
 <th:block th:fragment="script">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-    <script>
-        $('#newBlog-container').load(/*[[@{/footer/newBlog}]]*/"/footer/newBlog");
-    </script>
+<!--    <script>-->
+<!--        $('#newBlog-container').load(/*[[@{/footer/newBlog}]]*/"/footer/newBlog");-->
+<!--    </script>-->
 </th:block>
 
 </body>
