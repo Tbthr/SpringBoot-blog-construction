@@ -8,11 +8,15 @@ body{
 .m-padded-tiny{
     padding: 0.3em !important;
 }
-.m-padded{
+.m-padded {
     padding: 1em !important;
 }
 
-.m-padded-tb-mini{
+.m-padded-top {
+    padding-top: 1em !important;
+}
+
+.m-padded-tb-mini {
     padding-top: 0.2em !important;
     padding-bottom: 0.2em !important;
 }
@@ -44,26 +48,44 @@ body{
     padding-bottom: 5em !important;
 }
 
-.m-padded-tb-largest{
+.m-padded-tb-largest {
     padding-top: 12em !important;
     padding-bottom: 12em !important;
 }
 
-.m-padded-lr-responsive{
+.m-padded-lr-responsive {
     padding-left: 4em !important;
     padding-right: 4em !important;;
 }
+
 /*--------------------------margin------------------------------*/
+.m-margin {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+.m-margin-1 {
+    margin-top: 50px !important;
+    margin-bottom: 30px !important;
+}
+
+.m-margin-small {
+    margin-top: 20px !important;
+    margin-bottom: 30px !important;
+}
+
 .m-margin-tiny {
     margin: 0.4em 0.9em 0.3em 0.5em !important;
 }
-.m-margin-top-small{
+
+.m-margin-top-small {
     margin-top: 0.5em !important;
 }
-.m-margin-top{
+
+.m-margin-top {
     margin-top: 1em !important;
 }
-.m-margin-top-big{
+
+.m-margin-top-big {
     margin-top: 1.5em !important;;
 }
 .m-margin-top-large{
@@ -81,12 +103,26 @@ body{
 .m-margin-button-small{
     margin-bottom: 0.5em !important;
 }
-.m-margin-button-mini{
+
+.m-margin-button-mini {
     margin-bottom: 0.4em !important;
 }
+.m-margin-button-s {
+    margin-bottom: 25px !important;
+}
+.m-margin-button {
+    margin-bottom: 40px !important;
+}
 
-.m-margin-right-small{
-    margin-right: 0.3em!important;
+.m-margin-left {
+    margin-left: 0.5em !important;
+}
+.m-margin-lr{
+    margin-left: 20px!important;
+    margin-right: 20px!important;
+}
+.m-margin-right-small {
+    margin-right: 0.3em !important;
 }
 .m-margin-right{
     margin-right: 0.5em!important;
@@ -100,7 +136,7 @@ body{
     letter-spacing: 1px !important;
     line-height: 1.8 !important;
 }
-.m-text-thin{
+.m-text-thin {
     font-width: 300 !important;
 }
 .m-text-spaced{
@@ -154,8 +190,13 @@ body{
 .m-opacity-mini{
     opacity: 0.8 !important;
 }
-.m-opacity-tiny{
+
+.m-opacity-tiny {
     opacity: 0.6 !important;
+}
+
+.m-transparent {
+    background-color: rgba(255, 255, 255, 0) !important /*最后一个参数设置透明度，前面三个是RGB颜色值*/
 }
 /*----------shadow-------------*/
 .m-shadow-small {
@@ -189,6 +230,10 @@ body{
 }
 .m-container-ninety{
     width: 90% !important;
+    display: block!important;
+}
+.m-container-ninety-five{
+    width: 95% !important;
     display: block!important;
 }
 .m-container-full{

@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="_fragments :: head(~{:: title})">
-    <title>首页</title>
+    <title>Welcome to LYQ's world</title>
 </head>
 <body>
 <!------------------------------导航---------------------------------------->
 <nav th:replace="_fragments :: menu(1)"></nav>
 <!------------------------------------中间部分---------------- ---------------->
 <div class="m-padded-tb-big">
-    <div class="ui stackable this container m-container-ninety">
+    <div class="ui stackable this container m-container-ninety-five">
         <div class="ui stackable grid">
-            <!---个人简介、语录--->
+            <!---左边top--->
             <div class="three wide column">
+                <!---个人简介--->
                 <div class="ui link card">
                     <div class="image">
                         <img th:src="@{/images/index_avatar/index_avatar5.jpeg}">
                     </div>
                     <div class="content">
-                        <a class="header" th:href="@{/about}">刘以强</a>
+                        <a class="header" th:href="@{/about}" style="font-family: 楷体;font-size: x-large!important;">刘以强</a>
                         <div class="meta">
                             <a style="">Java程序员、乐观主义者</a>
                         </div>
-                        <div class=" description m-padded" style="font-family: 楷体;font-weight: 800 ;!important;">
-                            唯有你也想见我，<br>
-                            我们的见面才有意义。
+                        <div class="description m-padded" style="font-family: 'Andale Mono';font-weight: 800 ;!important;">
+                            The harder ，<br>
+                            the more fortunate ！
                         </div>
                     </div>
                     <div class="extra content">
@@ -59,81 +60,213 @@
                         </div>
                     </div>
                 </div>
+                <!---语录--->
+                <div class="ui horizontal divider m-margin">Little World</div>
+                <div class="ui cards">
+                    <a class="blue card m-margin-button-s" href="#">
+                        <div class="content" style="background:url(/images/background_images/just-waves.png)">
+                            <div class="description">
+                                <p style="font-size:18px;font-weight:500;font-family: '楷体';!important;">决定一个人的一生，以及整个命运的，只是一瞬之间。</p>
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <div class="right floated author">
+                                <img class="ui avatar image" th:src="@{/images/index_avatar/index_avatar4.jpeg}"><b>歌德</b>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="brown card m-margin-button-s" href="#">
+                        <div class="content" style="background:url(/images/background_images/cloudy-day.png)">
+                            <div class="description">
+                                <p style="font-size:18px;font-weight:500;font-family: '楷体';!important;">既然我已经踏上这条道路，那么，任何东西都不应妨碍我沿着这条路走下去。</p>
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <div class="right floated author">
+                                <img class="ui avatar image" th:src="@{/images/index_avatar/index_avatar4.jpeg}"><b>康德</b>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="teal card m-margin-button-s" href="#">
+                        <div class="content" style="background:url(/images/background_images/blue-snow.png)">
+                            <div class="description">
+                                <p style="font-size:18px;font-weight:500;font-family: '楷体';!important;">学到很多东西的诀窍，就是一下子不要学很多。</p>
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <div class="right floated author">
+                                <img class="ui avatar image" th:src="@{/images/index_avatar/index_avatar4.jpeg}"><b>洛克</b>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="green card m-margin-button-s" href="#">
+                        <div class="content" style="background:url(/images/background_images/trees.png)">
+                            <div class="description">
+                                <p style="font-size:18px;font-weight:500;font-family: '楷体';!important;">最大的骄傲于最大的自卑都表示心灵的最软弱无力。</p>
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <div class="right floated author">
+                                <img class="ui avatar image" th:src="@{/images/index_avatar/index_avatar4.jpeg}"><b>斯宾诺莎</b>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
             <!-----博客列表----->
             <div class="ten wide column">
-                <!----------------header----------------------->
-                <div class="ui top attached segment">
-                    <div class="ui middle aligned two column grid">
-                        <div class="column">
-                            <h3 class="ui teal header">博客</h3>
-                        </div>
-                        <div class="right aligned column">
-                            共 <h2 class="ui orange header m-inline-block m-text-thin" th:text="${page.totalElements}">&nbsp;16&nbsp;</h2>篇
-                        </div>
-                    </div>
-                </div>
-                <!-----------------content------------------------>
-                <div class="ui top teal attached horizontal segment">
-                    <div class="ui padded vertical segment m-padded-tb-large" th:each="blog : ${page.content}">
-                        <div class="ui middle aligned mobile reversed stackable grid">
-                            <div class="ui eleven wide column">
-                                <h3 class="ui header"><a href="#" target="_blank" class="m-black" th:href="@{blog/{id}(id=${blog.id})}" th:text="${blog.title}">认识Docker的底层原理</a></h3>
-                                <p class="m-text mini" th:text="|${blog.description}......|">提到虚拟化技术，我们首先想到的一定是 Docker，经过四年的快速发展 Docker 已经成为了很多公司的生产环境中大规模使用，也不再是一个只能在开发阶段使用的玩具了。作为在生产环境中广泛应用的产品，Docker 有着非常成熟的社区以及大量的使用者，代码库中的内容也变得非常庞大。......</p>
-                                <div class="ui stackable grid">
-                                    <div class="eleven wide column">
-                                        <div class="ui small horizontal link list">
-                                            <div class="item">
-                                                <img th:src="@{${blog.user.avatar}}" src="https://picsum.photos/seed/picsum/100/100" alt="" class="ui avatar image">
-                                                <div class="content">
-                                                    <h5 class="ui header m-opacity-mini" th:text="${blog.user.nickname}">LYQ</h5>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <i class="fa fa-calendar-check-o"></i>
-                                                <span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2019-12-23</span>
-                                            </div>
-                                            <div class="item">
-                                                <i class="fa fa-eye"></i>
-                                                <span th:text="${blog.views}">6666</span>
-                                            </div>
-                                        </div>
+                <!----------------收获、不足、待完善-------------------->
+                <div class="ui stackable two column grid">
+                    <div class="column">
+                        <div class="ui raised segment">
+                            <a class="ui blue ribbon label">REWARD</a>
+                            <div class="ui middle aligned animated list">
+                                <div class="item">
+                                    <img class="ui avatar image" th:src="@{/images/index_avatar/index_avatar6.jpeg}">
+                                    <div class="content">
+                                        <div class="header" th:text="#{index.reward1}"></div>
                                     </div>
-
-                                    <div class="right aligned five wide column">
-                                        <a th:href="@{/types/{id}(id=${blog.type.id})}" target="_blank" class="ui teal basic label m-padded-mini m-text-thin" th:text="${blog.type.name}">数据结构</a>
+                                </div>
+                                <div class="item">
+                                    <img class="ui avatar image" th:src="@{/images/index_avatar/index_avatar6.jpeg}">
+                                    <div class="content">
+                                        <div class="header" th:text="#{index.reward2}"></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img class="ui avatar image" th:src="@{/images/index_avatar/index_avatar6.jpeg}">
+                                    <div class="content">
+                                        <div class="header" th:text="#{index.reward3}"></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img class="ui avatar image" th:src="@{/images/index_avatar/index_avatar6.jpeg}">
+                                    <div class="content">
+                                        <div class="header" th:text="#{index.reward4}"></div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="ui five wide column">
-                                <a href="#" th:href="@{blog/{id}(id=${blog.id})}" target="_blank" class="top">
-                                    <img th:src="@{${blog.firstPicture}}" src="http://pic.yupoo.com/weikisa/19f4b025/2e1a444b.png" alt="" class="ui rounded image">
-                                </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui raised segment">
+                            <a class="ui red ribbon label">TO BE SOLVED</a>
+                            <div class="ui middle aligned animated list">
+                                <div class="item">
+                                    <img class="ui avatar image" th:src="@{/images/index_avatar/index_avatar8.jpeg}">
+                                    <div class="content">
+                                        <div class="header" th:text="#{index.tbs1}"></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img class="ui avatar image" th:src="@{/images/index_avatar/index_avatar8.jpeg}">
+                                    <div class="content">
+                                        <div class="header" th:text="#{index.tbs2}"></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img class="ui avatar image" th:src="@{/images/index_avatar/index_avatar8.jpeg}">
+                                    <div class="content">
+                                        <div class="header" th:text="#{index.tbs3}"></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img class="ui avatar image" th:src="@{/images/index_avatar/index_avatar8.jpeg}">
+                                    <div class="content">
+                                        <div class="header" th:text="#{index.tbs4}"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-------------------上一页、下一页--------------------->
-                <div th:if="${page.totalPages}>1" class="ui bottom attached segment">
-                    <div class="ui middle aligned two column grid">
+                <!----------------分割线-------------------->
+                <div class="ui horizontal divider m-margin" style="font-family:楷体;font-size: 20px; font-weight: 600;!important;">最新博客</div>
+                <!----------------content------------------->
+                <div class="ui raised segment m-margin-button" th:each="blog : ${page.content}">
+                    <div class="ui mobile reversed stackable grid">
+                        <!---文章展示--->
+                        <div class="ui eleven wide column">
+                            <h3 class="ui header m-padded-top"><a href="#" target="_blank" class="m-black" th:href="@{blog/{id}(id=${blog.id})}" th:text="${blog.title}"></a></h3>
+                            <p class="m-text mini" th:text="|${blog.description}......|" style="font-size: 15px; font-weight: 500 !important;letter-spacing: 1px !important;line-height: 2.5;"></p>
+                            <div class="ui divider "></div>
+                            <div class="ui stackable grid">
+                                <!--作者、时间、浏览次数-->
+                                <div class="eight wide column">
+                                    <div class="ui small horizontal link list">
+                                        <div class="item">
+                                            <img th:src="@{${blog.user.avatar}}" src="https://picsum.photos/seed/picsum/100/100" alt="" class="ui avatar image">
+                                            <div class="content">
+                                                <h5 class="ui header m-opacity-mini" th:text="${blog.user.nickname}">LYQ</h5>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <i class="fa fa-calendar-check-o"></i>
+                                            <span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2019-12-23</span>
+                                        </div>
+                                        <div class="item">
+                                            <i class="fa fa-eye"></i>
+                                            <span th:text="${blog.views}">6666</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--分类-->
+                                <div class="left aligned three wide column">
+                                    <a th:href="@{/types/{id}(id=${blog.type.id})}" target="_blank" class="ui orange basic label m-text-thin" th:text="${blog.type.name}">数据结构</a>
+                                </div>
+                                <!--标签-->
+                                <div class="right aligned five wide column" th:each="tag : ${blog.tags}">
+                                    <a th:href="@{/tags/{id}(id=${tag.id})}" target="_blank" class="ui teal left pointing basic label m-text-thin" th:text="${tag.name}">数据结构</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!---图片--->
+                        <div class="ui five wide column">
+                            <a href="#" th:href="@{blog/{id}(id=${blog.id})}" target="_blank" class="top">
+                                <img th:src="@{${blog.firstPicture}}" src="http://pic.yupoo.com/weikisa/19f4b025/2e1a444b.png" alt="" class="ui rounded image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-------------上一页、下一页---------------->
+                <div th:if="${page.totalPages}>1" class="ui bottom attached m-transparent segment">
+                    <div class="ui middle aligned two column m-transparent grid">
                         <div class="column">
-                            <a th:href="@{/(page=${page.number}-1)}" th:if="!${page.isFirst()}" class="ui mini teal basic button">上一页</a>
+                            <a th:href="@{/(page=${page.number}-1)}" th:if="!${page.isFirst()}" class="ui small teal basic button">上一页</a>
                         </div>
                         <div class="right aligned column">
-                            <a th:href="@{/(page=${page.number}+1)}" th:if="!${page.isLast()}" class="ui mini teal basic button">下一页</a>
+                            <a th:href="@{/(page=${page.number}+1)}" th:if="!${page.isLast()}" class="ui small teal basic button">下一页</a>
                         </div>
                     </div>
                 </div>
             </div>
             <!-----右边top----->
             <div class="three wide column">
+                <!--Beautiful Words-->
+                <div class="ui horizontal divider ">Beautiful Words</div>
+                <div style="font-size:18px;font-weight:500;font-family: 楷体!important;">
+                    <p class="ui left aligned ">仲夏夜，</p>
+                    <p class="content ">清风徐徐吹来，</p>
+                    <p class="">明月追赶晚霞，</p>
+                    <p class="">早早爬过山头，</p>
+                    <p class="">挂在中天，</p>
+                    <p class="">那月光似乎带着一股清凉，</p>
+                    <p class="">驱赶着酷日留下的余热。</p>
+                    <i class="fa fa-camera-retro fa-1x m-margin-right-big"></i>
+                    <i class="fa fa-envira fa-1x"></i>
+                    <i class="fa fa-envira fa-1x"></i>
+                    <i class="fa fa-envira fa-1x"></i>
+                    <i class="fa fa-envira fa-1x"></i>
+                    <i class="fa fa-envira fa-1x"></i>
+                </div>
+                <!--分割线-->
+                <div class="ui horizontal divider m-margin-1">Tools</div>
                 <!--分类-->
                 <div class="ui raised segments m-margin">
                     <div class="ui segment">
                         <div class="ui two column grid">
                             <div class="column">
-                                <i class="fa fa-leaf fa-lg m-margin-right-small"></i>分类
+                                <i class="fa fa-flag fa-lg m-margin-right-small"></i>分类
                             </div>
                             <div class="right aligned column">
                                 <a th:href="@{/types/-1}" target="_blank">more <i class="mini angle double right icon"></i></a>
@@ -179,11 +312,11 @@
                     </div>
                     <div class="ui blue segment">
                         <div class="menu">
-                            <div class="item m-padded-tb"><i class="folder outline icon"></i>文章总数: <span th:text="${page.totalElements}">1</span>篇</div>
-                            <div class="item m-padded-tb"><i class="bookmark outline icon"></i>分类总数: <span th:text="${#arrays.length(AllTypes)}">1</span>个</div>
-                            <div class="item m-padded-tb"><i class="moon outline icon"></i>标签总数: <span th:text="${#arrays.length(AllTags)}">1</span>个</div>
-                            <div class="item m-padded-tb"><i class="comments outline icon"></i>评论总数: <span>0</span>条</div>
-                            <div class="item m-padded-tb"><i class="spinner icon"></i>建站时长: <span id="recordTime">0</span></div>
+                            <div class="item m-padded-tb-small"><i class="folder outline icon"></i>文章总数:<span class="m-margin-left" th:text="${page.totalElements}">1</span> 篇</div>
+                            <div class="item m-padded-tb-small"><i class="bookmark outline icon"></i>分类总数:<span class="m-margin-left" th:text="${#arrays.length(AllTypes)}">1</span> 个</div>
+                            <div class="item m-padded-tb-small"><i class="star outline icon"></i>标签总数:<span class="m-margin-left" th:text="${#arrays.length(AllTags)}">1</span> 个</div>
+                            <div class="item m-padded-tb-small"><i class="comments outline icon"></i>评论总数:<span class="m-margin-left">0</span> 条</div>
+                            <div class="item m-padded-tb-small"><i class="spinner icon"></i>建站时长:<span class="m-margin-left" id="recordTime">0</span></div>
                         </div>
                     </div>
                 </div>
@@ -211,9 +344,14 @@
         position: 'bottom center'
     });
 
+    function PlaceholderTwo(a) {
+        if(a<10)
+            return "0"+a;
+        return a;
+    }
     function time(){
         var nowTime =new Date();
-        var startTime=new Date(2020,2,11,22,56,0);
+        var startTime=new Date(2020,1,11,22,56,0);
         var xc=(nowTime.getTime()-startTime.getTime())/1000;
         var day=parseInt(xc/86400);
         xc-=day*86400;
@@ -221,9 +359,9 @@
         xc-=hour*3600;
         var min=parseInt(xc/60);
         var sec=parseInt(xc-min*60);
-        hour=guolv(hour);
-        min=guolv(min);
-        sec=guolv(sec);
+        hour=PlaceholderTwo(hour);
+        min=PlaceholderTwo(min);
+        sec=PlaceholderTwo(sec);
         var str=day+'天'+hour+'小时'+min+'分'+sec;
         $("#recordTime").html(str);
     }

@@ -3,8 +3,8 @@ spring:
     active: dev
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://39.107.229.6:3306/myblog?useUnicode=true&characterEncoding=utf-8 # &serverTimezone=Asia/Shanghai
-    username: windows
+    url: jdbc:mysql://119.3.183.202:3306/myblog?useUnicode=true&characterEncoding=utf-8 # &serverTimezone=Asia/Shanghai
+    username: linux
     password: 8880
   thymeleaf:
     cache: false

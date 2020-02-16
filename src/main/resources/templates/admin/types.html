@@ -7,7 +7,7 @@
 <!------------------------------导航---------------------------------------->
 <nav th:replace="admin/_fragments :: menu(2)"></nav>
 <!------------------------------------中间部分---------------- ---------------->
-<div class="m-container-small m-padded-tb-large">
+<div class="m-container-small m-padded-tb-massive">
     <div class="ui container">
         <!-------------------提示--------------------->
         <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
@@ -19,10 +19,9 @@
         <table class="ui green compact padded table">
             <thead>
             <tr>
-                <th class="ui center aligned single line one wide">#</th>
-                <th class="six wide">分类名称</th>
-                <th class="four
-                 wide">操作</th>
+                <th></th>
+                <th>分类名称</th>
+                <th>操作</th>
             </tr>
             </thead>
             <tbody>
@@ -34,11 +33,11 @@
                 <td>
                     <a th:href="@{/admin/types/input/{id}(id=${pageType.id})}"
                        class="ui mini teal basic button">
-                        编辑
+                        <b style="font-family: 'Andale Mono'">Edit</b>
                     </a>
                     <a th:href="@{/admin/types/delete/{id}(id=${pageType.id})}"
                        class="ui mini negative basic button">
-                        删除
+                        <b style="font-family: 'Andale Mono'">Delete</b>
                     </a>
                 </td>
             </tr>
@@ -55,7 +54,9 @@
                            class="ui mini item"> 下一页 </a>
                     </div>
                     <div class="ui right floated small pagination menu">
-                    <a th:href="@{/admin/types/input}" class="ui mini item"> 增加 </a>
+                    <a th:href="@{/admin/types/input}" class="ui mini item">
+                        <b style="font-family: 'Andale Mono'">Add</b>
+                    </a>
                     </div>
                 </th>
             </tr>
