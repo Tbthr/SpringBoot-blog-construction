@@ -20,6 +20,10 @@ public class TypeServiceImpl {
     @Resource
     TypeRepository typeRepository;
 
+    public Long countTypes(){
+        return typeRepository.count();
+    }
+
     public Type saveType(Type type){
         return typeRepository.save(type);
     }

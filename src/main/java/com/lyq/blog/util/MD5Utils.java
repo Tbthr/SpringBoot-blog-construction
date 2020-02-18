@@ -32,6 +32,6 @@ public class MD5Utils {
     }
 
     public static void main(String[] args) {
-        System.out.println(code("admin"));
+        System.out.println(code("admin151"));
     }
 }

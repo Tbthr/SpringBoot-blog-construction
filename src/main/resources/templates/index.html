@@ -242,6 +242,15 @@
             </div>
             <!-----右边top----->
             <div class="three wide column">
+                <!--搜索框-->
+                <div class="item m-margin-tb-forSearch">
+                    <form name="search" method="get" th:action="@{/search}" target="_blank">
+                        <div class="ui icon input">
+                            <input type="text" name="query" placeholder="Search..." th:value="${query}">
+                            <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                        </div>
+                    </form>
+                </div>
                 <!--Beautiful Words-->
                 <div class="ui horizontal divider ">Beautiful Words</div>
                 <div style="font-size:18px;font-weight:500;font-family: 楷体!important;">
@@ -313,9 +322,9 @@
                     <div class="ui blue segment">
                         <div class="menu">
                             <div class="item m-padded-tb-small"><i class="folder outline icon"></i>文章总数:<span class="m-margin-left" th:text="${page.totalElements}">1</span> 篇</div>
-                            <div class="item m-padded-tb-small"><i class="bookmark outline icon"></i>分类总数:<span class="m-margin-left" th:text="${#arrays.length(AllTypes)}">1</span> 个</div>
-                            <div class="item m-padded-tb-small"><i class="star outline icon"></i>标签总数:<span class="m-margin-left" th:text="${#arrays.length(AllTags)}">1</span> 个</div>
-                            <div class="item m-padded-tb-small"><i class="comments outline icon"></i>评论总数:<span class="m-margin-left">0</span> 条</div>
+                            <div class="item m-padded-tb-small"><i class="bookmark outline icon"></i>分类总数:<span class="m-margin-left" th:text="${typesCount}">1</span> 个</div>
+                            <div class="item m-padded-tb-small"><i class="star outline icon"></i>标签总数:<span class="m-margin-left" th:text="${tagsCount}">1</span> 个</div>
+                            <div class="item m-padded-tb-small"><i class="comments outline icon"></i>评论总数:<span class="m-margin-left" th:text="${commentsCount}">0</span> 条</div>
                             <div class="item m-padded-tb-small"><i class="spinner icon"></i>建站时长:<span class="m-margin-left" id="recordTime">0</span></div>
                         </div>
                     </div>
@@ -330,9 +339,6 @@
 <!--/*/<th:block th:replace="_fragments :: script">/*/-->
 <!--/*/</th:block>/*/-->
 <script>
-    $('.menu.toggle').click(function () {
-        $('.m-item').toggleClass('m-mobile-show')
-    });
     $('#wechatButton').popup({
         popup: $('.wechatQR.popup'),
         on: 'hover',

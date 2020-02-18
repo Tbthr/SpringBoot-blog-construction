@@ -4,83 +4,60 @@
     <title>分类管理</title>
 </head>
 <body>
-<!------------------------------导航---------------------------------------->
-<nav th:replace="admin/_fragments :: menu(2)"></nav>
-<!------------------------------------中间部分---------------- ---------------->
-<div class="m-container-small m-padded-tb-massive">
-    <div class="ui container">
-        <!-------------------提示--------------------->
+    <!------------------------------导航---------------------------------------->
+    <nav th:replace="admin/_fragments :: menu(2)"></nav>
+    <!------------------------------------中间部分---------------- ---------------->
+    <div class="m-container-small m-padded-tb-massive">
+        <!------------分类展示------------>
+        <div class="ui container">
+            <a th:each="pageType : ${page.content}">
+                <h2 class="ui teal header m-words-display type-btn" th:text="${pageType.name}"></h2>
+                <div class="ui popup hidden m-transparent type-float">
+                    <a th:href="@{/admin/types/input/{id}(id=${pageType.id})}" class="ui mini teal basic button">
+                        <b style="font-family: 'Andale Mono'"> 修改 </b>
+                    </a>
+                    <a th:href="@{/admin/types/delete/{id}(id=${pageType.id})}" class="ui mini negative basic button">
+                        <b style="font-family: 'Andale Mono'"> 删除 </b>
+                    </a>
+                </div>
+            </a>
+        </div>
+        <!--------------提示-------------->
         <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
             <i class="close icon"></i>
             <div class="header">提示：</div>
             <p th:text="${message}">恭喜：操作成功！</p>
         </div>
-        <!-------------------表格--------------------->
-        <table class="ui green compact padded table">
-            <thead>
-            <tr>
-                <th></th>
-                <th>分类名称</th>
-                <th>操作</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="pageType : ${page.content}" th:class="${pageTypeStat.odd}? 'odd'">
-                <td>
-                    <h4 th:text="${pageTypeStat.count + page.number*page.size}" class="ui center aligned header">1</h4>
-                </td>
-                <td th:text="${pageType.name}">刻意练习清单</td>
-                <td>
-                    <a th:href="@{/admin/types/input/{id}(id=${pageType.id})}"
-                       class="ui mini teal basic button">
-                        <b style="font-family: 'Andale Mono'">Edit</b>
-                    </a>
-                    <a th:href="@{/admin/types/delete/{id}(id=${pageType.id})}"
-                       class="ui mini negative basic button">
-                        <b style="font-family: 'Andale Mono'">Delete</b>
-                    </a>
-                </td>
-            </tr>
-            </tbody>
-            <tfoot>
-            <tr>
-                <th colspan="3" class="">
-                    <div th:if="${page.totalPages}>1" class="ui small pagination menu">
-                        <a th:href="@{/admin/types(page=${page.number}-1)}"
-                           th:if="!${page.isFirst()}"
-                           class="ui mini item"> 上一页 </a>
-                        <a th:href="@{/admin/types(page=${page.number}+1)}"
-                           th:if="!${page.isLast()}"
-                           class="ui mini item"> 下一页 </a>
-                    </div>
-                    <div class="ui right floated small pagination menu">
-                    <a th:href="@{/admin/types/input}" class="ui mini item">
-                        <b style="font-family: 'Andale Mono'">Add</b>
-                    </a>
-                    </div>
-                </th>
-            </tr>
-            </tfoot>
-        </table>
+        <!-------------翻页、Add-------------->
+        <div style="width: 20em;height: 2em;margin: 100px 0 0 600px;!important">
+            <a th:href="@{/admin/types(page=${page.number}-1)}"
+               th:if="!${page.isFirst()}" class="ui blue basic button m-margin-small"> 上一页 </a>
+
+            <a th:href="@{/admin/types(page=${page.number}+1)}"
+               th:if="!${page.isLast()}" class="ui blue basic button m-margin-small"> 下一页 </a>
+
+            <a th:href="@{/admin/types/input}" class="ui blue basic button m-margin-small">
+                <b style="font-family: 'Andale Mono'"> Add </b>
+            </a>
+        </div>
     </div>
-</div>
 
-<!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
-<!--/*/</th:block>/*/-->
-<script>
-    $('.dropdown').dropdown({
-        on: 'hover'
-    });
+    <!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
+    <!--/*/</th:block>/*/-->
+    <script>
+       //消息提示关闭
+        $('.message').click(function () {
+            $(this).closest('.message').transition({
+                animation: 'fade',
+                // duration: '1s'
+            })
+        });
 
-    //消息提示关闭
-    $('.message').click(function () {
-        $(this)
-            .closest('.message')
-            .transition({
-            animation: 'fade',
-            // duration: '1s'
-        })
-    });
-</script>
+       $('.type-btn').popup({
+           popup: $('.type-float'),
+           on: 'click',
+           position: 'bottom center'
+       });
+    </script>
 </body>
 </html>

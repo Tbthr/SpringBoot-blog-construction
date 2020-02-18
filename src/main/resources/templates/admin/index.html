@@ -4,25 +4,20 @@
     <title>后台管理</title>
 </head>
 <body>
-<!------------------------------导航---------------------------------------->
-<nav th:replace="admin/_fragments :: menu(0)"></nav>
-<!------------------------------------中间部分---------------- ---------------->
-<div class="m-container-small m-padded-tb-large">
-    <div class="ui container">
-        <div class="ui success large message">
-            <h3>Hi,</h3>
-            <p>刘以强，欢迎登录！</p>
+    <!------------------------------导航---------------------------------------->
+    <nav th:replace="admin/_fragments :: menu(0)"></nav>
+    <!------------------------------------中间部分---------------- ---------------->
+    <div class="m-container-small m-padded-tb-large">
+        <div class="ui container">
+            <div class="ui success large message">
+                <h3>Hi,</h3>
+                <p th:text="|${session.user.nickname}，欢迎登录！|"></p>
+            </div>
+            <img src="https://picsum.photos/id/0/1000/600" alt="" class="ui rounded bordered fluid image">
         </div>
-        <img src="https://picsum.photos/id/180/1000/600" alt="" class="ui rounded bordered fluid image">
     </div>
-</div>
 
-<!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
-<!--/*/</th:block>/*/-->
-<script>
-    $('.dropdown').dropdown({
-        on: 'hover'
-    });
-</script>
+    <!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
+    <!--/*/</th:block>/*/-->
 </body>
 </html>

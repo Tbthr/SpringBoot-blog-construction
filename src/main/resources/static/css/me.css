@@ -15,6 +15,9 @@ body{
 .m-padded-top {
     padding-top: 1em !important;
 }
+.m-padded-nav {
+    padding: 1.8em 0 0 2em !important;
+}
 
 .m-padded-tb-mini {
     padding-top: 0.2em !important;
@@ -99,6 +102,10 @@ body{
     margin-top: 0.6em !important;
     margin-bottom: 0.6em !important;
 }
+.m-margin-tb-forSearch{
+    margin-top: 1em !important;
+    margin-bottom: 3em !important;
+}
 
 .m-margin-button-small{
     margin-bottom: 0.5em !important;
@@ -162,7 +169,7 @@ body{
 }
 /*----------手机端响应-----------*/
 @media screen and (max-width: 786px){
-    .m-mobile-hide{
+   .m-mobile-hide{
         display: none !important;
     }
     .m-mobile-show{
@@ -205,6 +212,10 @@ body{
 }
 /*------------block------------*/
 .m-inline-block{
+    display: inline-block !important;
+}
+.m-words-display{
+    margin: 0em 1em 2em 1em !important;
     display: inline-block !important;
 }
 /*-------container----------*/
@@ -250,14 +261,17 @@ body{
 .m-blue{
     color: #4183C4 !important;
 }
+.m-blue-l{
+    color: #0e90d2 !important;
+}
 .m-grey{
     color: rgba(0,0,0,.4);
 }
 /*--------------------------position-----------------------------*/
 .m-right-top{
     position: absolute !important;
-    top: 0;
-    right: 0;
+    top: 5px !important;
+    right: 5px !important;
 }
 
 .m-right-bottom{

@@ -4,7 +4,6 @@
     <title>500</title>
 </head>
 <body>
-
     <!------------------------------导航---------------------------------------->
     <nav th:replace="_fragments :: menu(0)"></nav>
 
@@ -18,5 +17,16 @@
     </div>
 
     <!--    <footer th:replace="_fragments :: footer"></footer>-->
+
+    <!-----页面源代码查看报错信息------>
+    <div>
+        <div th:utext="'&lt;!--'" th:remove="tag"></div>
+        <div th:utext="'Failed Request URL : ' + ${url}" th:remove="tag"></div>
+        <div th:utext="'Exception message : ' + ${exception.message}" th:remove="tag"></div>
+        <ul th:remove="tag">
+            <li th:each="st : ${exception.stackTrace}" th:remove="tag"><span th:utext="${st}" th:remove="tag"></span></li>
+        </ul>
+        <div th:utext="'--&gt;'" th:remove="tag"></div>
+    </div>
 </body>
 </html>

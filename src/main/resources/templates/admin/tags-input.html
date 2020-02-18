@@ -4,46 +4,41 @@
     <title>标签编辑</title>
 </head>
 <body>
-<!------------------------------导航---------------------------------------->
-<nav th:replace="admin/_fragments :: menu(3)"></nav>
-<!------------------------------------中间部分---------------- ---------------->
-<div class="m-container-small m-padded-tb-large">
-    <div class="ui container">
-        <!----------------发布----------------------->
-        <form th:object="${tag}" th:action="*{id} == null ? @{/admin/tags} : @{/admin/tags/{id}(id=*{id})}"
-              class="ui form" method="post">
-            <!--分类-->
-            <div class="field m-padded-tb-big">
-                <div class="ui left labeled input large">
-                    <label class="ui teal basic label">分类</label>
-                    <input type="text" name="name" placeholder="请输入您要新增的标签名称" th:value="*{name}">
+    <!------------------------------导航---------------------------------------->
+    <nav th:replace="admin/_fragments :: menu(3)"></nav>
+    <!------------------------------------中间部分---------------- ---------------->
+    <div class="m-container-small m-padded-tb-large">
+        <div class="ui container">
+            <!----------------发布----------------------->
+            <form th:object="${tag}" th:action="*{id} == null ? @{/admin/tags} : @{/admin/tags/{id}(id=*{id})}"
+                  class="ui form" method="post">
+                <!--分类-->
+                <div class="field m-padded-tb-big">
+                    <div class="ui left labeled input large">
+                        <label class="ui teal basic label">分类</label>
+                        <input type="text" name="name" placeholder="请输入您要新增的标签名称" th:value="*{name}">
+                    </div>
                 </div>
-            </div>
-            <div class="ui error message"></div> <!--报错提示填充框-->
+                <div class="ui error message"></div> <!--报错提示填充框-->
 
-            <!--/*/
-            <div class="ui negative message" th:if="${#fields.hasErrors('name')}">
-                <i class="close icon"></i>
-                <div class="header">验证失败</div>
-                <p th:errors="*{name}">提交信息不符合规则</p>
-            </div>
-            /*/-->
+                <!--/*/
+                <div class="ui negative message" th:if="${#fields.hasErrors('name')}">
+                    <i class="close icon"></i>
+                    <div class="header">验证失败</div>
+                    <p th:errors="*{name}">提交信息不符合规则</p>
+                </div>
+                /*/-->
 
-            <!--保存按钮-->
-            <div class="ui right aligned container m-padded-tb">
-                <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>
-                <button class="ui teal submit button">保存</button>
-            </div>
-        </form>
+                <!--保存按钮-->
+                <div class="ui right aligned container m-padded-tb">
+                    <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>
+                    <button class="ui teal submit button">保存</button>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
-<!--/*/</th:block>/*/-->
-<script>
-    $('.dropdown').dropdown({
-        on: 'hover'
-    });
-</script>
+    <!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
+    <!--/*/</th:block>/*/-->
 </body>
 </html>

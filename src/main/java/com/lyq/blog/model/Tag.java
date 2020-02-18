@@ -1,7 +1,6 @@
 package com.lyq.blog.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -17,7 +16,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Builder
 public class Tag {
 
     @Id
@@ -28,7 +26,11 @@ public class Tag {
     private String name;
 
     @ManyToMany(mappedBy = "tags")
-    private List<Blog> blogs=new ArrayList<>();
+    private List<Blog> blogs = new ArrayList<>();
+
+    public Tag(String s) {
+        name = s;
+    }
 
     @Override
     public String toString() {

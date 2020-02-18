@@ -628,10 +628,6 @@ h5,h6{font-size:1em;}
     <script src="../static/lib/Waypoints/jquery.waypoints.min.js" th:src="@{/lib/Waypoints/jquery.waypoints.min.js}"></script>
     <!--滚动侦测-->
     <script th:inline="javascript">
-            $('.menu.toggle').click(function () {
-                $('.m-item').toggleClass('m-mobile-show')
-            });
-
             $('#payButton').popup({
                 popup: $('.payQR.popup'),
                 on: 'click',

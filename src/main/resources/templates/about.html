@@ -28,14 +28,14 @@
 </nav>
 <!----------------------------中间部分---------------- ---------------->
 <div class="m-padded-tb-big animated fadeIn">
-    <div class="ui container m-container-ninety">
+    <div class="ui container">
         <div class="ui stackable grid">
             <!-----左侧图片----->
-            <div class="ten wide column" style="width: 75%!important">
-                <img src="https://picsum.photos/id/259/1000/500" alt="" class="ui rounded image">
+            <div class="twelve wide column">
+                <img src="https://picsum.photos/id/259/850/515" alt="" class="ui rounded image">
             </div>
             <!------右侧信息--------->
-            <div class="right floated four wide column">
+            <div class="four wide column">
                 <div class="ui top attached segment">
                     <div class="ui header">关于我</div>
                 </div>
@@ -51,7 +51,8 @@
                         甚慕，作博客也渐化为行。<br/>
                         乃吾之博客生矣！<br/>
                         然多用不遂，观亦亟待益。<br/>
-                        又勉之！若有暇，以览吾之博客矣！<br/>
+                        又勉之！<br/>
+                        若有暇，以览吾之博客矣！<br/>
                     </p>
                 </div>
                 <!------技术学习------>
@@ -64,36 +65,7 @@
                 </div>
 
                 <div class="ui bottom attached segment">
-                    <!----------GitHub---------->
-                    <a href="https://github.com/Tbthr" class="ui circular icon button" style="margin-right: 0.5em">
-                        <i class="github icon"></i>
-                    </a>
-                    <!----------WeChat---------->
-                    <button id="wechatButton" class="ui wecaht circular icon button" style="margin-right: 0.5em">
-                        <i class="weixin icon"></i>
-                    </button>
-                    <div class="ui wechatQR flowing popup transition hidden">
-                        <div class="ui column divided center aligned grid">
-                            <div class="column">
-                                <div class="image">
-                                    <img src="../static/images/Wechat.png" th:src="@{/images/Wechat.png}" class="ui rounded bordered image" style="width: 125px">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!----------QQ---------->
-                    <button id="qqButton" class="ui qq circular icon button" style="margin-right: 0.5em">
-                        <i class="qq icon"></i>
-                    </button>
-                    <div class="ui qqQR flowing popup transition hidden">
-                        <div class="ui column divided center aligned grid">
-                            <div class="column">
-                                <div class="image">
-                                    <img src="../static/images/QQ.jpg" th:src="@{/images/QQ.jpg}" class="ui rounded bordered image" style="width: 125px">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+               <p style="font-family: 楷体;font-weight: 600;font-size: medium;!important;">页面待完善......</p>
                 </div>
             </div>
         </div>
@@ -103,20 +75,5 @@
 
 <!--/*/<th:block th:replace="_fragments :: script">/*/-->
 <!--/*/</th:block>/*/-->
-<script>
-    $('.menu.toggle').click(function () {
-        $('.m-item').toggleClass('m-mobile-show')
-    });
-    $('#wechatButton').popup({
-        popup: $('.wechatQR.popup'),
-        on: 'click',
-        position: 'bottom center'
-    });
-    $('#qqButton').popup({
-        popup: $('.qqQR.popup'),
-        on: 'click',
-        position: 'bottom center'
-    })
-</script>
 </body>
 </html>

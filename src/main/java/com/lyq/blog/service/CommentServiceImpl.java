@@ -16,6 +16,10 @@ public class CommentServiceImpl {
     @Resource
     private CommentRepository commentRepository;
 
+    public Long countComments(){
+        return commentRepository.count();
+    }
+
     public List<Comment> listCommentByBlogId(Long blogId) {
         Sort sort = Sort.by(Sort.Direction.ASC, "createTime");
         return eachComment(commentRepository.findByBlogIdAndParentCommentNull(blogId, sort));

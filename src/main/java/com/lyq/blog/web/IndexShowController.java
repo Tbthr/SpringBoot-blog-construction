@@ -30,8 +30,9 @@ public class IndexShowController {
         model.addAttribute("page",blogService.listBlog(pageable));
         model.addAttribute("types",typeService.listTypeTop(6));
         model.addAttribute("tags",tagService.listTagTop(10));
-        model.addAttribute("AllTypes",typeService.getAllTypes());
-        model.addAttribute("AllTags",tagService.getAllTags());
+        model.addAttribute("typesCount",typeService.countTypes());
+        model.addAttribute("tagsCount",tagService.countTags());
+        model.addAttribute("commentsCount",commentService.countComments());
         return "index";
     }
 

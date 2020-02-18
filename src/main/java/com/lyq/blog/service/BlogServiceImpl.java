@@ -107,7 +107,7 @@ public class BlogServiceImpl {
         return map;
     }
 
-    public Long countBlog(){
+    public Long countBlogs(){
         return blogRepository.count();
     }
 

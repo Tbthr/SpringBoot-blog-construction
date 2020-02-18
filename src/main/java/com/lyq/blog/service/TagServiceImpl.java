@@ -26,8 +26,8 @@ public class TagServiceImpl {
         return tagRepository.save(Tag);
     }
 
-    public List<Tag> getAllTags() {
-        return tagRepository.findAll();
+    public Long countTags(){
+        return tagRepository.count();
     }
 
     public List<String> String_List(String Names) { // "aa,bb,cc" to list[aa,bb,cc]
@@ -45,7 +45,7 @@ public class TagServiceImpl {
         for (String s : list) {
             Tag tag = tagRepository.findByName(s);
             if (tag == null) {
-                tag = tagRepository.save(Tag.builder().name(s).build());
+                tag = tagRepository.save(new Tag(s));
             }
             tags.add(tag);
         }
@@ -54,6 +54,10 @@ public class TagServiceImpl {
 
     public Tag getTag(Long id) {
         return tagRepository.findById(id).get();
+    }
+
+    public List<Tag> getAllTags(){
+        return tagRepository.findAll();
     }
 
     public Tag findByName(String name) {

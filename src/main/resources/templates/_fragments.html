@@ -26,17 +26,25 @@
             <a th:href="@{/tags/-1}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class="fa fa-heart-o fa-lg m-margin-right"></i>标签</a>
             <a th:href="@{/archives}" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class="fa fa-folder-open-o fa-lg m-margin-right"></i>归档</a>
             <a th:href="@{/about}" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class="fa fa-send-o fa-lg m-margin-right"></i>关于我</a>
-            <div class="right m-item item m-mobile-hide">
-                <form name="search" method="get" th:action="@{/search}" target="_blank">
-                    <div class="ui icon transparent input">
-                        <input type="text" name="query" placeholder="Search..." th:value="${query}">
-                        <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+            <!--登录、注册-->
+            <div class="m-item m-mobile-hide m-padded-nav">
+                <div class="filed">
+                    <a th:href="@{/admin}" class="ui blue button small"><i class="fa fa-check fa-lg m-margin-right"></i>登录</a>
+                    <a href="#" id="registered-btn" class="ui red button small"><i class="fa fa-question fa-lg m-margin-right"></i>注册</a>
+                    <div class="ui reminderWords flowing popup transition hidden">
+                        <div class="ui column divided center aligned grid">
+                            <div class="column">
+                                <div class="details">
+                                    <p>用户登录、注册功能尚未开发，抱歉</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
-    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+    <a href="#" class="menu toggle ui teal basic tiny icon button m-right-top m-mobile-show">
         <i class="sidebar icon"></i>
     </a>
 </nav>
@@ -85,9 +93,16 @@
 <th:block th:fragment="script">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-<!--    <script>-->
-<!--        $('#newBlog-container').load(/*[[@{/footer/newBlog}]]*/"/footer/newBlog");-->
-<!--    </script>-->
+    <script>
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-show')
+        });
+        $('#registered-btn').popup({
+            popup: $('.reminderWords.popup'),
+            on: 'click',
+            position: 'bottom center'
+        });
+    </script>
 </th:block>
 
 </body>
