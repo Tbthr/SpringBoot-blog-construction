@@ -1,3 +1,5 @@
+server:
+  port: 8888
 spring:
   profiles:
     active: dev
@@ -10,7 +12,7 @@ spring:
     cache: false
   jpa:
     open-in-view: true
-
+  mvc:
+    favicon:
+      enabled: false
 comment.avatar: /images/fine-1.gif
-server:
-  port: 8888

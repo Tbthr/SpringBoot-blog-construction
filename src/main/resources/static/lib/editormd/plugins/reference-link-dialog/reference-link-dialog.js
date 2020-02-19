@@ -52,7 +52,7 @@
                     name       : dialogName,
                     title      : dialogLang.title,
                     width      : 380,
-                    height     : 296,
+                    height     : 450,
                     content    : dialogHTML,
                     mask       : settings.dialogShowMask,
                     drag       : settings.dialogDraggable,
