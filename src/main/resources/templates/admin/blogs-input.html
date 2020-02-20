@@ -17,7 +17,7 @@
                 <div class="required field">
                     <div class="ui left labeled input">
                         <div class="ui selection compact teal basic dropdown label">
-                            <input type="hidden" name="flag" value="原创" th:value="*{flag}!=null ?*{flag} : '原创'">
+                            <input type="hidden" name="flag" value="原创" th:value="*{flag}!=null ? *{flag} : '原创'">
                             <i class="dropdown icon"></i>
                             <div class="text">原创</div>
                             <div class="menu">
@@ -131,6 +131,16 @@
                     <button type="button" id="save-btn" class="ui secondary button">保存</button>
                     <button type="button" id="publish-btn" class="ui teal button">发布</button>
                 </div>
+                <div class="ui selection compact teal basic dropdown label">
+                    <input type="hidden" name="flag" value="原创" th:value="*{flag}!=null ? *{flag} : '原创'">
+                    <i class="dropdown icon"></i>
+                    <div class="text">原创</div>
+                    <div class="menu">
+                        <div class="item" data-value="原创">原创</div>
+                        <div class="item" data-value="转载">转载</div>
+                        <div class="item" data-value="翻译">翻译</div>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
@@ -139,6 +149,8 @@
     <!--/*/</th:block>/*/-->
     <script src="../../static/lib/editormd/editormd.js" th:src="@{/lib/editormd/editormd.js}"></script>
     <script>
+        $(".ui.dropdown").dropdown();
+
          $('.ui.tag.dropdown').dropdown({
             allowAdditions: true
         });

@@ -118,6 +118,8 @@
     <!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
     <!--/*/</th:block>/*/-->
     <script>
+        $(".ui.dropdown").dropdown();
+
         $('.menu.toggle').click(function () {
             $('.m-item').toggleClass('m-mobile-hide');
         });

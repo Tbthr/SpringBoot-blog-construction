@@ -34,15 +34,15 @@
                 <div class="ui relaxed horizontal list">
                     <div class="item">
                         <img th:src="@{${blog.user.avatar}}" src="https://picsum.photos/id/666/200/200" class="ui avatar image">
-                        <div class="content m-opacity-mini" th:text="${blog.user.nickname}">流韵</div>
+                        <div class="content m-opacity-mini" th:text="${blog.user.nickname}"></div>
                     </div>
                     <div class="item">
-                        <i class="calendar m-opacity-mini alternate outline icon"></i>
-                        <span class="m-opacity-mini" th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2019-12-23</span>
+                        <i class="fa fa-calendar-check-o m-opacity-mini"></i>
+                        <span class="m-opacity-mini" th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}"></span>
                     </div>
                     <div class="item">
-                        <i class="eye m-opacity-mini icon"></i>
-                        <span class="m-opacity-mini" th:text="${blog.views}">6666</span>
+                        <i class="fa fa-eye m-opacity-mini"></i>
+                        <span class="m-opacity-mini" th:text="${blog.views}"></span>
                     </div>
                 </div>
             </div>
@@ -498,13 +498,9 @@ h5,h6{font-size:1em;}
                 <div class="ui middle aligned grid">
                     <div class="eleven wide column">
                         <ul class="list">
-                            <li>作者：
-                                <span th:text="${blog.user.name}">刘以强</span>
-                                <a href="#" target="_blank" th:href="@{/about}">（联系作者）</a>
-                            </li>
-                            <li>发表时间：<span th:text="${blog.updateTime}">2019-12-24 11:06</span></li>
-                            <li>版权声明：自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）</li>
-                            <li>公众号转载：请在文末添加作者公众号二维码</li>
+                            <li>作者：<span th:text="${blog.user.name}">刘以强</span></li>
+                            <li>发表时间：<span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}"></span></li>
+                            <li>转载请署名作者且注明文章出处</li>
                         </ul>
                     </div>
                     <div class="five wide column">
