@@ -24,7 +24,7 @@ public class TypeShowController {
 
     @GetMapping("/types/{id}")
     public String types(@PathVariable Long id,
-                        @PageableDefault(size = 6, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
+                        @PageableDefault(size = 10, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
                         Model model) {
         List<Type> types = typeService.listTypeTop(1000);
         if (id == -1) {

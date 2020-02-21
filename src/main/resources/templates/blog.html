@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="_fragments :: head(~{:: title})">
-    <title>博客正文</title>
+    <title th:text="${blog.title}">博客正文</title>
 </head>
 <body>
     <!------------------------------导航---------------------------------------->
@@ -475,18 +475,14 @@ h5,h6{font-size:1em;}
                         <div class="ui two column divided center aligned grid">
                             <div class="column">
                                 <div class="image">
-                                    <img src="../static/images/fine-3.gif" th:src="@{/static/images/fine-3.gif}" alt=""
-                                         class="ui rounded bordered image"
-                                         style="width: 125px">
-                                    <div class="ui basic label m-margin-top">支付宝</div>
+                                    <img src="../static/images/fine-3.gif" th:src="@{/images/zhifubaoPay.jpg}" alt=""
+                                         class="ui rounded bordered image" style="width: 180px!important;">
                                 </div>
                             </div>
                             <div class="column">
                                 <div class="image">
-                                    <img src="../static/images/fine-3.gif" th:src="@{/static/images/fine-3.gif}" alt=""
-                                         class="ui rounded bordered image"
-                                         style="width: 125px">
-                                    <div class="ui basic label m-margin-top">微信</div>
+                                    <img src="../static/images/fine-3.gif" th:src="@{/images/wechatPay.png}" alt=""
+                                         class="ui rounded bordered image" style="width: 180px!important;">
                                 </div>
                             </div>
                         </div>
@@ -494,19 +490,19 @@ h5,h6{font-size:1em;}
                 </div>
             </div>
             <!-------博客信息------>
-            <div class="ui positive attached message" th:if="${blog.shareStatement}">
-                <div class="ui middle aligned grid">
+            <div class="ui positive attached message" th:if="${blog.shareStatement}" style="height: 130px!important">
+                <div class="ui middle aligned grid" style="margin-top: -1rem;!important">
                     <div class="eleven wide column">
                         <ul class="list">
-                            <li>作者：<span th:text="${blog.user.name}">刘以强</span></li>
-                            <li>发表时间：<span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}"></span></li>
+                            <li>本文作者：<span th:text="${blog.user.name}">刘以强</span></li>
+                            <li>发表时间：<span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd HH:mm:ss')}"></span></li>
                             <li>转载请署名作者且注明文章出处</li>
                         </ul>
                     </div>
                     <div class="five wide column">
                         <img src="../static/images/Wechat.png" th:src="@{/images/Wechat.png}" alt=""
                              class="ui right floated rounded bordered image"
-                             style="width: 120px">
+                             style="width: 100px">
                     </div>
                 </div>
             </div>

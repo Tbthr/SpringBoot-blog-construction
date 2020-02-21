@@ -25,7 +25,7 @@ public class IndexShowController {
     private CommentServiceImpl commentService;
 
     @GetMapping("/")
-    public String index(@PageableDefault(size = 6, sort = {"updateTime"}, direction = Sort.Direction.DESC)
+    public String index(@PageableDefault(size = 10, sort = {"updateTime"}, direction = Sort.Direction.DESC)
                                     Pageable pageable, Model model) {
         model.addAttribute("page",blogService.listBlog(pageable));
         model.addAttribute("types",typeService.listTypeTop(6));

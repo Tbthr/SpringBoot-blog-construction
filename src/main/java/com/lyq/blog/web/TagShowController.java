@@ -23,7 +23,7 @@ public class TagShowController {
 
     @GetMapping("/tags/{id}")
     public String types(@PathVariable Long id,
-                        @PageableDefault(size = 6, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
+                        @PageableDefault(size = 10, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
                         Model model) {
         List<Tag> tags = tagService.listTagTop(1000);
         if (id == -1) {

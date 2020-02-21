@@ -54,7 +54,7 @@
             <div class="ui mobile reversed stackable grid">
                 <!---文章展示--->
                 <div class="ui eleven wide column">
-                    <h3 class="ui header m-padded-top"><a href="#" target="_blank" class="m-black" th:href="@{blog/{id}(id=${blog.id})}" th:text="${blog.title}"></a></h3>
+                    <h3 class="ui header m-padded-top"><a href="#" target="_blank" class="m-black" th:href="@{/blog/{id}(id=${blog.id})}" th:text="${blog.title}"></a></h3>
                     <p class="m-text mini" th:text="|${blog.description}......|" style="font-size: 15px; font-weight: 500 !important;letter-spacing: 1px !important;line-height: 2.5;"></p>
                     <div class="ui divider "></div>
                     <div class="ui stackable grid">
@@ -89,7 +89,7 @@
                 </div>
                 <!---图片--->
                 <div class="ui five wide column">
-                    <a href="#" th:href="@{blog/{id}(id=${blog.id})}" target="_blank" class="top">
+                    <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="top">
                         <img th:src="@{${blog.firstPicture}}" src="http://pic.yupoo.com/weikisa/19f4b025/2e1a444b.png" alt="" class="ui rounded image">
                     </a>
                 </div>

@@ -92,16 +92,12 @@
                     </tr>
                     </tbody>
                     <tfoot>
-                    <tr th:if="${page.totalPages}>1">
-                        <th colspan="10" class="">
-                            <div class="ui tiny pagination menu">
-                                <a href="javascript:void(0);" onclick="page(this);" th:attr="date-page=${page.number}-1"
-                                   th:if="!${page.isFirst()}"
-                                   class="ui mini item"> 上一页 </a>
-                                <a href="javascript:void(0);" onclick="page(this);" th:attr="date-page=${page.number}+1"
-                                   th:if="!${page.isLast()}"
-                                   class="ui mini item"> 下一页 </a>
-                            </div>
+                    <tr th:if="${page.totalPages}>1" style="height: 1em!important">
+                        <th colspan="10" class="m-transparent">
+                            <a href="javascript:void(0);" onclick="page(this);" th:attr="date-page=${page.number}-1"
+                               th:if="!${page.isFirst()}" class="ui tiny teal basic button"> 上一页 </a>
+                            <a href="javascript:void(0);" onclick="page(this);" th:attr="date-page=${page.number}+1"
+                               th:if="!${page.isLast()}" class="ui tiny teal basic button"> 下一页 </a>
                         </th>
                     </tr>
                     </tfoot>
