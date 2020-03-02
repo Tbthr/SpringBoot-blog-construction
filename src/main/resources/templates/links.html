@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="_fragments :: head(~{:: title})">
+    <title>关于我</title>
+</head>
+<body>
+<!------------------导航--------------------->
+<nav th:replace="_fragments :: menu(5)"></nav>
+<!---------------中部主体-------------------->
+<div class="m-padded-tb-large ">
+    <div class="ui stackable container m-container-nine">
+        <h3 class="ui header m-text"><i class="fa fa-free-code-camp fa-lg m-margin-right"></i>大佬的博客:</h3>
+        <br>
+        <div class="ui cards">
+            <a th:each="bg : ${BGs}" th:href="${bg.blogUrl}" class="orange card m-card-center">
+                <div class="content">
+                    <div class="header" th:text="${bg.name}">徐高瑞</div>
+                    <p th:text="${bg.description}">爱帮助别人的大佬+java工程师</p>
+                </div>
+            </a>
+        </div>
+        <!--分割线-->
+        <div class="ui section divider m-padded-tb"></div>
+        <div class="ui stackable container">
+            <h3 class="ui header m-text">
+                <i class="fa fa-eercast fa-lg m-margin-right"></i>
+                友情链接(<b>需要添加友链的朋友，请在下方留言区留言</b>):
+            </h3>
+            <br>
+            <div class="ui link cards">
+                <a th:each="fd : ${friends}" th:href="${fd.blogUrl}" class="teal card m-card-center">
+                    <div class="image">
+                        <img th:src="${fd.imgUrl}">
+                    </div>
+                    <div class="content">
+                        <div class="header" th:text="${fd.name}">青丘</div>
+                        <div class="meta">
+                            <span class="date" th:text="${fd.description}">一名即将毕业的大四程序猿（Web前端）</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------------------留言-------------------------->
+<div class="ui stackable container" style="margin: 40px auto 60px auto!important;">
+    <div class="ui top attached segment">
+        <div id="comment-container" class="ui segment">
+            <!-------评论展示------>
+            <div th:fragment="commentList">
+                <div class="ui threaded comments" style="max-width: 100% !important">
+                    <h3 class="ui dividing header">留言</h3>
+                    <div class="comment" th:each="comment : ${comments}">
+                        <a class="avatar"><img th:src="@{${comment.avatar}}"></a>
+                        <div class="content">
+                            <a class="author">
+                                <span th:text="${comment.nickname}">Matt</span>
+                                <div th:if="${comment.adminComment}"
+                                     class="ui tiny teal basic left pointing label m-padded-tiny">博主
+                                </div>
+                            </a>
+                            <div class="metadata">
+                                <span class="date" th:text="${#dates.format(comment.createTime,'yyyy-MM-dd HH:mm:ss')}">今天下午 5:42</span>
+                            </div>
+                            <div class="text" th:text="${comment.content}">太赞了！</div>
+                            <div class="actions">
+                                <a th:attr="data-commentid=${comment.id} ,data-commentnickname=${comment.nickname}"
+                                   data-commentid="1" data-commentnickname="Mi" onclick="reply(this)"
+                                   class="reply">回复</a>
+                            </div>
+                        </div>
+                        <!------子类评论------>
+                        <div class="comments" th:if="${#arrays.length(comment.replayComments)>0}">
+                            <div class="comment" th:each="reply : ${comment.replayComments}">
+                                <a class="avatar"><img th:src="@{${reply.avatar}}"></a>
+                                <div class="content">
+                                    <a class="author">
+                                        <span th:text="${reply.nickname}">Matt</span>
+                                        <div th:if="${reply.adminComment}"
+                                             class="ui tiny teal basic left pointing label m-padded-tiny">博主
+                                        </div>
+                                        <span th:text="| @ ${reply.parentComment.nickname}|" class="m-teal">@Matt</span>
+                                    </a>
+                                    <div class="metadata">
+                                        <span class="date" th:text="${#dates.format(reply.createTime,'yyyy-MM-dd HH:mm:ss')}">今天下午 5:42</span>
+                                    </div>
+                                    <div class="text" th:text="${reply.content}">太赞了！</div>
+                                    <div class="actions">
+                                        <a th:attr="data-commentid=${reply.id} ,data-commentnickname=${reply.nickname}"
+                                           data-commentid="1" data-commentnickname="Mi" onclick="reply(this)"
+                                           class="reply">回复</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------评论输入------>
+        <div id="comment-form" class="ui form">
+            <input type="hidden" name="parentComment.id" value="-1">
+            <div class="field">
+                <textarea name="content" id="" cols="30" rows="10" placeholder="请输入评论信息..."></textarea>
+            </div>
+            <div class="fields">
+                <div class="field m-mobile-wide m-margin-button-small">
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input type="text" name="nickname" placeholder="姓名" th:value="${session.user}!=null ? ${session.user.nickname}">
+                    </div>
+                </div>
+                <div class="field m-mobile-wide m-margin-button-small">
+                    <div class="ui left icon input">
+                        <i class="mail icon"></i>
+                        <input type="text" name="email" placeholder="邮箱" th:value="${session.user}!=null ? ${session.user.email}">
+                    </div>
+                </div>
+                <div class="field m-mobile-wide m-margin-button-small">
+                    <button id="comment-submit" type="button" class="ui teal m-mobile-wide button">
+                        <i class="edit icon"></i>发表
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
+<!--/*/</th:block>/*/-->
+<script th:inline="javascript">
+    $('.ui.form').form({
+        fields: {
+            content: {
+                identifier: 'content',
+                rules: [{
+                    type: 'empty',
+                    prompt: '请输入评论内容'
+                }]
+            },
+            nickname: {
+                identifier: 'nickname',
+                rules: [{
+                    type: 'empty',
+                    prompt: '请输入你的名字'
+                }]
+            },
+            email: {
+                identifier: 'email',
+                rules: [{
+                    type: 'email',
+                    prompt: '请输入正确的邮箱地址'
+                }]
+            }
+        }
+    });
+
+    $('#comment-submit').click(function () {
+        const boo = $('.ui.form').form('validate form');
+        if (boo) {
+            console.log('校验成功');
+            postComments();
+        } else {
+            console.log('校验失败');
+        }
+    });
+
+    //
+    // $(function () {
+    //     $('#comment-container').load(/*[[@{/linksComments}]]*/"");
+    // });
+
+    function postComments() {
+        $("#comment-container").load(/*[[@{/linksComments}]]*/"", {
+            "parentComment.id": $("[name='parentComment.id']").val(),
+            "nickname": $("[name='nickname']").val(),
+            "email": $("[name='email']").val(),
+            "content": $("[name='content']").val()
+        }, function (responseTxt, statusTxt, xhr) {
+            // $(window).scrollTo($('#comment-container'), 500);
+            clearContent();
+        });
+    }
+
+    function clearContent() {
+        $("[name='parentComment.id']").val(-1);
+        $("[name='content']").attr("placeholder", "请输入评论信息...");
+    }
+
+    function reply(obj) {
+        var commentId = $(obj).data('commentid');
+        var commentNickname = $(obj).data('commentnickname');
+        $("[name='content']").attr("placeholder", "@" + commentNickname).focus();
+        $("[name='parentComment.id']").val(commentId);
+        $(window).scrollTo($('#comment-form'), 500);
+    }
+</script>
+
+</body>
+</html>

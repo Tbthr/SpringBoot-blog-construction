@@ -50,10 +50,4 @@ public class IndexShowController {
         model.addAttribute("comments",commentService.listCommentByBlogId(id));
         return "blog";
     }
-
-    @GetMapping("/footer/newBlog")
-    public String newBlogs(Model model) {
-        model.addAttribute("newBlogs",blogService.listRecommendBlogTop(3));
-        return "_fragments :: newBlogList";
-    }
 }
