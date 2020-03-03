@@ -1,44 +1,83 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="_fragments :: head(~{:: title})">
-    <title>关于我</title>
+    <title>友链</title>
 </head>
 <body>
 <!------------------导航--------------------->
 <nav th:replace="_fragments :: menu(5)"></nav>
 <!---------------中部主体-------------------->
 <div class="m-padded-tb-large ">
-    <div class="ui stackable container m-container-nine">
+    <div class="ui stackable container m-container-ninety">
         <h3 class="ui header m-text"><i class="fa fa-free-code-camp fa-lg m-margin-right"></i>大佬的博客:</h3>
         <br>
         <div class="ui cards">
-            <a th:each="bg : ${BGs}" th:href="${bg.blogUrl}" class="orange card m-card-center">
+            <a th:each="bg : ${BGs}" th:href="${bg.blogUrl}" class="orange card">
                 <div class="content">
-                    <div class="header" th:text="${bg.name}">徐高瑞</div>
-                    <p th:text="${bg.description}">爱帮助别人的大佬+java工程师</p>
+                    <div class="header" th:text="${bg.name}"></div>
+                    <p th:text="${bg.description}" style="padding-top: 10px!important;"></p>
                 </div>
             </a>
         </div>
         <!--分割线-->
         <div class="ui section divider m-padded-tb"></div>
-        <div class="ui stackable container">
-            <h3 class="ui header m-text">
-                <i class="fa fa-eercast fa-lg m-margin-right"></i>
-                友情链接(<b>需要添加友链的朋友，请在下方留言区留言</b>):
-            </h3>
-            <br>
-            <div class="ui link cards">
-                <a th:each="fd : ${friends}" th:href="${fd.blogUrl}" class="teal card m-card-center">
-                    <div class="image">
-                        <img th:src="${fd.imgUrl}">
-                    </div>
-                    <div class="content">
-                        <div class="header" th:text="${fd.name}">青丘</div>
-                        <div class="meta">
-                            <span class="date" th:text="${fd.description}">一名即将毕业的大四程序猿（Web前端）</span>
+        <div class="ui stackable grid">
+            <div class="ui eleven wide column">
+                <h3 class="ui header m-text">
+                    <i class="fa fa-eercast fa-lg m-margin-right"></i>
+                    友情链接(<b>需要添加友链的朋友，请在下方留言区留言</b>):
+                </h3>
+                <br>
+                <div class="ui link cards">
+                    <a th:each="fd : ${friends}" th:href="${fd.blogUrl}" class="teal card m-margin-left-big" style="width: 210px;!important;">
+                        <div class="image">
+                            <img th:src="${fd.imgUrl}" style="height: 200px;!important;">
                         </div>
-                    </div>
-                </a>
+                        <div class="content">
+                            <div class="header" th:text="${fd.name}"></div>
+                            <div class="description" th:text="${fd.description}"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="ui five wide column">
+                <h3 class="ui header m-text"><i class="fa  fa-meetup fa-lg m-margin-right"></i>
+                    网站分享:
+                </h3>
+                <br>
+                <div class="ui cards">
+                    <a href="http://bilibili.com" target="_blank" class="black card m-card-center">
+                        <div class="content">
+                            <div class="header">哔哩哔哩</div>
+                            <p style="padding-top: 10px!important;">弹幕视频网站，你想要的这里都有</p>
+                        </div>
+                    </a>
+                    <a href="https://www.wanmeikk.me" target="_blank" class="black card m-card-center">
+                        <div class="content">
+                            <div class="header">完美看看</div>
+                            <p style="padding-top: 10px!important;">电影免费观看</p>
+                        </div>
+                    </a>
+                    <a href="https://idea.medeming.com/jet/?tdsourcetag=s_pctim_aiomsg" target="_blank" class="black card m-card-center">
+                        <div class="content">
+                            <div class="header">程序员开发专属激活码</div>
+                            <p style="padding-top: 10px!important;">IDEA等各类激活码分享</p>
+                        </div>
+                    </a>
+                    <a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank" class="black card m-card-center">
+                        <div class="content">
+                            <div class="header">Subtle Patterns</div>
+                            <p style="padding-top: 10px!important;">简约好看的背景图网站</p>
+                        </div>
+                    </a>
+                    <a href="https://unsplash.com" target="_blank" class="black card m-card-center">
+                        <div class="content">
+                            <div class="header">Unsplash</div>
+                            <p style="padding-top: 10px!important;">Beautiful Free Images & Pictures</p>
+                        </div>
+                    </a>
+
+                </div>
             </div>
         </div>
     </div>

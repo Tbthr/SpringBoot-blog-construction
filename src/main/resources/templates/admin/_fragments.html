@@ -29,6 +29,8 @@
                     class="star icon"></i>分类</a>
             <a th:href="@{/admin/tags}" href="#" class="m-item item m-mobile-hide"
                th:classappend="${n==3} ? 'active'"><i class="tags icon"></i>标签</a>
+            <a th:href="@{/admin/links}" href="#" class="m-item item m-mobile-hide"
+               th:classappend="${n==4} ? 'active'"><i class="linkify icon"></i>友链</a>
             <a th:href="@{/}" href="#" class="m-item item m-mobile-hide"><i class="arrow circle left icon"></i>返回主页面</a>
             <a class="m-item item"><i class="edit icon"></i>修改信息</a>
             <a th:href="@{/admin/logout}" class="m-item item"><i class="delete icon"></i>注销</a>

@@ -14,7 +14,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
 @Controller
-public class LinksShowController {
+public class LinkShowController {
 
     @Resource
     private LinkCommentServiceImpl linkCommentService;

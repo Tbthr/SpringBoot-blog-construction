@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="admin/_fragments :: head(~{:: title})">
+    <title>友链编辑</title>
+</head>
+<body>
+<!----------------------导航--------------------------->
+<nav th:replace="admin/_fragments :: menu(4)"></nav>
+<!--------------------中间部分------------------------->
+<div class="m-container-small m-padded-tb-large">
+    <div class="ui container">
+        <!----------------发布----------------------->
+        <form th:object="${link}" th:action="@{/admin/links/input}" class="ui form" method="post">
+            <input type="hidden" name="id" th:value="*{id}">
+            <!--友链-->
+            <div class="required field m-margin-top-largest">
+                <div class="ui left labeled input large">
+                    <label class="ui teal basic label">友链名称</label>
+                    <input type="text" name="name" placeholder="请输入友链名称" th:value="*{name}">
+                </div>
+            </div>
+
+            <div class="required field m-padded-top-large">
+                <div class="ui left labeled input large">
+                    <label class="ui teal basic label">友情链接</label>
+                    <input type="text" name="blogUrl" placeholder="请输入友情链接" th:value="*{blogUrl}">
+                </div>
+            </div>
+
+            <div class="required field m-padded-top-large">
+                <div class="ui left labeled input large">
+                    <label class="ui teal basic label">友链描述</label>
+                    <input type="text" name="description" placeholder="请输入友链描述" th:value="*{description}">
+                </div>
+            </div>
+
+            <div class="ui toggle checkbox friend" style="margin-top: 2em!important;">
+                <input type="checkbox" id="Friend" name="friend" tabindex="0" class="hidden">
+                <label for="Friend"><b>Is a Friend ?</b></label>
+            </div>
+
+            <div class="field m-padded-top-large" id="imageUrl" style="display: none">
+                <div class="ui left labeled input large">
+                    <label class="ui teal basic label">图片展示</label>
+                    <input type="text" name="imgUrl" placeholder="请输入图片链接(1500x1000)" th:value="*{imgUrl}">
+                </div>
+            </div>
+
+            <div class="ui error message"></div> <!--报错提示填充框-->
+
+            <!--/*/
+            <div class="ui negative message" th:if="${#fields.hasErrors('name')}">
+                <i class="close icon"></i>
+                <div class="header">验证失败</div>
+                <p th:errors="*{name}">提交信息不符合规则</p>
+            </div>
+            /*/-->
+
+            <!--保存按钮-->
+            <div class="ui right aligned container m-padded-tb m-margin-top-largest">
+                <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>
+                <button class="ui teal submit button">保存</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
+<!--/*/</th:block>/*/-->
+<script>
+    $('.ui.form').form({
+        fields: {
+            name: {
+                identifier: 'name',
+                rules: [{
+                    type: 'empty',
+                    prompt: '请输入友链名称'
+                }]
+            },
+            blogUrl: {
+                identifier: 'blogUrl',
+                rules: [{
+                    type: 'empty',
+                    prompt: '请输入友情链接'
+                }]
+            },
+            description: {
+                identifier: 'description',
+                rules: [{
+                    type: 'empty',
+                    prompt: '请输入友链描述'
+                }]
+            }
+        }
+    });
+
+    $('.friend').click(function () {
+        var val=$('input[name="friend"]:checked').val();
+        if(val!=null){
+            // $('input[name="friend"]').attr("checked",false);
+            document.getElementById("imageUrl").style.display="block";
+        }
+        else{
+            // $('input[name="friend"]').attr("checked",true);
+            document.getElementById("imageUrl").style.display="none";
+        }
+    });
+</script>
+</body>
+</html>

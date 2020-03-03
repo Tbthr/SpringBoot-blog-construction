@@ -24,7 +24,7 @@ public class Link {
 
     private String description;
 
-    private boolean bigGuy;
+    private boolean friend;
 
     private String imgUrl;
 }

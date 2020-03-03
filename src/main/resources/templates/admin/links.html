@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="admin/_fragments :: head(~{:: title})">
+    <title>友链管理</title>
+</head>
+<body>
+<!--------------导航-------------->
+<nav th:replace="admin/_fragments :: menu(4)"></nav>
+<!------------中间部分------------>
+<div class="m-container-largest">
+    <!-------------------提示--------------------->
+    <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+        <i class="close icon"></i>
+        <div class="header">提示：</div>
+        <p th:text="${message}">恭喜：操作成功！</p>
+    </div>
+    <!------------友链展示------------>
+    <div id="table-container" class="">
+        <table class="ui compact padded large table">
+            <thead>
+            <tr>
+                <th></th>
+                <th>友链名称</th>
+                <th>博客地址</th>
+                <th>博客描述</th>
+                <th>IsFriend</th>
+                <th>图片地址</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="link : ${page.content}" th:class="${linkStat.odd}? 'odd'">
+                <td>
+                    <h4 th:text="${linkStat.count + page.number*page.size}" class="ui center aligned header">1</h4>
+                </td>
+                <td th:text="${link.name}"></td>
+                <td th:text="${link.blogUrl}"></td>
+                <td th:text="${link.description}"></td>
+                <td th:text="${link.friend} ? '是' : '否'"></td>
+                <td th:text="${#strings.abbreviate(link.imgUrl,40)}"></td>
+                <td>
+                    <a th:href="@{/admin/links/input/{id}(id=${link.id})}"
+                       class="ui mini teal basic button">
+                        <b style="font-family: 'Andale Mono'">Edit</b>
+                    </a>
+                    <a th:href="@{/admin/links/delete/{id}(id=${link.id})}"
+                       class="ui mini negative basic button">
+                        <b style="font-family: 'Andale Mono'">Delete</b>
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div style="margin-left: 100em!important;">
+            <a th:href="@{/admin/links/input}" class="ui blue basic small button m-margin-small">
+                <b style="font-family: 'Andale Mono'"> Add </b>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
+<!--/*/</th:block>/*/-->
+<script>
+    //消息提示关闭
+    $('.message').click(function () {
+        $(this).closest('.message').transition({
+            animation: 'fade',
+            // duration: '1s'
+        })
+    });
+</script>
+</body>
+</html>
