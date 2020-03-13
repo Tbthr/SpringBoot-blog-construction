@@ -9,7 +9,7 @@
     <!------------------------------------中间部分---------------- ---------------->
     <div class="m-container-big m-padded-tb-large">
         <div class="ui container">
-            <!----------------查询----------------------->
+            <!----------------查询------------------->
             <div class="ui basic segment form">
                 <input type="hidden" name="page" value=""> <!--for search-->
                 <div class="inline fields">
@@ -49,7 +49,13 @@
                     </div>
                 </div>
             </div>
-            <!-------------------表格--------------------->
+            <!----------------提示------------------->
+            <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+                <i class="close icon"></i>
+                <div class="header">提示：</div>
+                <p th:text="${message}">恭喜：操作成功！</p>
+            </div>
+            <!----------------表格------------------->
             <div id="table-container" class="">
                 <table th:fragment="blogList" class="ui teal compact padded table">
                     <thead>
@@ -102,12 +108,6 @@
                     </tr>
                     </tfoot>
                 </table>
-                <!-------------------提示--------------------->
-                <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
-                    <i class="close icon"></i>
-                    <div class="header">提示：</div>
-                    <p th:text="${message}">恭喜：操作成功！</p>
-                </div>
             </div>
         </div>
     </div>

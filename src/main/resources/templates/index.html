@@ -4,9 +4,9 @@
     <title>Welcome to LYQ's world</title>
 </head>
 <body>
-<!------------------------------导航---------------------------------------->
+<!------------------------------导航----------------------------------->
 <nav th:replace="_fragments :: menu(1)"></nav>
-<!------------------------------------中间部分---------------- ---------------->
+<!---------------------------中间部分---------------- ---------------->
 <div class="m-padded-tb-big">
     <div class="ui stackable this container m-container-ninety-five">
         <div class="ui stackable grid">
@@ -229,7 +229,7 @@
                     </div>
                 </div>
                 <!-------------上一页、下一页---------------->
-                <div th:if="${page.totalPages}>1" class="ui bottom attached m-transparent segment">
+                <div th:if="${page.totalPages}>1" class="ui m-transparent segment">
                     <div class="ui middle aligned two column m-transparent grid">
                         <div class="column">
                             <a th:href="@{/(page=${page.number}-1)}" th:if="!${page.isFirst()}" class="ui small teal basic button">上一页</a>
@@ -334,7 +334,8 @@
     </div>
 </div>
 
-<!---------------------底部footer----------待添加-------------------->
+<!---------------------底部footer------------------------------>
+<footer th:replace="_fragments :: footer"></footer>
 
 <!--/*/<th:block th:replace="_fragments :: script">/*/-->
 <!--/*/</th:block>/*/-->
@@ -350,6 +351,9 @@
         position: 'bottom center'
     });
 
+    /** 统计网站运行时间
+     * @return {string}
+     */
     function PlaceholderTwo(a) {
         if(a<10)
             return "0"+a;

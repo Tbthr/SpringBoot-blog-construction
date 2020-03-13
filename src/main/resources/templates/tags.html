@@ -4,9 +4,9 @@
     <title>标签</title>
 </head>
 <body>
-<!-----------------------------导航---------------------------------------->
+<!-----------------------------导航-------------------------------------->
 <nav th:replace="_fragments :: menu(3)"></nav>
-<!------------------------------------中间部分---------------- ---------------->
+<!------------------------------中间部分---------------- ---------------->
 <div class="m-container m-padded-tb-big">
     <div class="ui container">
         <!----------------header----------------------->
@@ -76,7 +76,7 @@
             </div>
         </div>
         <!-------------page checkout------------>
-        <div th:if="${page.totalPages}>1" class="ui bottom attached m-transparent segment">
+        <div th:if="${page.totalPages}>1" class="ui m-transparent segment">
             <div class="ui middle aligned two column m-transparent grid">
                 <div class="column">
                     <a th:href="@{'/tags/'+${activeTagId} (page=${page.number}-1)}" th:if="!${page.isFirst()}"
@@ -90,8 +90,6 @@
         </div>
     </div>
 </div>
-
-<!----------------------------------------------底部footer-------------------------------------->
 
 <!--/*/<th:block th:replace="_fragments :: script">/*/-->
 <!--/*/</th:block>/*/-->
