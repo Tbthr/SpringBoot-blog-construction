@@ -8,19 +8,45 @@
     <nav th:replace="admin/_fragments :: menu(2)"></nav>
     <!------------------------------------中间部分---------------- ---------------->
     <div class="m-container-small m-padded-tb-massive">
-        <!------------分类展示------------>
-        <div class="ui container">
-            <a th:each="pageType : ${page.content}">
-                <h2 class="ui teal header m-words-display type-btn" th:text="${pageType.name}"></h2>
-                <div class="ui popup hidden m-transparent type-float">
-                    <a th:href="@{/admin/types/input/{id}(id=${pageType.id})}" class="ui mini teal basic button">
-                        <b style="font-family: 'Andale Mono'"> 修改 </b>
-                    </a>
-                    <a th:href="@{/admin/types/delete/{id}(id=${pageType.id})}" class="ui mini negative basic button">
-                        <b style="font-family: 'Andale Mono'"> 删除 </b>
-                    </a>
-                </div>
-            </a>
+        <!------------分类表格展示------------>
+        <div id="table-container" class="">
+            <table class="ui blue compact very padded table">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>分类名称</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="pageType : ${page.content}" th:class="${pageTypeStat.odd}? 'odd'">
+                    <td>
+                        <h4 th:text="${pageTypeStat.count + page.number*page.size}" class="ui center aligned header">1</h4>
+                    </td>
+                    <td th:text="${pageType.name}">分类名称</td>
+                    <td>
+                        <a th:href="@{/admin/types/input/{id}(id=${pageType.id})}"
+                           class="ui mini teal basic button">
+                            <b style="font-family: 'Andale Mono'">Edit</b>
+                        </a>
+                        <a th:href="@{/admin/types/delete/{id}(id=${pageType.id})}"
+                           class="ui mini negative basic button">
+                            <b style="font-family: 'Andale Mono'">Delete</b>
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr th:if="${page.totalPages}>1" style="height: 1em!important">
+                    <th colspan="10" class="m-transparent">
+                        <a href="javascript:void(0);" onclick="page(this);" th:attr="date-page=${page.number}-1"
+                           th:if="!${page.isFirst()}" class="ui tiny teal basic button"> 上一页 </a>
+                        <a href="javascript:void(0);" onclick="page(this);" th:attr="date-page=${page.number}+1"
+                           th:if="!${page.isLast()}" class="ui tiny teal basic button"> 下一页 </a>
+                    </th>
+                </tr>
+                </tfoot>
+            </table>
         </div>
         <!--------------提示-------------->
         <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
