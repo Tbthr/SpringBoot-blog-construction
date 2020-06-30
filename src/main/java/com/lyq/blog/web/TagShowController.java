@@ -3,16 +3,16 @@ package com.lyq.blog.web;
 import com.lyq.blog.model.Tag;
 import com.lyq.blog.service.BlogServiceImpl;
 import com.lyq.blog.service.TagServiceImpl;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class TagShowController {
@@ -22,15 +22,20 @@ public class TagShowController {
     private TagServiceImpl tagService;
 
     @GetMapping("/tags/{id}")
-    public String types(@PathVariable Long id,
-                        @PageableDefault(size = 10, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
-                        Model model) {
-        List<Tag> tags = tagService.listTagTop(1000);
+    public String tags(@PathVariable Long id,
+                       @RequestParam(required = false, defaultValue = "1") int page,
+                       @RequestParam(required = false, defaultValue = "8") int rows,
+                       Model model) {
+        List<Tag> tags = tagService.listTagTop();
         if (id == -1) {
             id = tags.get(0).getId();
         }
-        model.addAttribute("tags", tags);
-        model.addAttribute("page", blogService.listBlog(id, pageable));
+        Map<Tag, Long> tagMap = new LinkedHashMap<>();
+        for (Tag t : tags) {
+            tagMap.put(t, tagService.countBlogs(t.getId()));
+        }
+        model.addAttribute("tags", tagMap);
+        model.addAttribute("page", blogService.listAllBlogByTagId(id, page, rows));
         model.addAttribute("activeTagId", id);
         return "tags";
     }

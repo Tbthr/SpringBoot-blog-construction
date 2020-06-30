@@ -1,10 +1,6 @@
 spring:
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-logging:
-  level:
-    root: info
-    com.lyq.blog: debug
-  file: log/blog-dev.log
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://119.3.183.202:3306/myblog?useUnicode=true&characterEncoding=utf-8&serverTimezone=CST
+    username: linux
+    password: 8880

@@ -1,64 +1,58 @@
 package com.lyq.blog.service;
 
-import com.lyq.blog.NotFoundExcepiton;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.lyq.blog.mapper.TypeMapper;
 import com.lyq.blog.model.Type;
-import com.lyq.blog.repository.TypeRepository;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
 
 @Service
-@Transactional
 public class TypeServiceImpl {
 
     @Resource
-    TypeRepository typeRepository;
+    TypeMapper typeMapper;
 
-    public Long countTypes(){
-        return typeRepository.count();
+    public Long countTypes() {
+        return typeMapper.sum();
     }
 
-    public Type saveType(Type type){
-        return typeRepository.save(type);
+    public Long countBlogs(Long id) {
+        return typeMapper.blogs_sum(id);
     }
 
-    public List<Type> getAllTypes(){
-        return typeRepository.findAll();
+    public Long saveType(Type type) {
+        return typeMapper.save(type);
     }
 
-    public Type getType(Long id){
-        return typeRepository.findById(id).get();
+    public void deleteType(Long id) {
+        typeMapper.deleteById(id);
     }
 
-    public Type findByName(String name){
-        return typeRepository.findByName(name);
+    public int updateType(Long id, Type type) {
+        return typeMapper.update(id, type.getName());
     }
 
-    public Page<Type> listType(Pageable pageable){
-        return typeRepository.findAll(pageable);
+    public Type findById(Long id) {
+        return typeMapper.findById(id);
     }
 
-    public List<Type> listTypeTop(Integer size){
-        Sort sort=Sort.by(Sort.Direction.DESC,"blogs.size");
-        Pageable pageable=PageRequest.of(0,size,sort);
-        return typeRepository.findTop(pageable);
+    public Type findByName(String name) {
+        return typeMapper.findByName(name);
     }
 
-    public Type updateType(Long id,Type type){
-        if (!typeRepository.existsById(id)){
-            throw new NotFoundExcepiton("不存在该分类");
-        }
-        return typeRepository.save(type);
+    public List<Type> getAllTypes() {
+        return typeMapper.findAll();
     }
 
-    public void deleteType(Long id){
-        typeRepository.deleteById(id);
+    public PageInfo<Type> listType(int page, int rows) {
+        PageHelper.startPage(page, rows);
+        return new PageInfo<>(typeMapper.findAll());
     }
 
+    public List<Type> listTypeTop() {
+        return typeMapper.findTop();
+    }
 }

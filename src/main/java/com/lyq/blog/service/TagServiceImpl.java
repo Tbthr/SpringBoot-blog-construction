@@ -1,14 +1,10 @@
 package com.lyq.blog.service;
 
-import com.lyq.blog.NotFoundExcepiton;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.lyq.blog.mapper.TagMapper;
 import com.lyq.blog.model.Tag;
-import com.lyq.blog.repository.TagRepository;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -16,18 +12,50 @@ import java.util.Arrays;
 import java.util.List;
 
 @Service
-@Transactional
 public class TagServiceImpl {
 
     @Resource
-    TagRepository tagRepository;
+    TagMapper tagMapper;
 
-    public Tag saveTag(Tag Tag) {
-        return tagRepository.save(Tag);
+    public Long countTags() {
+        return tagMapper.sum();
     }
 
-    public Long countTags(){
-        return tagRepository.count();
+    public Long countBlogs(Long id) {
+        return tagMapper.blogs_sum(id);
+    }
+
+    public Long saveTag(Tag Tag) {
+        return tagMapper.save(Tag);
+    }
+
+    public void deleteTag(Long id) {
+        tagMapper.deleteById(id);
+    }
+
+    public int updateTag(Long id, Tag Tag) {
+        return tagMapper.update(id, Tag.getName());
+    }
+
+    public Tag findById(Long id) {
+        return tagMapper.findById(id);
+    }
+
+    public Tag findByName(String name) {
+        return tagMapper.findByName(name);
+    }
+
+    public List<Tag> getAllTags() {
+        return tagMapper.findAll();
+    }
+
+    public PageInfo<Tag> listTag(int page, int rows) {
+        PageHelper.startPage(page, rows);
+        return new PageInfo<>(tagMapper.findAll());
+    }
+
+    public List<Tag> listTagTop() {
+        return tagMapper.findTop();
     }
 
     public List<String> String_List(String Names) { // "aa,bb,cc" to list[aa,bb,cc]
@@ -43,46 +71,15 @@ public class TagServiceImpl {
         List<String> list = String_List(Names);
         List<Tag> tags = new ArrayList<>();
         for (String s : list) {
-            Tag tag = tagRepository.findByName(s);
+            Tag tag = tagMapper.findByName(s);
             if (tag == null) {
-                tag = tagRepository.save(new Tag(s));
+                Tag t = new Tag(s);
+                tagMapper.save(t);
+                tags.add(tagMapper.findById(t.getId()));
+            } else {
+                tags.add(tag);
             }
-            tags.add(tag);
         }
         return tags;
     }
-
-    public Tag getTag(Long id) {
-        return tagRepository.findById(id).get();
-    }
-
-    public List<Tag> getAllTags(){
-        return tagRepository.findAll();
-    }
-
-    public Tag findByName(String name) {
-        return tagRepository.findByName(name);
-    }
-
-    public Page<Tag> listTag(Pageable pageable){
-        return tagRepository.findAll(pageable);
-    }
-
-    public List<Tag> listTagTop(Integer size){
-        Sort sort=Sort.by(Sort.Direction.DESC,"blogs.size");
-        Pageable pageable= PageRequest.of(0,size,sort);
-        return tagRepository.findTop(pageable);
-    }
-
-    public Tag updateTag(Long id,Tag Tag){
-        if (!tagRepository.existsById(id)){
-            throw new NotFoundExcepiton("不存在该标签");
-        }
-        return tagRepository.save(Tag);
-    }
-
-    public void deleteTag(Long id){
-        tagRepository.deleteById(id);
-    }
-
 }

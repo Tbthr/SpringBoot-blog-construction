@@ -2,16 +2,10 @@ package com.lyq.blog.web.admin;
 
 import com.lyq.blog.model.Tag;
 import com.lyq.blog.service.TagServiceImpl;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.annotation.Resource;
@@ -20,14 +14,14 @@ import javax.validation.Valid;
 @Controller
 @RequestMapping("/admin/tags")
 public class TagController {
-
     @Resource
     private TagServiceImpl tagService;
 
     @GetMapping //get all
-    public String tags(@PageableDefault(size = 10, sort = {"id"}, direction = Sort.Direction.DESC)
-                                Pageable pageable, Model model) {
-        model.addAttribute("page", tagService.listTag(pageable));
+    public String tags(@RequestParam(required = false, defaultValue = "1") int page,
+                       @RequestParam(required = false, defaultValue = "20") int rows,
+                       Model model) {
+        model.addAttribute("page", tagService.listTag(page, rows));
         return "admin/tags";
     }
 
@@ -39,7 +33,7 @@ public class TagController {
 
     @GetMapping("/input/{id}") // to标签页面 attached "id"
     public String editInput(@PathVariable Long id, Model model) {
-        model.addAttribute("tag", tagService.getTag(id));
+        model.addAttribute("tag", tagService.findById(id));
         model.addAttribute("edit", "修改");
         return "admin/tags-input";
     }
@@ -53,8 +47,8 @@ public class TagController {
         if (result.hasErrors()) {
             return "admin/tags-input";
         }
-        Tag t = tagService.saveTag(Tag);
-        if (t != null) {
+        Long id = tagService.saveTag(Tag);
+        if (id != null) {
             attributes.addFlashAttribute("message", "添加成功");
         } else {
             attributes.addFlashAttribute("message", "添加失败");
@@ -64,8 +58,8 @@ public class TagController {
 
     @PostMapping("/{id}") //update
     public String edit(Tag Tag, @PathVariable Long id, RedirectAttributes attributes) {
-        Tag t = tagService.updateTag(id, Tag);
-        if (t != null) {
+        int res = tagService.updateTag(id, Tag);
+        if (res > 0) {
             attributes.addFlashAttribute("message", "更新成功");
         } else {
             attributes.addFlashAttribute("message", "更新失败");

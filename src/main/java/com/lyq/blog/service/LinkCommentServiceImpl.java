@@ -1,9 +1,7 @@
 package com.lyq.blog.service;
 
+import com.lyq.blog.mapper.LinkCommentMapper;
 import com.lyq.blog.model.LinkComment;
-import com.lyq.blog.repository.LinkCommentRepository;
-import org.springframework.beans.BeanUtils;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -14,64 +12,65 @@ import java.util.List;
 @Service
 public class LinkCommentServiceImpl {
     @Resource
-    private LinkCommentRepository linkCommentRepository;
+    private LinkCommentMapper linkCommentMapper;
+    //存放 迭代找出的所有子代的集合
+    private List<LinkComment> tempReplys = new ArrayList<>();
 
-    public List<LinkComment> listCommentASC() {
-        Sort sort = Sort.by(Sort.Direction.ASC, "createTime");
-        return eachComment(linkCommentRepository.findAllByParentCommentNull(sort));
-    }
-
-    public void saveComment(LinkComment linkComment) {
-        Long parentCommentId = linkComment.getParentComment().getId();
-        if (parentCommentId != -1) {
-            linkComment.setParentComment(linkCommentRepository.findById(parentCommentId).get());
+    public void saveLinkComment(LinkComment linkComment) {
+        Long parentLinkCommentId = linkComment.getParentLinkCommentId();
+        if (parentLinkCommentId != -1) {
+            linkComment.setParentLinkCommentId(parentLinkCommentId);
         } else {
-            linkComment.setParentComment(null);
+            linkComment.setParentLinkCommentId(null);
         }
         linkComment.setCreateTime(new Date());
-        linkCommentRepository.save(linkComment);
+        linkCommentMapper.save(linkComment);
     }
 
-    //    循环每个顶级的评论节点
-    private List<LinkComment> eachComment(List<LinkComment> linkComments) {
-        List<LinkComment> commentsView = new ArrayList<>();
+    public List<LinkComment> linkLinkCommentASC() {
+        List<LinkComment> linkComments = eachLinkComment(linkCommentMapper.findAllByParentLinkCommentNull());
         for (LinkComment linkComment : linkComments) {
-            LinkComment c = new LinkComment();
-            BeanUtils.copyProperties(linkComment, c);
-            commentsView.add(c);
+            List<LinkComment> replayLinkComments = linkComment.getReplayLinkComments();
+            for (LinkComment lk : replayLinkComments) {
+                lk.setParentLinkComment(linkCommentMapper.setParentById(lk.getParentLinkCommentId()));
+            }
         }
-        //合并评论的各层子代到第一级子代集合中
-        combineChildren(commentsView);
-        return commentsView;
+        return linkComments;
     }
 
-    //    root根节点，blog不为空的对象集合
+    // 循环每个顶级的评论节点
+    private List<LinkComment> eachLinkComment(List<LinkComment> linkComments) {
+        List<LinkComment> linkCommentsView = new ArrayList<>(linkComments);
+        //合并评论的各层子代-->第一级子代集合中
+        combineChildren(linkCommentsView);
+        return linkCommentsView;
+    }
+
+    //合并评论的各层子代-->第一级子代集合中
     private void combineChildren(List<LinkComment> linkComments) {
+        // 遍历父评论
         for (LinkComment linkComment : linkComments) {
-            List<LinkComment> replys1 = linkComment.getReplayComments();
-            for (LinkComment reply1 : replys1) {
-                //循环迭代，找出子代，存放在tempReplys中
-                recursively(reply1);
+            List<LinkComment> sons = linkComment.getSons();
+            for (LinkComment c : sons) {
+                recursively(c);
             }
             //修改顶级节点的reply集合为迭代处理后的集合
-            linkComment.setReplayComments(tempReplys);
+            linkComment.setReplayLinkComments(tempReplys);
             //清除临时存放区
             tempReplys = new ArrayList<>();
         }
     }
 
-    //存放迭代找出的所有子代的集合
-    private List<LinkComment> tempReplys = new ArrayList<>();
-
-    //    递归迭代子类
+    // 递归迭代子类
     private void recursively(LinkComment linkComment) {
         tempReplys.add(linkComment);//顶节点添加到临时存放集合
-        if (linkComment.getReplayComments().size() > 0) {
-            List<LinkComment> replys = linkComment.getReplayComments();
-            for (LinkComment reply : replys) {
-                tempReplys.add(reply);
-                if (reply.getReplayComments().size() > 0) {
-                    recursively(reply);
+        List<LinkComment> son = linkCommentMapper.findByParentId(linkComment.getId());
+        if (son.size() > 0) {
+            for (LinkComment c : son) {
+                tempReplys.add(c);
+                List<LinkComment> byParentId = linkCommentMapper.findByParentId(c.getId());
+                if (byParentId.size() > 0) {
+                    byParentId.forEach(this::recursively);
                 }
             }
         }

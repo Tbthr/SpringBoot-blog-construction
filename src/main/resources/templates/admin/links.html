@@ -29,9 +29,9 @@
             </tr>
             </thead>
             <tbody>
-            <tr th:each="link : ${page.content}" th:class="${linkStat.odd}? 'odd'">
+            <tr th:each="link : ${page.list}" th:class="${linkStat.odd}? 'odd'">
                 <td>
-                    <h4 th:text="${linkStat.count + page.number*page.size}" class="ui center aligned header">1</h4>
+                    <h4 th:text="${linkStat.count + page.prePage*page.size}" class="ui center aligned header">1</h4>
                 </td>
                 <td th:text="${link.name}"></td>
                 <td th:text="${link.blogUrl}"></td>
@@ -51,8 +51,19 @@
             </tr>
             </tbody>
         </table>
-        <div style="margin-left: 100em!important;">
-            <a th:href="@{/admin/links/input}" class="ui blue basic small button m-margin-small">
+        <div style="margin-left: 6em!important;">
+            <a th:href="@{/admin/links(page=${page.pageNum}-1)}"
+               th:if="!${page.isIsFirstPage()}" class="ui blue basic small button m-margin-small">
+                <b style="font-family: 'Andale Mono'"> 上一页 </b>
+            </a>
+
+            <a th:href="@{/admin/links(page=${page.pageNum}+1)}"
+               th:if="!${page.isIsLastPage()}" class="ui blue basic small button m-margin-small">
+                <b style="font-family: 'Andale Mono'"> 下一页 </b>
+            </a>
+
+            <a th:href="@{/admin/links/input}" class="ui blue basic small button m-margin-small"
+               style="margin-left: 86em!important;">
                 <b style="font-family: 'Andale Mono'"> Add </b>
             </a>
         </div>

@@ -293,3 +293,11 @@ body{
     z-index: 10 !important;
     position: fixed !important;
 }
+
+/*th.tablesorter-headerAsc:after {*/
+/*    content: "  \2191"!important;*/
+/*}*/
+
+/*th.tablesorter-headerDesc:after {*/
+/*    content: " \2193"!important;*/
+/*}*/

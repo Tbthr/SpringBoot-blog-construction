@@ -7,11 +7,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class BlogSearch {
+public class Blog_tags {
 
-    private String title;
+    private Long blogsId;
 
-    private Long typeId;
-
-    private boolean recommend;
+    private Long tagsId;
 }

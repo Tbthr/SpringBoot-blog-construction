@@ -2,7 +2,6 @@ package com.lyq.blog.web;
 
 import com.lyq.blog.model.Comment;
 import com.lyq.blog.model.User;
-import com.lyq.blog.service.BlogServiceImpl;
 import com.lyq.blog.service.CommentServiceImpl;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -16,11 +15,8 @@ import javax.servlet.http.HttpSession;
 
 @Controller
 public class CommentController {
-
     @Resource
     private CommentServiceImpl commentService;
-    @Resource
-    private BlogServiceImpl blogService;
     @Value("${comment.avatar}")
     private String avatar;
 
@@ -32,13 +28,12 @@ public class CommentController {
 
     @PostMapping("/comments")
     public String post(Comment comment, HttpSession session) {
-        Long blogId = comment.getBlog().getId();
-        comment.setBlog(blogService.getBlog(blogId));
-        User user= (User) session.getAttribute("user");
-        if (user!=null) {
+        Long blogId = comment.getBlogId();
+        User user = (User) session.getAttribute("user");
+        if (user != null) {
             comment.setAvatar(user.getAvatar());
             comment.setAdminComment(true);
-        }else {
+        } else {
             comment.setAvatar(avatar);
         }
         commentService.saveComment(comment);

@@ -56,8 +56,8 @@
                 <p th:text="${message}">恭喜：操作成功！</p>
             </div>
             <!----------------表格------------------->
-            <div id="table-container" class="">
-                <table th:fragment="blogList" class="ui teal compact padded table">
+            <div id="table-container">
+                <table th:fragment="blogList" class="ui teal single line compact padded table tablesorter">
                     <thead>
                     <tr>
                         <th></th>
@@ -72,9 +72,10 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr th:each="blog : ${page.content}" th:class="${blogStat.odd}? 'odd'">
+                    <tr th:each="blog : ${page.list}" th:class="${blogStat.odd}? 'odd'">
                         <td>
-                            <h4 th:text="${blogStat.count + page.number*page.size}" class="ui center aligned header">1</h4>
+                            <h4 th:text="${blogStat.count + page.prePage*page.size}" class="ui center aligned header">
+                                1</h4>
                         </td>
                         <td th:text="${blog.title}">刻意练习清单</td>
                         <td th:text="${blog.type.name}">认知升级</td>
@@ -98,12 +99,12 @@
                     </tr>
                     </tbody>
                     <tfoot>
-                    <tr th:if="${page.totalPages}>1" style="height: 1em!important">
+                    <tr th:if="${page.pages}>1" style="height: 1em!important">
                         <th colspan="10" class="m-transparent">
-                            <a href="javascript:void(0);" onclick="page(this);" th:attr="date-page=${page.number}-1"
-                               th:if="!${page.isFirst()}" class="ui tiny teal basic button"> 上一页 </a>
-                            <a href="javascript:void(0);" onclick="page(this);" th:attr="date-page=${page.number}+1"
-                               th:if="!${page.isLast()}" class="ui tiny teal basic button"> 下一页 </a>
+                            <a href="javascript:void(0);" onclick="page(this);" th:attr="date-page=${page.pageNum}-1"
+                               th:if="!${page.isIsFirstPage()}" class="ui tiny teal basic button"> 上一页 </a>
+                            <a href="javascript:void(0);" onclick="page(this);" th:attr="date-page=${page.pageNum}+1"
+                               th:if="!${page.isIsLastPage()}" class="ui tiny teal basic button"> 下一页 </a>
                         </th>
                     </tr>
                     </tfoot>
@@ -113,15 +114,16 @@
     </div>
     <!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
     <!--/*/</th:block>/*/-->
+    <script th:src="@{/lib/tablesortor/jquery.tablesorter.js}"></script>
     <script>
         $(".ui.dropdown").dropdown();
 
         $('.menu.toggle').click(function () {
             $('.m-item').toggleClass('m-mobile-hide');
         });
-        $('.ui.checkbox')
-            .checkbox()
-        ;
+
+        $('.ui.checkbox').checkbox();
+
         function loaddata() {
             $("#table-container").load(/*[[@{/admin/blogs/search}]]*/"/admin/blogs/search", {
                 title: $("[name='title']").val(),
@@ -146,6 +148,10 @@
             $(this)
                 .closest('.message')
                 .transition('fade');
+        });
+
+        $(document).ready(function () {
+            $(".tablesorter").tablesorter();
         });
     </script>
 </body>

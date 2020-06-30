@@ -183,7 +183,7 @@
                 <!----------------分割线-------------------->
                 <div class="ui horizontal divider m-margin" style="font-family:楷体;font-size: 20px; font-weight: 600;!important;">最新博客</div>
                 <!----------------content------------------->
-                <div class="ui raised segment m-margin-button" th:each="blog : ${page.content}">
+                <div class="ui raised segment m-margin-button" th:each="blog : ${page.list}">
                     <div class="ui mobile reversed stackable grid">
                         <!---文章展示--->
                         <div class="ui eleven wide column">
@@ -229,13 +229,13 @@
                     </div>
                 </div>
                 <!-------------上一页、下一页---------------->
-                <div th:if="${page.totalPages}>1" class="ui m-transparent segment">
+                <div th:if="${page.pages}>1" class="ui m-transparent segment">
                     <div class="ui middle aligned two column m-transparent grid">
                         <div class="column">
-                            <a th:href="@{/(page=${page.number}-1)}" th:if="!${page.isFirst()}" class="ui small teal basic button">上一页</a>
+                            <a th:href="@{/(page=${page.pageNum}-1)}" th:if="!${page.isIsFirstPage()}" class="ui small teal basic button">上一页</a>
                         </div>
                         <div class="right aligned column">
-                            <a th:href="@{/(page=${page.number}+1)}" th:if="!${page.isLast()}" class="ui small teal basic button">下一页</a>
+                            <a th:href="@{/(page=${page.pageNum}+1)}" th:if="!${page.isIsLastPage()}" class="ui small teal basic button">下一页</a>
                         </div>
                     </div>
                 </div>
@@ -284,9 +284,9 @@
                     </div>
                     <div class="ui orange segment">
                         <div class="ui fluid vertical menu">
-                            <a th:href="@{/types/{id}(id=${type.id})}" target="_blank" class="item" th:each="type : ${types}">
-                                <span th:text="${type.name}">学习日志</span>
-                                <div class="ui orange basic left pointing label" th:text="${#arrays.length(type.blogs)}">66</div>
+                            <a th:href="@{/types/{id}(id=${type.key.id})}" target="_blank" class="item" th:each="type : ${types}">
+                                <span th:text="${type.key.name}">学习日志</span>
+                                <div class="ui orange basic left pointing label" th:text="${type.value}">66</div>
                             </a>
                         </div>
                     </div>
@@ -304,9 +304,9 @@
                         </div>
                     </div>
                     <div class="ui teal segment">
-                        <a th:href="@{/tags/{id}(id=${tag.id})}" target="_blank" class="ui teal basic left pointing label m-margin-tiny" th:each="tag : ${tags}">
-                            <span th:text="${tag.name}">计算机</span>
-                            <div class="detail" th:text="${#arrays.length(tag.blogs)}">6</div>
+                        <a th:href="@{/tags/{id}(id=${tag.key.id})}" target="_blank" class="ui teal basic left pointing label m-margin-tiny" th:each="tag : ${tags}">
+                            <span th:text="${tag.key.name}">计算机</span>
+                            <div class="detail" th:text="${tag.value}">6</div>
                         </a>
                     </div>
                 </div>
@@ -321,7 +321,7 @@
                     </div>
                     <div class="ui blue segment">
                         <div class="menu">
-                            <div class="item m-padded-tb-small"><i class="folder outline icon"></i>文章总数:<span class="m-margin-left" th:text="${page.totalElements}">1</span> 篇</div>
+                            <div class="item m-padded-tb-small"><i class="folder outline icon"></i>文章总数:<span class="m-margin-left" th:text="${page.total}">1</span> 篇</div>
                             <div class="item m-padded-tb-small"><i class="bookmark outline icon"></i>分类总数:<span class="m-margin-left" th:text="${typesCount}">1</span> 个</div>
                             <div class="item m-padded-tb-small"><i class="star outline icon"></i>标签总数:<span class="m-margin-left" th:text="${tagsCount}">1</span> 个</div>
                             <div class="item m-padded-tb-small"><i class="comments outline icon"></i>评论总数:<span class="m-margin-left" th:text="${commentsCount}">0</span> 条</div>

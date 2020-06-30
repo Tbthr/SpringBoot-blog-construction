@@ -2,17 +2,26 @@ server:
   port: 8888
 spring:
   profiles:
-    active: dev
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://119.3.183.202:3306/myblog?useUnicode=true&characterEncoding=utf-8 # &serverTimezone=Asia/Shanghai
-    username: linux
-    password: 8880
+    active: prod
+  banner:
+    location: banner.txt
+  main:
+    banner-mode: console
   thymeleaf:
     cache: false
-  jpa:
-    open-in-view: true
   mvc:
     favicon:
       enabled: false
+
 comment.avatar: /images/fine-1.gif
+
+mybatis:
+  #扫描Entity, 加入此设置方可在Mybatis的XML文件中使用实体类的Alias
+  typeAliasesPackage: com.lyq.blog.model
+  #扫描Mybatis的XML文件,
+  mapperLocations: com/lyq/blog/mapper/*.xml
+  configuration:
+    #开启驼峰映射
+    map-underscore-to-camel-case: true
+    #日志实现
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

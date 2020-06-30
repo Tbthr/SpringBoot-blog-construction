@@ -9,8 +9,8 @@
     <!------------------------------------中间部分---------------- ---------------->
     <div class="m-container-small m-padded-tb-massive">
         <!------------标签表格展示------------>
-        <div id="table-container" class="">
-            <table class="ui orange compact very padded table">
+        <div id="table-container">
+            <table class="ui orange compact padded very basic table tablesorter">
                 <thead>
                 <tr>
                     <th></th>
@@ -19,9 +19,9 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="pageTag : ${page.content}" th:class="${pageTagStat.odd}? 'odd'">
+                <tr th:each="pageTag : ${page.list}" th:class="${pageTagStat.odd}? 'odd'">
                     <td>
-                        <h4 th:text="${pageTagStat.count + page.number*page.size}" class="ui center aligned header">1</h4>
+                        <h4 th:text="${pageTagStat.count + page.prePage*page.pageSize}" class="ui center aligned header">1</h4>
                     </td>
                     <td th:text="${pageTag.name}">标签名称</td>
                     <td>
@@ -36,16 +36,6 @@
                     </td>
                 </tr>
                 </tbody>
-                <tfoot>
-                <tr th:if="${page.totalPages}>1" style="height: 1em!important">
-                    <th colspan="10" class="m-transparent">
-                        <a href="javascript:void(0);" onclick="page(this);" th:attr="date-page=${page.number}-1"
-                           th:if="!${page.isFirst()}" class="ui tiny teal basic button"> 上一页 </a>
-                        <a href="javascript:void(0);" onclick="page(this);" th:attr="date-page=${page.number}+1"
-                           th:if="!${page.isLast()}" class="ui tiny teal basic button"> 下一页 </a>
-                    </th>
-                </tr>
-                </tfoot>
             </table>
         </div>
         <!--------------提示-------------->
@@ -56,11 +46,11 @@
         </div>
         <!-------------翻页、Add-------------->
         <div style="width: 20em;height: 2em;margin: 100px 0 0 600px;!important">
-            <a th:href="@{/admin/tags(page=${page.number}-1)}"
-               th:if="!${page.isFirst()}" class="ui blue basic button m-margin-small"> 上一页 </a>
+            <a th:href="@{/admin/tags(page=${page.pageNum}-1)}"
+               th:if="!${page.isIsFirstPage()}" class="ui blue basic button m-margin-small"> 上一页 </a>
 
-            <a th:href="@{/admin/tags(page=${page.number}+1)}"
-               th:if="!${page.isLast()}" class="ui blue basic button m-margin-small"> 下一页 </a>
+            <a th:href="@{/admin/tags(page=${page.pageNum}+1)}"
+               th:if="!${page.isIsLastPage()}" class="ui blue basic button m-margin-small"> 下一页 </a>
 
             <a th:href="@{/admin/tags/input}" class="ui blue basic button m-margin-small">
                 <b style="font-family: 'Andale Mono'"> Add </b>
@@ -70,6 +60,7 @@
 
     <!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
     <!--/*/</th:block>/*/-->
+    <script th:src="@{/lib/tablesortor/jquery.tablesorter.js}"></script>
     <script>
         //消息提示关闭
         $('.message').click(function () {
@@ -85,6 +76,10 @@
             popup: $('.tag-float'),
             on: 'click',
             position: 'bottom center'
+        });
+
+        $(document).ready(function () {
+            $(".tablesorter").tablesorter();
         });
     </script>
 </body>

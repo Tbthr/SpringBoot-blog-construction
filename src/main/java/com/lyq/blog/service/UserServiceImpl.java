@@ -1,8 +1,8 @@
 package com.lyq.blog.service;
 
 
+import com.lyq.blog.mapper.UserMapper;
 import com.lyq.blog.model.User;
-import com.lyq.blog.repository.UserRepository;
 import com.lyq.blog.util.MD5Utils;
 import org.springframework.stereotype.Service;
 
@@ -12,10 +12,10 @@ import javax.annotation.Resource;
 public class UserServiceImpl {
 
     @Resource
-    private UserRepository userRepository;
+    private UserMapper userMapper;
 
     public User checkUser(String username,String password){
-        return userRepository.findByUsernameAndPassword(username, MD5Utils.code(password));
+        return userMapper.findByUsernameAndPassword(username, MD5Utils.code(password));
     }
 
 }

@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -13,42 +12,25 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
 public class Comment {
 
-    @Id
-    @GeneratedValue
     private Long id;
 
     private String nickname;
     private String email;
     private String avatar;
     private String content;
-    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
 
     private boolean adminComment;
 
-    @ManyToOne
-    private Blog blog;
+    private Long blogId;
 
-    @OneToMany(mappedBy = "parentComment")
-    private List<Comment> replayComments=new ArrayList<>();
+    private List<Comment> sons;
+    private List<Comment> replayComments = new ArrayList<>();
 
-    @ManyToOne
+    private Long parentCommentId;
     private Comment parentComment;
-
-    @Override
-    public String toString() {
-        return "Comment{" +
-                "id=" + id +
-                ", nickname='" + nickname + '\'' +
-                ", email='" + email + '\'' +
-                ", avatar='" + avatar + '\'' +
-                ", content='" + content + '\'' +
-                ", createTime=" + createTime +
-                ", adminComment=" + adminComment +
-                ", replayComments=" + replayComments +
-                '}';
-    }
 }

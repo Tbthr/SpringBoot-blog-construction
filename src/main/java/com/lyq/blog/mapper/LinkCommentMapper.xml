@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lyq.blog.mapper.LinkCommentMapper">
+
+    <select id="findAllByParentLinkCommentNull" parameterType="long" resultMap="map">
+        select c1.id                c1_id,
+               c1.create_time       c1_create_time,
+               c1.avatar            c1_avatar,
+               c1.email             c1_email,
+               c1.nickname          c1_nickname,
+               c1.content           c1_content,
+               c1.parent_comment_id c1_parent_comment_id,
+               c1.admin_comment     c1_admin_comment,
+               c2.id                c2_id,
+               c2.create_time       c2_create_time,
+               c2.avatar            c2_avatar,
+               c2.email             c2_email,
+               c2.nickname          c2_nickname,
+               c2.content           c2_content,
+               c2.parent_comment_id c2_parent_comment_id,
+               c2.admin_comment     c2_admin_comment
+        from link_comment c1
+                 left join link_comment c2 on c1.id = c2.parent_comment_id
+        where c1.parent_comment_id is null;
+    </select>
+
+    <resultMap id="map" type="linkComment">
+        <id property="id" column="c1_id"/>
+        <result property="createTime" column="c1_create_time"/>
+        <result property="avatar" column="c1_avatar"/>
+        <result property="email" column="c1_email"/>
+        <result property="nickname" column="c1_nickname"/>
+        <result property="content" column="c1_content"/>
+        <result property="parentCommentId" column="c1_parent_comment_id"/>
+        <result property="adminComment" column="c1_admin_comment"/>
+        <collection property="sons" javaType="list" ofType="linkComment">
+            <id property="id" column="c2_id"/>
+            <result property="createTime" column="c2_create_time"/>
+            <result property="avatar" column="c2_avatar"/>
+            <result property="email" column="c2_email"/>
+            <result property="nickname" column="c2_nickname"/>
+            <result property="content" column="c2_content"/>
+            <result property="parentLinkCommentId" column="c2_parent_comment_id"/>
+            <result property="adminComment" column="c2_admin_comment"/>
+        </collection>
+    </resultMap>
+</mapper>

@@ -25,28 +25,28 @@ public class LinkShowController {
 
     @GetMapping("/links")
     public String links(Model model){
-        model.addAttribute("comments",linkCommentService.listCommentASC());
-        model.addAttribute("BGs",linkService.listBGASC());
-        model.addAttribute("friends",linkService.listFriendASC());
+        model.addAttribute("comments", linkCommentService.linkLinkCommentASC());
+        model.addAttribute("BGs", linkService.listBGASC());
+        model.addAttribute("friends", linkService.listFriendASC());
         return "links";
     }
 
     @GetMapping("/linksComments")
-    public String comments(Model model) {
-        model.addAttribute("comments", linkCommentService.listCommentASC());
+    public String linkComments(Model model) {
+        model.addAttribute("comments", linkCommentService.linkLinkCommentASC());
         return "links :: commentList";
     }
 
     @PostMapping("/linksComments")
-    public String post(LinkComment comment, HttpSession session) {
-        User user= (User) session.getAttribute("user");
-        if (user!=null) {
-            comment.setAvatar(user.getAvatar());
-            comment.setAdminComment(true);
-        }else {
-            comment.setAvatar(avatar);
+    public String post(LinkComment linkComment, HttpSession session) {
+        User user = (User) session.getAttribute("user");
+        if (user != null) {
+            linkComment.setAvatar(user.getAvatar());
+            linkComment.setAdminComment(true);
+        } else {
+            linkComment.setAvatar(avatar);
         }
-        linkCommentService.saveComment(comment);
+        linkCommentService.saveLinkComment(linkComment);
         return "redirect:/linksComments";
     }
 }

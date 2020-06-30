@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace 绑定一对应的Mapper/Mapper接口 -->
+<mapper namespace="com.lyq.blog.mapper.BlogMapper">
+    <!--    <cache/>-->
+
+    <!--保存博客-->
+    <insert id="save" parameterType="blog" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        insert into blog(appreciation,
+                         commentable,
+                         content,
+                         create_time,
+                         first_picture,
+                         flag,
+                         published,
+                         recommend,
+                         share_statement,
+                         title,
+                         update_time,
+                         views,
+                         type_id,
+                         user_id,
+                         description,
+                         big_picture)
+        values (#{appreciation},
+                #{commentable},
+                #{content},
+                #{createTime},
+                #{firstPicture},
+                #{flag},
+                #{published},
+                #{recommend},
+                #{shareStatement},
+                #{title},
+                #{updateTime,jdbcType=TIMESTAMP},
+                #{views},
+                #{type.id},
+                #{user.id},
+                #{description},
+                #{bigPicture})
+    </insert>
+
+    <update id="update" parameterType="blog">
+        update blog
+        set appreciation    = #{appreciation,jdbcType=BIT},
+            commentable     = #{commentable,jdbcType=BIT},
+            create_time     = #{createTime,jdbcType=TIMESTAMP},
+            flag            = #{flag,jdbcType=VARCHAR},
+            published       = #{published,jdbcType=BIT},
+            recommend       = #{recommend,jdbcType=BIT},
+            share_statement = #{shareStatement,jdbcType=BIT},
+            title           = #{title,jdbcType=VARCHAR},
+            update_time     = #{updateTime,jdbcType=TIMESTAMP},
+            views           = #{views,jdbcType=INTEGER},
+            type_id         = #{type.id,jdbcType=BIGINT},
+            user_id         = #{user.id,jdbcType=BIGINT},
+            content         = #{content,jdbcType=LONGVARCHAR},
+            first_picture   = #{firstPicture,jdbcType=LONGVARCHAR},
+            description     = #{description,jdbcType=LONGVARCHAR},
+            big_picture     = #{bigPicture,jdbcType=LONGVARCHAR}
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <select id="findByIF" parameterType="map" resultMap="blogAO">
+        select b.id b_id, b.appreciation, b.commentable, b.content, b.create_time bct, b.first_picture, b.flag,
+        b.published, b.recommend, b.share_statement, b.title, b.update_time but, b.views, b.description, b.big_picture,
+        type.id type_id, type.name type_name,
+        u.id u_id, u.avatar, u.create_time uct, u.email, u.nickname, u.password, u.type, u.update_time uut, u.username,
+        tag.id tag_id, tag.name tag_name
+        from blog b,type,user u,blog_tags bt
+        left outer join tag on tags_id = tag.id
+        <where>
+            <if test="bId != null">
+                and b.id = #{bId}
+            </if>
+            <if test="bTitle != null">
+                and b.title = #{bTitle}
+            </if>
+            <if test="bTitleLike != null">
+                and b.title like #{bTitleLike}
+            </if>
+            <if test="bContentLike != null">
+                and b.content like #{bContentLike}
+            </if>
+            <if test="tagId != null">
+                and tag.id = #{tagId}
+            </if>
+            <if test="typeId != null">
+                and type.id = #{typeId}
+            </if>
+            <if test="bRecommend != null">
+                and b.recommend = #{bRecommend}
+            </if>
+            <if test="bUpdate_time != null">
+                and Year(b.update_time) = #{bUpdate_time}
+            </if>
+            <if test="true">
+                and b.type_id = type.id
+                and b.user_id = u.id
+                and bt.blogs_id = b.id
+            </if>
+            <if test="oderByUpdateTimeDesc != null">
+                order by b.update_time desc
+            </if>
+        </where>
+    </select>
+
+    <resultMap id="blogAO" type="blog">
+        <id property="id" column="b_id"/>
+        <result property="appreciation" column="appreciation"/>
+        <result property="commentable" column="commentable"/>
+        <result property="content" column="content"/>
+        <result property="createTime" column="bct"/>
+        <result property="firstPicture" column="first_picture"/>
+        <result property="flag" column="flag"/>
+        <result property="published" column="published"/>
+        <result property="recommend" column="recommend"/>
+        <result property="shareStatement" column="share_statement"/>
+        <result property="title" column="title"/>
+        <result property="updateTime" column="but"/>
+        <result property="views" column="views"/>
+        <result property="description" column="description"/>
+        <result property="bigPicture" column="big_picture"/>
+        <association property="type" javaType="type">
+            <id property="id" column="type_id"/>
+            <result property="name" column="type_name"/>
+        </association>
+        <association property="user" javaType="user">
+            <id property="id" column="u_id"/>
+            <result property="avatar" column="avatar"/>
+            <result property="createTime" column="uct"/>
+            <result property="email" column="email"/>
+            <result property="nickname" column="nickname"/>
+            <result property="password" column="password"/>
+            <result property="type" column="type"/>
+            <result property="updateTime" column="uut"/>
+            <result property="username" column="username"/>
+        </association>
+        <collection property="tags" javaType="list" ofType="tag">
+            <id property="id" column="tag_id"/>
+            <result property="name" column="tag_name"/>
+        </collection>
+    </resultMap>
+</mapper>

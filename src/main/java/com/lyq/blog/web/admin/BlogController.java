@@ -1,18 +1,12 @@
 package com.lyq.blog.web.admin;
 
-import com.lyq.blog.model.Blog;
-import com.lyq.blog.model.BlogSearch;
-import com.lyq.blog.model.Type;
-import com.lyq.blog.model.User;
+import com.lyq.blog.model.*;
 import com.lyq.blog.service.BlogServiceImpl;
 import com.lyq.blog.service.TagServiceImpl;
 import com.lyq.blog.service.TypeServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import net.minidev.json.JSONObject;
 import org.apache.commons.io.FileUtils;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.File;
+import java.util.List;
 
 @Slf4j
 @Controller
@@ -37,17 +32,20 @@ public class BlogController {
     private TagServiceImpl tagService;
 
     @GetMapping
-    public String AllBlogs(@PageableDefault(size = 20, sort = {"updateTime"}, direction = Sort.Direction.DESC)
-                                   Pageable pageable, BlogSearch blog, Model model) {
+    public String AllBlogs(@RequestParam(required = false, defaultValue = "1") int page,
+                           @RequestParam(required = false, defaultValue = "100") int rows,
+                           Model model) {
         model.addAttribute("types", typeService.getAllTypes());
-        model.addAttribute("page", blogService.listBlog(pageable, blog));
+        model.addAttribute("page", blogService.listAllBlog(page, rows));
         return "admin/blogs";
     }
 
     @PostMapping("/search")
-    public String search(@PageableDefault(size = 20, sort = {"updateTime"}, direction = Sort.Direction.DESC)
-                                 Pageable pageable, BlogSearch blog, Model model) {
-        model.addAttribute("page", blogService.listBlog(pageable, blog));
+    public String search(@RequestParam(required = false, defaultValue = "1") int page,
+                         @RequestParam(required = false, defaultValue = "15") int rows,
+                         BlogSearch blog, Model model) {
+        blog.setTitle("%" + blog.getTitle() + "%");
+        model.addAttribute("page", blogService.listAllBlogBySearch(page, rows, blog));
         return "admin/blogs :: blogList";
     }
 
@@ -64,7 +62,7 @@ public class BlogController {
         model.addAttribute("tags", tagService.getAllTags());
         model.addAttribute("types", typeService.getAllTypes());
         model.addAttribute("edit","修改");
-        Blog blog=blogService.getBlog(id);
+        Blog blog = blogService.findById(id);
         blog.tags_tagsNames();
         model.addAttribute("blog", blog);
         return "admin/blogs-input";
@@ -72,31 +70,49 @@ public class BlogController {
 
     @PostMapping //add + update
     public String add(Blog blog, RedirectAttributes attributes, HttpSession session) {
-        blog.setUser((User) session.getAttribute("user"));
+        User user = (User) session.getAttribute("user");
+        blog.setUser(user);
         Type type = typeService.findByName(blog.getType().getName());
         if (type == null) {
-            blog.setType(typeService.getType(typeService.saveType(blog.getType()).getId()));
+            typeService.saveType(blog.getType());
+            blog.setType(typeService.findById(blog.getType().getId()));
         } else {
             blog.setType(type);
         }
-        blog.setTags(tagService.getTags(blog.getTagNames()));
-        Blog b;
+        List<Tag> tags = tagService.getTags(blog.getTagNames());
+        blog.setTags(tags);
+        Long id;
         if (blog.getId() == null) {
-            b = blogService.saveBlog(blog);
-        }else{
-            b=blogService.updateBlog(blog.getId(),blog);
-        }
-        if (b != null) {
-            if (blog.isPublished()) {
-                attributes.addFlashAttribute("message", "发布成功");
+            id = blogService.saveBlog(blog);
+            blogService.saveBlogTags(blog.getId(), tags);
+            if (id > 0) {
+                if (blog.isPublished()) {
+                    attributes.addFlashAttribute("message", "发布成功");
+                } else {
+                    attributes.addFlashAttribute("message", "保存成功");
+                }
             } else {
-                attributes.addFlashAttribute("message", "保存成功");
+                if (blog.isPublished()) {
+                    attributes.addFlashAttribute("message", "发布失败");
+                } else {
+                    attributes.addFlashAttribute("message", "保存失败");
+                }
             }
         } else {
-            if (blog.isPublished()) {
-                attributes.addFlashAttribute("message", "发布失败");
+            id = (long) blogService.updateBlog(blog.getId(), blog);
+            blogService.updateBlogTags(blog.getId(), tags);
+            if (id > 0) {
+                if (blog.isPublished()) {
+                    attributes.addFlashAttribute("message", "发布成功（更新）");
+                } else {
+                    attributes.addFlashAttribute("message", "保存成功（更新）");
+                }
             } else {
-                attributes.addFlashAttribute("message", "保存失败");
+                if (blog.isPublished()) {
+                    attributes.addFlashAttribute("message", "发布失败（更新）");
+                } else {
+                    attributes.addFlashAttribute("message", "保存失败（更新）");
+                }
             }
         }
         return "redirect:/admin/blogs";
@@ -105,6 +121,7 @@ public class BlogController {
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable Long id, RedirectAttributes attributes) {
         blogService.deleteBlog(id);
+        blogService.deleteBlogTagsByBlogId(id);
         attributes.addFlashAttribute("message", "删除成功");
         return "redirect:/admin/blogs";
     }

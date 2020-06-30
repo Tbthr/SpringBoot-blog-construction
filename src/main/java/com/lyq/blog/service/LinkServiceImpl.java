@@ -1,9 +1,9 @@
 package com.lyq.blog.service;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.lyq.blog.mapper.LinkMapper;
 import com.lyq.blog.model.Link;
-import com.lyq.blog.repository.LinkRepository;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -12,33 +12,38 @@ import java.util.List;
 @Service
 public class LinkServiceImpl {
     @Resource
-    private LinkRepository linkRepository;
+    private LinkMapper linkMapper;
 
-    public Page<Link> listLinks(Pageable pageable){
-        return linkRepository.findAll(pageable);
+    public PageInfo<Link> listLinks(int page, int rows) {
+        PageHelper.startPage(page, rows);
+        return new PageInfo<>(linkMapper.findAllByFriendAndId());
     }
 
     public List<Link> listBGASC() {
-        return linkRepository.findAllByFriendFalse();
+        return linkMapper.findAllByFriendFalse();
     }
 
     public List<Link> listFriendASC() {
-        return linkRepository.findAllByFriendTrue();
+        return linkMapper.findAllByFriendTrue();
     }
 
-    public Link findLinkById(Long id){
-        return linkRepository.findById(id).get();
+    public Link findLinkById(Long id) {
+        return linkMapper.findById(id);
     }
 
-    public Link findByName(String name){
-        return linkRepository.findByName(name);
+    public Link findByName(String name) {
+        return linkMapper.findByName(name);
     }
 
-    public Link saveLink(Link link) {
-        return linkRepository.save(link);
+    public Long saveLink(Link link) {
+        return linkMapper.save(link);
     }
 
-    public void deleteLink(Long id){
-        linkRepository.deleteById(id);
+    public void deleteLink(Long id) {
+        linkMapper.deleteById(id);
+    }
+
+    public int update(Link link) {
+        return linkMapper.update(link);
     }
 }

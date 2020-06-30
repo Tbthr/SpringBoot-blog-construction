@@ -1,127 +1,188 @@
 package com.lyq.blog.service;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.lyq.blog.NotFoundExcepiton;
+import com.lyq.blog.mapper.BlogMapper;
 import com.lyq.blog.model.Blog;
 import com.lyq.blog.model.BlogSearch;
-import com.lyq.blog.repository.BlogRepository;
+import com.lyq.blog.model.Blog_tags;
+import com.lyq.blog.model.Tag;
 import com.lyq.blog.util.MarkdownUtils;
 import com.lyq.blog.util.MyBeanUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
-import javax.persistence.criteria.*;
-import java.util.*;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Service
-@Transactional
 @Slf4j
 public class BlogServiceImpl {
 
     @Resource
-    BlogRepository blogRepository;
+    BlogMapper blogMapper;
 
-    public Blog saveBlog(Blog blog){
+    // 返回博客总数
+    public Long countBlogs() {
+        return blogMapper.sum();
+    }
+
+    // 保存博客
+    public Long saveBlog(Blog blog) {
         Date date = new Date();
         blog.setCreateTime(date);
         blog.setUpdateTime(date);
         blog.setViews(0);
-        return blogRepository.save(blog);
+        return blogMapper.save(blog);
     }
 
-    public Blog getBlog(Long id) {
-        return blogRepository.findById(id).get();
+    // 保存博客标签关系
+    public void saveBlogTags(Long blogId, List<Tag> tags) {
+        Long tagId;
+        for (Tag tag : tags) {
+            tagId = tag.getId();
+            if (blogMapper.findBlogTagsByBlogIdAndTagId(blogId, tagId) == null) {
+                blogMapper.saveBlogTags(blogId, tagId);
+            }
+        }
     }
 
+    // 更新博客标签关系
+    public void updateBlogTags(Long blogId, List<Tag> tags) {
+        Long tagId;
+        List<Blog_tags> blogTags = blogMapper.findBlogTagsByBlogId(blogId);//原来的关系
+        for (Blog_tags bt : blogTags) {
+            boolean delete = true;
+            for (Tag t : tags) {
+                if (bt.getTagsId().equals(t.getId())) {
+                    delete = false;
+                }
+                tagId = t.getId();
+                if (blogMapper.findBlogTagsByBlogIdAndTagId(blogId, tagId) == null) {
+                    blogMapper.saveBlogTags(blogId, tagId); //把新关系加入
+                }
+            }
+            if (delete) {
+                blogMapper.deleteBlogTagsByBlogIdAndTagId(blogId, bt.getTagsId());
+            }
+        }
+    }
+
+    public void deleteBlog(Long id) {
+        blogMapper.deleteById(id);
+    }
+
+    public void deleteBlogTagsByBlogId(Long blogId) {
+        blogMapper.deleteBlogTagsByBlogId(blogId);
+    }
+
+    public int updateBlog(Long id, Blog blog) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("bId", id);
+        Blog b = blogMapper.findByIF(map).get(0);
+        BeanUtils.copyProperties(blog, b, MyBeanUtils.getNullPropertyNames(blog));//source,target,ignoreProperties
+        b.setUpdateTime(new Date());
+        return blogMapper.update(b);
+    }
+
+    public Blog findById(Long id) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("bId", id);
+        return blogMapper.findByIF(map).get(0);
+    }
+
+    // 转换 md->html
     public Blog getAndConvert(Long id) {
-        if (!blogRepository.existsById(id)) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("bId", id);
+        Blog blog = blogMapper.findByIF(map).get(0);
+        if (blog == null) {
             throw new NotFoundExcepiton("该博客不存在");
         }
-        Blog blog = blogRepository.getOne(id);
         Blog b = new Blog();
         BeanUtils.copyProperties(blog, b);
         String content = b.getContent();
         b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
-        blogRepository.updateViews(id); //浏览次数 + 1
+        blogMapper.updateViews(id); //浏览次数 + 1
         return b;
     }
 
     public Blog findByName(String title) {
-        return blogRepository.findByTitle(title);
+        Map<String, Object> map = new HashMap<>();
+        map.put("bTitle", title);
+        return blogMapper.findByIF(map).get(0);
     }
 
-    public Page<Blog> listBlog(Pageable pageable, BlogSearch blog) {
-        return blogRepository.findAll((Specification<Blog>) (root, query, cb) -> {
-            List<Predicate> predicates = new ArrayList<>();
-            if (blog.getTitle() != null && !("".equals(blog.getTitle()))) {
-                predicates.add(cb.like(root.get("title"), "%" + blog.getTitle() + "%"));
-            }
-            if (blog.getTypeId() != null){
-                predicates.add(cb.equal(root.<String>get("type").get("id"),blog.getTypeId()));
-            }
-            if (blog.isRecommend()){
-                predicates.add(cb.equal(root.<Boolean>get("recommend"), blog.isRecommend()));
-            }
-            query.where(predicates.toArray(new Predicate[0]));
-            return null;
-        }, pageable);
+    // 所有博客、时间倒序、分页展示
+    public PageInfo<Blog> listAllBlog(int page, int rows) {
+        PageHelper.startPage(page, rows);
+        Map<String, Object> map = new HashMap<>();
+        map.put("oderByUpdateTimeDesc", true);
+        return new PageInfo<>(blogMapper.findByIF(map));
     }
 
-    public Page<Blog> listBlog(Long tagId,Pageable pageable) {
-       return blogRepository.findAll(new Specification<Blog>() {
-           @Override
-           public Predicate toPredicate(Root<Blog> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
-               Join join=root.join("tags");
-               return cb.equal(join.get("id"),tagId);
-           }
-       },pageable);
+    // 根据分类ID、返回博客列表
+    public PageInfo<Blog> listAllBlogByTypeId(Long typeId, int page, int rows) {
+        PageHelper.startPage(page, rows);
+        Map<String, Object> map = new HashMap<>();
+        map.put("typeId", typeId);
+        map.put("oderByUpdateTimeDesc", true);
+        return new PageInfo<>(blogMapper.findByIF(map));
     }
 
-    public Page<Blog> listBlog(Pageable pageable) {
-        return blogRepository.findAll(pageable);
+    // 根据标签ID、返回博客列表
+    public PageInfo<Blog> listAllBlogByTagId(Long tagId, int page, int rows) {
+        PageHelper.startPage(page, rows);
+        Map<String, Object> map = new HashMap<>();
+        map.put("tagId", tagId);
+        map.put("oderByUpdateTimeDesc", true);
+        return new PageInfo<>(blogMapper.findByIF(map));
     }
 
-    public Page<Blog> listBlog(String query, Pageable pageable) {
-        return blogRepository.findByQuery(query, pageable);
+    // 根据关键字、查询博客
+    public PageInfo<Blog> listAllBlogByQuery(String query, int pageNum, int pageSize) {
+        PageHelper.startPage(pageNum, pageSize);
+        Map<String, Object> map = new HashMap<>();
+        map.put("bTitleLike", query);
+        map.put("bContentLike", query);
+        return new PageInfo<>(blogMapper.findByIF(map));
     }
 
-    public List<Blog> listRecommendBlogTop(Integer size) {
-        Sort sort = Sort.by(Sort.Direction.DESC, "updateTime");
-        Pageable pageable = PageRequest.of(0, size, sort);
-        return blogRepository.findTop(pageable);
+    // 根据标题、类型、是否推荐、返回博客列表
+    public PageInfo<Blog> listAllBlogBySearch(int page, int rows, BlogSearch blog) {
+        PageHelper.startPage(page, rows);
+        Map<String, Object> map = new HashMap<>();
+        map.put("bTitleLike", blog.getTitle());
+        map.put("typeId", blog.getTypeId());
+        map.put("bRecommend", blog.isRecommend());
+        map.put("oderByUpdateTimeDesc", true);
+        return new PageInfo<>(blogMapper.findByIF(map));
     }
 
-    public Map<String,List<Blog>> archiveBlog(){
-        List<String> years=blogRepository.findGroupYear();
-        Map<String,List<Blog>> map=new HashMap<>();
-        for (String year: years){
-            map.put(year,blogRepository.findByYear(year));
+    // 时间倒序、展示前n个博客
+    public PageInfo<Blog> listRecommendBlogTop(Integer size) {
+        PageHelper.startPage(1, size);
+        Map<String, Object> map = new HashMap<>();
+        map.put("oderByUpdateTimeDesc", true);
+        List<Blog> top = blogMapper.findByIF(map);
+        return new PageInfo<>(top);
+    }
+
+    // 归档、按照年份倒序 分组展示
+    public Map<String, List<Blog>> archiveBlog() {
+        List<String> years = blogMapper.findGroupYear();
+        Map<String, List<Blog>> map = new HashMap<>();
+        for (String year : years) {
+            Map<String, Object> mapIF = new HashMap<>();
+            mapIF.put("bUpdate_time", year);
+            mapIF.put("oderByUpdateTimeDesc", true);
+            map.put(year, blogMapper.findByIF(mapIF));
         }
         return map;
-    }
-
-    public Long countBlogs(){
-        return blogRepository.count();
-    }
-
-    public void deleteBlog(Long id) {
-        blogRepository.deleteById(id);
-    }
-
-    public Blog updateBlog(Long id,Blog blog){
-        if (!blogRepository.existsById(id)) {
-            throw new NotFoundExcepiton("不存在该博客");
-        }
-        Blog b=blogRepository.getOne(id);
-        BeanUtils.copyProperties(blog,b, MyBeanUtils.getNullPropertyNames(blog));
-        b.setUpdateTime(new Date());
-        return blogRepository.save(b);
     }
 }

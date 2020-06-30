@@ -16,22 +16,22 @@
                     <h3 class="ui teal header">分类</h3>
                 </div>
                 <div class="right aligned column">
-                    共 <h2 class="ui orange header m-inline-block m-text-thin" th:text="${#arrays.length(types)}">6</h2> 个
+                    共 <h2 class="ui orange header m-inline-block m-text-thin" th:text="${types.size()}">6</h2> 个
                 </div>
             </div>
         </div>
         <!----------------分类------------------>
         <div class="ui attached segment m-padded-tb-large">
             <div class="ui labeled button m-margin-tb-tiny" th:each="type : ${types}">
-                <a th:href="@{/types/{id}(id=${type.id})}" class="ui basic button" style="font-weight: 500!important"
-                   th:classappend="${type.id==activeTypeId} ? 'teal'" th:text="${type.name}">后端</a>
-                <div class="ui basic left pointing label" th:classappend="${type.id==activeTypeId} ? 'teal'"
-                     th:text="${#arrays.length(type.blogs)}">6
+                <a th:href="@{/types/{id}(id=${type.key.id})}" class="ui basic button" style="font-weight: 500!important"
+                   th:classappend="${type.key.id==activeTypeId} ? 'teal'" th:text="${type.key.name}">后端</a>
+                <div class="ui basic left pointing label" th:classappend="${type.key.id==activeTypeId} ? 'teal'"
+                     th:text="${type.value}">6
                 </div>
             </div>
         </div>
         <!--------------中间内容----------------->
-        <div class="ui raised segment m-margin-small" th:each="blog : ${page.content}">
+        <div class="ui raised segment m-margin-small" th:each="blog : ${page.list}">
             <div class="ui mobile reversed stackable grid">
                 <!---文章展示--->
                 <div class="ui eleven wide column">
@@ -73,13 +73,13 @@
             </div>
         </div>
         <!-------------page checkout------------>
-        <div th:if="${page.totalPages}>1" class="ui m-transparent segment">
+        <div th:if="${page.pages}>1" class="ui m-transparent segment">
             <div class="ui middle aligned two column m-transparent grid">
                 <div class="column">
-                    <a th:href="@{'/types/'+${activeTypeId} (page=${page.number}-1)}" th:if="!${page.isFirst()}" class="ui mini teal basic button">上一页</a>
+                    <a th:href="@{'/types/'+${activeTypeId} (page=${page.pageNum}-1)}" th:if="!${page.isIsFirstPage()}" class="ui small teal basic button">上一页</a>
                 </div>
                 <div class="right aligned column">
-                    <a th:href="@{'/types/'+${activeTypeId} (page=${page.number}+1)}" th:if="!${page.isLast()}" class="ui mini teal basic button">下一页</a>
+                    <a th:href="@{'/types/'+${activeTypeId} (page=${page.pageNum}+1)}" th:if="!${page.isIsLastPage()}" class="ui small teal basic button">下一页</a>
                 </div>
             </div>
         </div>
