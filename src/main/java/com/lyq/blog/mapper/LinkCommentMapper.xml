@@ -2,7 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lyq.blog.mapper.LinkCommentMapper">
 
-    <select id="findAllByParentLinkCommentNull" parameterType="long" resultMap="map">
+    <!--开启二级缓存-->
+    <cache/>
+
+    <select id="findAllByParentLinkCommentNull" parameterType="long" resultMap="map" useCache="true">
         select c1.id                c1_id,
                c1.create_time       c1_create_time,
                c1.avatar            c1_avatar,

@@ -6,14 +6,18 @@
 <body>
     <!------------------------------导航---------------------------------------->
     <nav th:replace="admin/_fragments :: menu(3)"></nav>
+    <!-------------Add-------------->
+    <a th:href="@{/admin/tags/input}" class="ui blue basic right floated icon circular button m-margin-top-large m-margin-right-large" >
+        <i class="plus icon"></i>
+    </a>
     <!------------------------------------中间部分---------------- ---------------->
     <div class="m-container-small m-padded-tb-massive">
         <!------------标签表格展示------------>
         <div id="table-container">
-            <table class="ui orange compact padded very basic table tablesorter">
+            <table class="ui single line very basic table tablesorter">
                 <thead>
                 <tr>
-                    <th></th>
+                    <th class="ui center aligned">#</th>
                     <th>标签名称</th>
                     <th>操作</th>
                 </tr>
@@ -44,17 +48,13 @@
             <div class="header">提示：</div>
             <p th:text="${message}">恭喜：操作成功！</p>
         </div>
-        <!-------------翻页、Add-------------->
+        <!-------------翻页-------------->
         <div style="width: 20em;height: 2em;margin: 100px 0 0 600px;!important">
             <a th:href="@{/admin/tags(page=${page.pageNum}-1)}"
                th:if="!${page.isIsFirstPage()}" class="ui blue basic button m-margin-small"> 上一页 </a>
 
             <a th:href="@{/admin/tags(page=${page.pageNum}+1)}"
                th:if="!${page.isIsLastPage()}" class="ui blue basic button m-margin-small"> 下一页 </a>
-
-            <a th:href="@{/admin/tags/input}" class="ui blue basic button m-margin-small">
-                <b style="font-family: 'Andale Mono'"> Add </b>
-            </a>
         </div>
     </div>
 

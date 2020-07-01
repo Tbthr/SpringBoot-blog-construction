@@ -2,7 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--namespace 绑定一对应的Mapper/Mapper接口 -->
 <mapper namespace="com.lyq.blog.mapper.BlogMapper">
-    <!--    <cache/>-->
+
+    <!--开启二级缓存-->
+    <cache/>
 
     <!--保存博客-->
     <insert id="save" parameterType="blog" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
@@ -61,7 +63,8 @@
         where id = #{id,jdbcType=BIGINT}
     </update>
 
-    <select id="findByIF" parameterType="map" resultMap="blogAO">
+    <!--使用缓存-->
+    <select id="findByIF" parameterType="map" resultMap="blogAO" useCache="true">
         select b.id b_id, b.appreciation, b.commentable, b.content, b.create_time bct, b.first_picture, b.flag,
         b.published, b.recommend, b.share_statement, b.title, b.update_time but, b.views, b.description, b.big_picture,
         type.id type_id, type.name type_name,

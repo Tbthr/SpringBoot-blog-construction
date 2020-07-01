@@ -147,6 +147,9 @@ body{
 .m-margin-right-big{
     margin-right: 1em!important;
 }
+.m-margin-right-large{
+    margin-right: 2em !important;;
+}
 /*--------------------------text-------------------------*/
 .m-text{
     font-width: 300 !important;
@@ -293,11 +296,3 @@ body{
     z-index: 10 !important;
     position: fixed !important;
 }
-
-/*th.tablesorter-headerAsc:after {*/
-/*    content: "  \2191"!important;*/
-/*}*/
-
-/*th.tablesorter-headerDesc:after {*/
-/*    content: " \2193"!important;*/
-/*}*/
