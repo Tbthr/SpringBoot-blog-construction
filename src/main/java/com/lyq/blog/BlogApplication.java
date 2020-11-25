@@ -18,5 +18,4 @@ public class BlogApplication extends SpringBootServletInitializer {
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
         return builder.sources(BlogApplication.class);
     }
-
 }

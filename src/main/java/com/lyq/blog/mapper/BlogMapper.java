@@ -3,11 +3,13 @@ package com.lyq.blog.mapper;
 import com.lyq.blog.model.Blog;
 import com.lyq.blog.model.Blog_tags;
 import org.apache.ibatis.annotations.*;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Map;
 
 @Mapper
+@Transactional
 public interface BlogMapper {
 
     @Select("select count(*) from blog")

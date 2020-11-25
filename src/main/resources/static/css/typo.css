@@ -51,7 +51,7 @@
   font-weight: 400;
   border-left: 1px solid #1abc9c;
   padding-left: 1em;
-  margin: 1em 3em 1em 2em;
+  margin: 1em 3em 1em 0em;
 }
 
 @media only screen and ( max-width: 640px ) {
@@ -231,7 +231,7 @@
 
 .typo h1,.typo  h2,.typo  h3,.typo  h4,.typo  h5,.typo  h6 {
   font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
-  font-weight: 100;
+  /*font-weight: 500;*/
   color: #000;
   line-height: 1.35;
 }
@@ -264,9 +264,17 @@
   font-size: 1.2em;
 }
 
+.typo ul li {
+  margin-bottom: 1em;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: justify;
+}
+
 /* 在文章中，应该还原 ul 和 ol 的样式 */
 .typo ul, .typo-ul {
-  margin-left: 1.3em;
+  margin-left: -1.5em;
   list-style: disc;
 }
 

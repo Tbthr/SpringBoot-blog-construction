@@ -8,19 +8,33 @@
 }
 
 .toc > ul li {
-    list-style: none
+    list-style: none;
 }
 
+/*一级菜单*/
 .toc-list {
     list-style-type: none;
     margin: 0;
-    padding-left: 10px
+    padding-left: 0
+}
+
+/*二级菜单缩进*/
+.toc-list .toc-list {
+    list-style-type: disc;
+    padding-left: 1.5em;
+}
+
+/*三级菜单缩进*/
+.toc-list .toc-list .toc-list {
+    list-style-type: square;
+    padding-left: 1.5em;
 }
 
 .toc-list li a {
-    display: block;
-    padding: 4px 0;
-    font-weight: 300;
+    list-style-type: disc;
+    /*display: inline-block;*/
+    /*padding: 0;*/
+    font-weight: 400;
 }
 .toc-list li a:hover {
     color: #00B5AD;
@@ -47,7 +61,7 @@ a.toc-link {
 }
 
 .is-active-link {
-    font-weight: 700;
+    font-weight: 600;
     color: #00B5AD !important;
 }
 
@@ -63,5 +77,6 @@ a.toc-link {
 }
 
 .is-active-link::before {
-    background-color: #54BC4B
+    background-color: #54BC4B;
+    width: 6px;
 }

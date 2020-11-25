@@ -2,10 +2,12 @@ package com.lyq.blog.mapper;
 
 import com.lyq.blog.model.Link;
 import org.apache.ibatis.annotations.*;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Mapper
+@Transactional
 public interface LinkMapper {
 
     @Insert("insert into link(friend,blog_url,description,img_url,name) values(#{friend,jdbcType=BIT},#{blogUrl,jdbcType=VARCHAR},#{description},#{imgUrl},#{name})")

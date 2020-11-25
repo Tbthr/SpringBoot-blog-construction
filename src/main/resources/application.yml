@@ -2,7 +2,7 @@ server:
   port: 8888
 spring:
   profiles:
-    active: dev
+    active: prod
   banner:
     location: banner.txt
   main:
@@ -12,16 +12,65 @@ spring:
   mvc:
     favicon:
       enabled: false
+  # 解决多个项目部署在tomcat报错
+  # javax.management.InstanceAlreadyExistsException:com.zaxxer.hikari:name=mallDataSource
+  jmx:
+    enabled: false
 
-comment.avatar: /images/fine-1.gif
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    # 连接池的配置信息
+    druid:
+      # 初始化大小,最小,最大
+      initialSize: 10
+      minIdle: 5
+      maxActive: 30
+
+      # 配置获取连接等待超时的时间
+      maxWait: 60000
+      # 配置间隔多久才进行一次检测,检测需要关闭的空闲连接,单位是毫秒
+      timeBetweenEvictionRunsMillis: 60000
+
+      # 配置一个连接在池中最小生存的时间,单位是毫秒
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 1 FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+
+      # 打开PSCache,并且指定每个连接上PSCache的大小
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      # 配置监控统计拦截的filters,去掉后监控界面sql无法统计,'wall'用于防火墙
+      filters: stat,wall
+
+      # 是否启用StatFilter默认值true
+      web-stat-filter:
+        enabled: true
+        url-pattern: /*
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+        session-stat-enable: false
+        session-stat-max-count: 1000
+        principal-cookie-name: admin
+        principal-session-name: admin
+        profile-enable: true
+      # 根据配置中的url-pattern来访问内置监控页面,如果是上面的配置,内置监控页面的首页是/druid/index.html
+      stat-view-servlet:
+        url-pattern: /druid/*  # 监控页面访问路径
+        # 允许清空统计数据
+        reset-enable: true
+        login-username: admin
+        login-password: 123456
+        # stat-view-servlet展示出来的监控信息比较敏感,是系统运行的内部情况,如果你需要做访问控制,可以配置allow和deny这两个参数
+        # deny优先于allow,如果在deny列表中,就算在allow列表中,也会被拒绝。如果allow没有配置或者为空,则允许所有访问
+        # 配置的格式
+        # <IP>或者<IP>/<SUB_NET_MASK_size>其中128.242.127.1/24
+        # 24表示,前面24位是子网掩码,比对的时候,前面24位相同就匹配,不支持IPV6。
+        # allow:
+        # deny:
 
 mybatis:
-  #扫描Entity, 加入此设置方可在Mybatis的XML文件中使用实体类的Alias
-  typeAliasesPackage: com.lyq.blog.model
-  #扫描Mybatis的XML文件,
-  mapperLocations: com/lyq/blog/mapper/*.xml
-  configuration:
-    #开启驼峰映射
-    map-underscore-to-camel-case: true
-    #日志实现
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # 配置文件位置
+  config-location: classpath:mybatis-config.xml
+
+comment.avatar: /images/fine-1.gif

@@ -26,7 +26,7 @@
                c2.admin_comment     c2_admin_comment
         from comment c1
                  left join comment c2 on c1.id = c2.parent_comment_id
-        where c1.parent_comment_id is null;
+        where c1.parent_comment_id is null and c1.blog_id = #{blogId}
     </select>
 
     <resultMap id="map" type="comment">

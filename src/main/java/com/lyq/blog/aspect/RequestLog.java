@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class RequestLog {
-        private String url;
-        private String ip;
-        private String classMethod;
-        private Object[] args;
-    }
+    private String url;
+    private String ip;
+    private String classMethod;
+    private Object[] args;
+}

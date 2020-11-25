@@ -2,10 +2,12 @@ package com.lyq.blog.mapper;
 
 import com.lyq.blog.model.Type;
 import org.apache.ibatis.annotations.*;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Mapper
+@Transactional
 public interface TypeMapper {
 
     @Select("select count(*) from type")

@@ -20,6 +20,13 @@
     </properties>
 
     <dependencies>
+        <!--数据库文档生成-->
+        <dependency>
+            <groupId>cn.smallbun.screw</groupId>
+            <artifactId>screw-core</artifactId>
+            <version>1.0.3</version>
+        </dependency>
+
         <!--MyBatis Spring Boot Starter-->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
@@ -30,8 +37,8 @@
         <!--MyBatis 分页插件 PageHelper-->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper-spring-boot-starter</artifactId>
-            <version>1.2.13</version>
+            <artifactId>pagehelper</artifactId>
+            <version>5.1.11</version>
         </dependency>
 
         <!--thymeleaf模板-->
@@ -59,6 +66,13 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
+        </dependency>
+
+        <!--Druid连接池-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.10</version>
         </dependency>
 
         <!--SpringBoot-test-->
@@ -106,6 +120,7 @@
             <scope>provided</scope>
         </dependency>
 
+        <!--editormd上传图片、所需依赖-->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
@@ -115,11 +130,6 @@
             <groupId>net.minidev</groupId>
             <artifactId>json-smart</artifactId>
             <version>2.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-jasper</artifactId>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -156,21 +166,11 @@
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
-<!--                <includes>-->
-<!--                    &lt;!&ndash;<include>**/*.yml</include>-->
-<!--                    <include>**/*.properties</include>-->
-<!--                    <include>**/*.xml</include>&ndash;&gt;-->
-<!--                    <include>**/*.**</include>-->
-<!--                </includes>-->
                 <filtering>false</filtering>
             </resource>
             <resource>
                 <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.properties</include>
-                    <include>**/*.xml</include>
-                </includes>
-                <filtering>true</filtering>
+                <filtering>false</filtering>
             </resource>
         </resources>
     </build>

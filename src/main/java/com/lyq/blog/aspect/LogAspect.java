@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 @Component
 @Slf4j
 public class LogAspect {
-//     定义切面
+
     @Pointcut("execution(* com.lyq.blog.web.*.*(..))")
     public void log() {
     }
@@ -41,8 +41,8 @@ public class LogAspect {
         //logger.info("---------- doAfter 2 ----------");
     }
 
-    @AfterReturning(returning = "result",pointcut = "log()")
+    @AfterReturning(returning = "result", pointcut = "log()")
     public void doAfterReturning(Object result) {
-        log.info("Return ------ {}",result );
+        log.info("Return ------ {}", result);
     }
 }

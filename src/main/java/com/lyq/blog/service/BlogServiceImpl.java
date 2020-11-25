@@ -10,7 +10,6 @@ import com.lyq.blog.model.Blog_tags;
 import com.lyq.blog.model.Tag;
 import com.lyq.blog.util.MarkdownUtils;
 import com.lyq.blog.util.MyBeanUtils;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +20,6 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-@Slf4j
 public class BlogServiceImpl {
 
     @Resource

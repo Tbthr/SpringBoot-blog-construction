@@ -11402,7 +11402,7 @@ $.fn.popup = function(parameters) {
             }
 
             // if last attempt use specified last resort position
-            if(searchDepth == settings.maxSearchDepth && typeof settings.lastResort === 'string') {
+            if(searchDepth === settings.maxSearchDepth && typeof settings.lastResort === 'string') {
               position = settings.lastResort;
             }
 
@@ -11502,20 +11502,20 @@ $.fn.popup = function(parameters) {
                   : false
                 ;
               }
-              else {
-                if(settings.lastResort) {
-                  module.debug('No position found, showing with last position');
-                }
-                else {
-                  module.debug('Popup could not find a position to display', $popup);
-                  module.error(error.cannotPlace, element);
-                  module.remove.attempts();
-                  module.remove.loading();
-                  module.reset();
-                  settings.onUnplaceable.call($popup, element);
-                  return false;
-                }
-              }
+              // else {
+              //   if(settings.lastResort) {
+              //     module.debug('No position found, showing with last position');
+              //   }
+              //   else {
+              //     module.debug('Popup could not find a position to display', $popup);
+              //     module.error(error.cannotPlace, element);
+              //     module.remove.attempts();
+              //     module.remove.loading();
+              //     module.reset();
+              //     settings.onUnplaceable.call($popup, element);
+              //     return false;
+              //   }
+              // }
             }
             module.debug('Position is on stage', position);
             module.remove.attempts();

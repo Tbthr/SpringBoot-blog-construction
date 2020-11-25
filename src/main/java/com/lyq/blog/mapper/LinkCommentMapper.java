@@ -2,10 +2,12 @@ package com.lyq.blog.mapper;
 
 import com.lyq.blog.model.LinkComment;
 import org.apache.ibatis.annotations.*;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Mapper
+@Transactional
 public interface LinkCommentMapper {
 
     @Insert("insert into link_comment" +
