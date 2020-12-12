@@ -17,21 +17,14 @@ public interface BlogMapper {
 
     Long save(Blog blog);
 
-    // <!--保存Blog_Tags-->
-    // <insert id="saveBlogTags" parameterType="list">
-    // insert into blog_tags(blogs_id, tags_id) values
-    //     <foreach collection="list" separator="," item="bt">
-    //         (#{bt.blogId},#{bt.tagId})
-    //     </foreach>
-    // </insert>
     @Insert("insert into blog_tags(blogs_id,tags_id) values(#{blogs_id},#{tags_id})")
-    void saveBlogTags(Long blogs_id, Long tags_id);
+    void saveBlogTags(@Param("blogs_id") Long blogs_id, @Param("tags_id") Long tags_id);
 
     @Select("select * from blog_tags where blogs_id = #{blogs_id} and tags_id = #{tags_id}")
-    Blog_tags findBlogTagsByBlogIdAndTagId(Long blogs_id, Long tags_id);
+    Blog_tags findBlogTagsByBlogIdAndTagId(@Param("blogs_id") Long blogs_id,@Param("tags_id") Long tags_id);
 
     @Select("select * from blog_tags where blogs_id = #{blogId}")
-    List<Blog_tags> findBlogTagsByBlogId(Long blogId);
+    List<Blog_tags> findBlogTagsByBlogId(@Param("blogId") Long blogId);
 
     @Delete("delete from blog where id = #{id}")
     void deleteById(Long id);
@@ -40,11 +33,11 @@ public interface BlogMapper {
     void deleteBlogTagsByBlogId(Long blogId);
 
     @Delete("delete from blog_tags where blogs_id = #{blogs_id} and tags_id = #{tags_id}")
-    void deleteBlogTagsByBlogIdAndTagId(Long blogs_id, Long tags_id);
+    void deleteBlogTagsByBlogIdAndTagId(@Param("blogs_id") Long blogs_id, @Param("tags_id") Long tags_id);
 
     int update(Blog blog);
 
-    @Update("update blog set views = views+1 where id = #{id}")
+    @Update("update blog set views = views + 1 where id = #{id}")
     void updateViews(Long id);
 
     List<Blog> findByIF(Map<String, Object> map);

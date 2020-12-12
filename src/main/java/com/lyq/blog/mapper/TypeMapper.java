@@ -24,7 +24,7 @@ public interface TypeMapper {
     void deleteById(Long id);
 
     @Update("update type set name = #{name} where id = #{id}")
-    int update(Long id, String name);
+    int update(@Param("id") Long id, @Param("name") String name);
 
     @Select("select * from type where id = #{id}")
     Type findById(Long id);

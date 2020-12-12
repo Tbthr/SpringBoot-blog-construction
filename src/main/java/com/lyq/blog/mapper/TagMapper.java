@@ -24,7 +24,7 @@ public interface TagMapper {
     void deleteById(Long id);
 
     @Update("update tag set name = #{name} where id = #{id}")
-    int update(Long id, String name);
+    int update(@Param("id") Long id, @Param("name") String name);
 
     @Select("select * from tag where id = #{id}")
     Tag findById(Long id);

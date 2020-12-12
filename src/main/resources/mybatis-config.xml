@@ -47,7 +47,7 @@
                 <property name="password" value="${dev.password}"/>
             </dataSource>
         </environment>
-        <!--测试环境-->
+        <!--生产环境-->
         <environment id="prod">
             <!--事务管理器-->
             <transactionManager type="JDBC"/>
