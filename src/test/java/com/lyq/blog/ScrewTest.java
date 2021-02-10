@@ -20,9 +20,9 @@ public class ScrewTest {
         //数据源
         HikariConfig hikariConfig = new HikariConfig();
         hikariConfig.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        hikariConfig.setJdbcUrl("jdbc:mysql://119.3.183.202:3306/blog");
-        hikariConfig.setUsername("linux");
-        hikariConfig.setPassword("8880");
+        hikariConfig.setJdbcUrl("jdbc:mysql://47.92.165.44:3306/blog");
+        hikariConfig.setUsername("root");
+        hikariConfig.setPassword("xxxx");
         //设置可以获取tables remarks信息
         hikariConfig.addDataSourceProperty("useInformationSchema", "true");
         hikariConfig.setMinimumIdle(2);
